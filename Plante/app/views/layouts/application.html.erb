@@ -6,7 +6,31 @@
 </head>
 <body>
 
-<%= yield %>
+	<div class="user_info">
+		<% if user_signed_in? %>
+			<p>Bonjour <%= current_user.first_name%> <%= current_user.last_name%></p>
+			<p>Accéder à votre <%= link_to 'profil', edit_user_registration_path %></p>
+			<p><%= link_to 'Se déconnecter', destroy_user_session_path %></p>
+		<% else %>
+			<p><%= link_to 'S\'inscrire', new_user_registration_path %></p>
+			<p><%= link_to 'Se connecter', new_user_session_path %></p>
+		<% end %>
+	</div>
+
+	<div class="container">
+	  <% flash.each do |key, value| %>
+					    <div class="alert alert-<%= key %>">
+	      <%= value %>
+	    </div>
+	  <% end %>
+	</div>
+	
+	<%= yield :top_content %>
+
+	<div class="container">
+		<h1><%= yield :header %></h1>
+	  <%= yield %>
+	</div
 
 </body>
 </html>
