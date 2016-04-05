@@ -1,0 +1,2 @@
+class TargetValuesController < ApplicationController
+end

@@ -1,0 +1,2 @@
+class MediaFilesController < ApplicationController
+end

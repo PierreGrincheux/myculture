@@ -1,0 +1,2 @@
+class DataCardsController < ApplicationController
+end
