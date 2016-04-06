@@ -1,0 +1,13 @@
+<%= form_for @school, url: admin_schools_path do |f| %>
+	<%= f.label :name, "Nom de l'école" %> : <%= f.text_field :name, autofocus: true %><br/>
+	---<br/>
+	<%= f.label :adress, "Adresse" %> : <%= f.text_field :adress, autofocus: true %><br/>
+	<%= f.label :town, "Ville" %> : <%= f.text_field :town, autoficus: true %><br/>
+	<%= f.label :zip_code, "Code Postal" %> : <%= f.text_field :zip_code, autofocus: true %><br/>
+	---<br/>
+	<%= f.label :contact, "Nom du contact" %> : <%= f.text_field :contact, autofocus: true %><br/>
+	<%= f.label :phone_number, "Numéro de téléphone" %> : <%= f.telephone_field :phone_number, autofocus: true %><br/>
+	<%= f.label :email, "Adresse mail" %> : <%= f.email_field :email, autofocus: true %><br/>
+
+	<%= f.submit "Créer" %>
+<% end %>
