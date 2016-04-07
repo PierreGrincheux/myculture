@@ -13,4 +13,7 @@
 /tmp
 *.swp
 *.swo
-config/database.yml
+
+config/database.yml*
+db/schema.rb*
+*.lock
