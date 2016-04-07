@@ -54,6 +54,7 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
        resources :schools do 
 				get 'index', on: :collection
+				post 'create', on: :collection
 			 end
      end
   

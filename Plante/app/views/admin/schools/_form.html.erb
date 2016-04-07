@@ -1,4 +1,4 @@
-<%= form_for @school, url: admin_schools_path do |f| %>
+<%= form_for @school, url: "create", method: :post do |f| %>
 	<%= f.label :name, "Nom de l'école" %> : <%= f.text_field :name, autofocus: true %><br/>
 	---<br/>
 	<%= f.label :adress, "Adresse" %> : <%= f.text_field :adress, autofocus: true %><br/>
