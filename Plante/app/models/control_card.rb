@@ -1,3 +1,4 @@
-class Controlard < ActiveRecord::Base
+class ControlCard < ActiveRecord::Base
+belongs_to :school
 
 end

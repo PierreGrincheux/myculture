@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Plante - Admin</title>
+
+</head>
+<body>
+
+	<div class="user_info">
+					<% if user_signed_in? %>
+									<h1> Administration </h1>
+			<p>Bonjour <%= current_user.first_name%> <%= current_user.last_name%></p>
+			<p>Accéder à votre <%= link_to 'profil', edit_user_registration_path %></p>
+			<% if current_user.super_admin? %>
+							<p><%= link_to 'Administration', admin_schools_path %></p>
+			<% end %>
+			<p><%= link_to 'Se déconnecter', destroy_user_session_path %></p>
+		<% else %>			
+			<%= redirect_to "pages/index" %>			
+		<% end %>
+	</div>
+
+	<div class="container">
+	  <% flash.each do |key, value| %>
+					    <div class="alert alert-<%= key %>">
+	      <%= value %>
+	    </div>
+	  <% end %>
+	</div>
+
+	<%= link_to "Gestion des Écoles", admin_schools_path %> | <%= link_to "Gestion des cartes de commandes", admin_control_cards_path %>
+	
+	<%= yield :top_content %>
+
+	<div class="container">
+		<h1><%= yield :header %></h1>
+	  <%= yield %>
+	</div
+
+</body>
+</html>

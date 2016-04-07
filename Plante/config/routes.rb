@@ -56,7 +56,14 @@ Rails.application.routes.draw do
 				get 'index', on: :collection
 				post 'create', on: :collection
 			 end
+
+			 resources :control_cards do
+			 end
      end
+
+
+
+
   
 
 end

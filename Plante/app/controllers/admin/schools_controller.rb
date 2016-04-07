@@ -1,4 +1,6 @@
 class Admin::SchoolsController < ApplicationController
+	layout "admin"
+
 	def index
 		@all_schools = School.all
 	end
@@ -45,12 +47,12 @@ class Admin::SchoolsController < ApplicationController
 	end
 
 	def show
-	
+		@school = School.where(id: params[:id].to_i)[0]	
 	end
 
 	private
 
 	def school_params
-		params.require(:school).permit(:name, :adress, :town, :zipcode, :contact, :phone_number, :email)
+		params.require(:school).permit(:name, :adress, :town, :zip_code, :contact, :phone_number, :email)
 	end
 end
