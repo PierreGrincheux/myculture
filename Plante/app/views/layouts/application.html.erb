@@ -1,27 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Plante</title>
-
+  <head>
+  <title>Puissance3</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <%= stylesheet_link_tag  'welcomes', media: 'all', 'data-turbolinks-track' => true %>
 </head>
 <body>
 
-	<div class="user_info">
-		<% if user_signed_in? %>
-			<p>Bonjour <%= current_user.first_name%> <%= current_user.last_name%></p>
-			<p>Accéder à votre <%= link_to 'profil', edit_user_registration_path %></p>
-			<% if current_user.super_admin? %>
-							<p><%= link_to 'Administration', admin_schools_path %></p>
-			<% end %>
-			<p><%= link_to 'Se déconnecter', destroy_user_session_path %></p>
-		<% else %>			
-			<p><%= link_to 'Se connecter', new_user_session_path %></p>
-			<p><%= link_to 'S\'inscrire', new_user_registration_path %></p>
-			
-		<% end %>
-	</div>
 
 	<div class="container">
+
+		  <%= render "shared/navbar" %>
+
 	  <% flash.each do |key, value| %>
 					    <div class="alert alert-<%= key %>">
 	      <%= value %>
@@ -34,7 +28,7 @@
 	<div class="container">
 		<h1><%= yield :header %></h1>
 	  <%= yield %>
-	</div
+	</div>
 
 </body>
 </html>

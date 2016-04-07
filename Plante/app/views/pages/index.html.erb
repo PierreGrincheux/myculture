@@ -1,7 +1,13 @@
 <% content_for :top_content do %>
 	<div class="jumbotron">
     <div class="container">
-      <h1>Welcome!</h1>
+		<% if user_signed_in? %>
+		<%= render partial: "connected_index" %>
+		<%= render partial: "actual_situation" %>
+
+		<% else %>
+		<%= render partial: "non_connected_index" %>
+		<%end%>
     </div>
   </div>
 <% end %>
