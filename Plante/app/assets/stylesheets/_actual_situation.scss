@@ -1,0 +1,61 @@
+/* circle */
+.circle {
+  width: 120px;
+  height: 120px;
+  margin-left: 0;
+  border-radius: 100%;
+  text-align: center;
+  color: #fff;
+  text-shadow: 0px 0px 30px rgba(119, 119, 119, 0.7);
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  span {
+	  font-size: 46px;
+	  letter-spacing: 4px;
+	  font-family: "Montserrat","Helvetica Neue",Helvetica,Arial,sans-serif;
+	  font-weight: 700;
+	  margin: 0;
+	  width: 100%;
+	}
+}
+.centred {
+  margin-left: auto;
+  margin-right: auto;
+  float: none;
+}
+.blue{
+	background-color: blue;
+}
+.red{
+	background-color: red;
+	float: right;
+}
+.green{
+	background-color: green;
+}
+.yellow{
+	background-color: yellow;
+}
+.black{
+	background-color: black;
+}
+/*.rect{
+	background-color: orange;
+}*/
+
+
+/*page situation actuelle*/
+.situation{
+	margin-top: 15%;
+}
+#plant{
+    margin-top: -45%;
+    width: 100%;
+}

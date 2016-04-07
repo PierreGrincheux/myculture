@@ -1,0 +1,39 @@
+#logo{
+	margin-top: -14px;
+}
+.navbar-default{
+	background-color: transparent;
+	border-color: transparent;
+	.navbar-nav {
+	    
+	    > li {
+	      
+	      > a {
+	        color: #7AB737;
+	        margin: 10px 5px 5px 5px;
+	        border: 2px solid #7AB737;
+	        border-radius: 11px;
+	        
+	      }
+	      > a:hover, > a:active, > a:focus {
+	        color: white;
+	        border: 2px solid #7AB737;
+	        background-color: #7AB737;
+	      }
+
+	    } 
+
+	    > .active {
+
+	      > a, > a:hover, > a:focus {
+	        background-color: #7AB737;
+	        color: white;
+	      }
+
+	    }
+
+	}
+}
+.user_info{
+	float: right;
+}
