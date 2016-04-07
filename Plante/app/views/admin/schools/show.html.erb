@@ -1,4 +1,18 @@
-<h1> SHOW id = <%= params[:id].to_s %>  </h1>
+<h1> École : <%= @school.name %> </h1>
+
+<b>Informations générales :</b><br/>
+<br/>
+Nom : <%= @school.name %><br/>
+-----<br/>
+Adresse : <%= @school.adress %><br/>
+Ville : <%= @school.town %><br/>
+Code Postal : <%= @school.zip_code %><br/>
+-----<br/>
+Nom du contact : <%= @school.contact %><br/>
+Numéro de téléphone : <%= @school.phone_number %><br/>
+Adresse mail : <%= @school.email %><br/>
+
+<br/><br/>
  
 <%= link_to "modifier", edit_admin_school_path %>
 
