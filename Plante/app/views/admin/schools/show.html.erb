@@ -11,7 +11,14 @@ Code Postal : <%= @school.zip_code %><br/>
 Nom du contact : <%= @school.contact %><br/>
 Numéro de téléphone : <%= @school.phone_number %><br/>
 Adresse mail : <%= @school.email %><br/>
-
+-----<br/>
+<b>Carte de commande liée :</b><br/>
+<% unless @control_card.blank? %>
+	Id : <%= @control_card.id.to_s %><br/>
+	Numéro de série : <%= @control_card.serial_nbr.to_s %><br/>
+<% else %>
+	Aucune
+<% end %>
 <br/><br/>
  
 <%= link_to "modifier", edit_admin_school_path %>

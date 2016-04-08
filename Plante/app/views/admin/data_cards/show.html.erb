@@ -1,0 +1,6 @@
+<h1> Carte de contrôle secondaire : <%= @data_card.serial_nbr.to_s %> </h1>
+
+Numéro de série de la carte : <%= @data_card.serial_nbr.to_s %><br/>
+<br/>
+<%= link_to "Modifier", edit_admin_data_card_path %>
+<%= render partial: "return_link" %>

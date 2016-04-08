@@ -1,4 +1,4 @@
-class DataCardsController < ApplicationController
+class Admin::DataCardsController < ApplicationController
 	layout "admin"
 
 	def index
@@ -10,9 +10,9 @@ class DataCardsController < ApplicationController
 	end
 
 	def create
-		@data_card = DataCard.new(control_card_params)
+		@data_card = DataCard.new(data_card_params)
 		if @data_card.save
-			flash[:notice] = "Nouvelle école ajoutée"
+			flash[:notice] = "Nouvelle carte de contrôle secondaire ajoutée"
 			redirect_to admin_data_card_path(@data_card)
 		else
 			flash[:notice] = "Erreur lors de l'enregistrement"
@@ -38,7 +38,7 @@ class DataCardsController < ApplicationController
 	def destroy
 		@data_card = DataCard.where(id: params[:id])[0]
 		if @data_card.destroy
-			flash[:notice] = "Carte de contrôle supprimée"
+			flash[:notice] = "Carte de contrôle secondaire supprimée"
 			redirect_to admin_data_cards_path
 		else
 			flash[:notice] = "Erreur lors de la suppression"
@@ -48,5 +48,11 @@ class DataCardsController < ApplicationController
 
 	def show
 		@data_card = DataCard.where(id: params[:id].to_i)[0]	
+	end
+
+	private
+
+	def data_card_params
+		params.require(:data_card).permit(:serial_nbr)
 	end
 end

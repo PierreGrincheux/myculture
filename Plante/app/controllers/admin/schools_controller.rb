@@ -47,7 +47,10 @@ class Admin::SchoolsController < ApplicationController
 	end
 
 	def show
-		@school = School.where(id: params[:id].to_i)[0]	
+		@school = School.where(id: params[:id].to_i)[0]
+		unless @school.control_card.blank?
+			@control_card = ControlCard.where(id: @school.control_card.id)[0]
+		end
 	end
 
 	private

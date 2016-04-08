@@ -1,0 +1,9 @@
+<h1> Ajout d'une nouvelle carte de commande </h1>
+
+<%= form_for @control_card, url: admin_control_cards_path, method: :post do |f| %>
+	<%= f.label :serial_nbr, "Numéro de série" %> : <%= f.text_field :serial_nbr, autofocus: true %><br/>
+
+	<%= f.submit "Créer" %>
+<% end %>
+
+<%= render partial: "return_link" %>
