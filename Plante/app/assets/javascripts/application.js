@@ -14,4 +14,8 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap-sprockets
+//= require snapsvg
+//= require 'greensock/TweenLite'
+//= require 'greensock/easing/EasePack'
+//= require 'greensock/jquery.gsap.js'
 //= require_tree .
