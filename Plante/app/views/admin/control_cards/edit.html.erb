@@ -1,0 +1,8 @@
+<h1> Modification de la carte de commande : <%= @control_card.serial_nbr.to_s %> </h1>
+
+<%= form_for @control_card, url: admin_control_card_path, method: :patch do |f| %>
+	<%= f.label :serial_nbr, "Numéro de série" %> : <%= f.text_field :serial_nbr, autofocus: true %><br/>
+	<%= f.label :school_id, "École liée" %> : <%= f.select :school_id, @linkable_schools.collect{|t| ["#{t.name} - #{t.town}", t.id]}, {prompt: "Choisir une école", include_blank: true} %> <br/>
+	<%= f.submit "Modifier" %>
+<% end %>
+<%= render partial: "return_link" %>

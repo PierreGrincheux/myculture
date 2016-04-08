@@ -1,0 +1,25 @@
+<h1> Liste des cartes de contrôle secondaires</h1>
+
+<table>
+		<th> ID  </th>
+		<th> Numero de Série </th>
+		<th colspan='2'> Actions </th>
+		<% @all_data_cards.each do |y| %>
+		<tr>
+				<td> 
+						<%= y.id %>
+				</td>
+				<td>
+						<%= y.serial_nbr %>
+				</td>
+				<td>
+					<%= link_to "Voir", admin_data_card_path(y) %>
+				</td>
+				<td>
+					<%= button_to "Supprimer", admin_data_card_path(y), method: :delete %>
+				</td>
+		</tr>
+	<% end %>
+</table>
+
+<%= link_to "Ajouter une nouvelle carte de contrôle secondaire", new_admin_data_card_path %>

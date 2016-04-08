@@ -59,6 +59,9 @@ Rails.application.routes.draw do
 
 			 resources :control_cards do
 			 end
+
+			 resources :data_cards do
+			 end
      end
 
 

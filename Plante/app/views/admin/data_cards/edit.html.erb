@@ -1,0 +1,7 @@
+<h1> Modification de la carte de commande secondaire: <%= @data_card.serial_nbr.to_s %> </h1>
+
+<%= form_for @data_card, url: admin_data_card_path, method: :patch do |f| %>
+	<%= f.label :serial_nbr, "Numéro de série" %> : <%= f.text_field :serial_nbr, autofocus: true %><br/>
+	<%= f.submit "Modifier" %>
+<% end %>
+<%= render partial: "return_link" %>

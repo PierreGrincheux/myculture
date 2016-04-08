@@ -4,7 +4,30 @@
 		<th> ID  </th>
 		<th> Numero de Série </th>
 		<th> Lié à une école </th>
+		<th colspan='2'> Actions </th>
 	<% @all_control_cards.each do |y| %>
 		<tr>
+				<td> 
+						<%= y.id %>
+				</td>
+				<td>
+						<%= y.serial_nbr %>
+				</td>
+				<td>
+						<% unless y.school.blank? %>
+								OUI
+						<% else %>
+								NON
+						<% end %>
+				</td>
+				<td>
+					<%= link_to "Voir", admin_control_card_path(y) %>
+				</td>
+				<td>
+					<%= button_to "Supprimer", admin_control_card_path(y), method: :delete %>
+				</td>
+		</tr>
 	<% end %>
 </table>
+
+<%= link_to "Ajouter une nouvelle carte de commande", new_admin_control_card_path %>
