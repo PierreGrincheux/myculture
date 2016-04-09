@@ -7,6 +7,7 @@ class Admin::DataCardsController < ApplicationController
 
 	def new
 		@data_card = DataCard.new
+		@linkable_control_cards = ControlCard.all
 	end
 
 	def create
@@ -22,6 +23,8 @@ class Admin::DataCardsController < ApplicationController
 
 	def edit
 		@data_card = DataCard.where(id: params[:id])[0]
+		@linkable_control_cards = ControlCard.all
+		@blank_included = false || true if !@data_card.control_card.blank?
 	end
 
 	def update
@@ -53,6 +56,6 @@ class Admin::DataCardsController < ApplicationController
 	private
 
 	def data_card_params
-		params.require(:data_card).permit(:serial_nbr)
+		params.require(:data_card).permit(:serial_nbr, :control_card_id)
 	end
 end

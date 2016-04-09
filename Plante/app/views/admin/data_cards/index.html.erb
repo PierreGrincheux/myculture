@@ -3,6 +3,7 @@
 <table>
 		<th> ID  </th>
 		<th> Numero de Série </th>
+		<th> Lié à une carte de contrôle </th>
 		<th colspan='2'> Actions </th>
 		<% @all_data_cards.each do |y| %>
 		<tr>
@@ -11,6 +12,13 @@
 				</td>
 				<td>
 						<%= y.serial_nbr %>
+				</td>
+				<td>
+					<% unless y.control_card_id.blank? %>
+							OUI
+					<% else %>
+							NON
+					<% end %>
 				</td>
 				<td>
 					<%= link_to "Voir", admin_data_card_path(y) %>
