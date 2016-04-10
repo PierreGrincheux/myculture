@@ -30,6 +30,9 @@
 														<% if current_user.super_admin? %>
 																<p><%= link_to 'Administration', admin_schools_path %></p>
 														<% end %>
+														<% if current_user.teacher? %>
+																<p> link_to zone professeur </p>
+														<% end %>
 																<p><%= link_to 'Se déconnecter', destroy_user_session_path %></p>
 												<% else %>      
 																<p><%= link_to 'Se connecter', new_user_session_path %></p>

@@ -1,0 +1,9 @@
+<h1> Modification des informations de la serre </h1>
+
+<%= form_for @greenhouse, url: admin_greenhouse_path, method: :patch do |f| %>
+	<%= f.label :serial_nbr, "Numéro de série" %> : <%= f.text_field :serial_nbr, autofocus: true %><br/>
+
+	<%= f.submit "Modifier" %>
+<% end %>
+
+<%= render partial: "return_link" %>

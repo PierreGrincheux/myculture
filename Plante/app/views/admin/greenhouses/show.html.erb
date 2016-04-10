@@ -1,0 +1,5 @@
+<h1> Serre : <%= @greenhouse.serial_nbr.to_s %> </h1>
+
+Numéro de série de la serre : <%= @greenhouse.serial_nbr.to_s %><br/>
+<%= link_to "Modifier", edit_admin_greenhouse_path %>
+<%= render partial: "return_link" %>
