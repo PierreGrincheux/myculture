@@ -7,6 +7,7 @@ class Admin::GreenhousesController < ApplicationController
 
 	def new
 		@greenhouse = Greenhouse.new
+		@linkable_schools = School.all
 	end
 
 	def create
@@ -22,6 +23,10 @@ class Admin::GreenhousesController < ApplicationController
 
 	def edit
 		@greenhouse = Greenhouse.where(id: params[:id])[0]
+		@linkable_schools = School.all
+		unless @greenhouse.school.blank?
+			@blank_included = true
+		end
 	end
 
 	def update
@@ -53,7 +58,7 @@ class Admin::GreenhousesController < ApplicationController
 	private
 
 	def greenhouse_params
-		params.require(:greenhouse).permit(:serial_nbr)
+		params.require(:greenhouse).permit(:serial_nbr, :school_id)
 	end
 
 end

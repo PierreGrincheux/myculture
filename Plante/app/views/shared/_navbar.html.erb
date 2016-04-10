@@ -14,7 +14,7 @@
 								<ul class="nav navbar-nav navbar-left">
 												<li><%= link_to "Situation actuelle", show_current_state_pages_path(id: params[:id]), class: "nav_btn" %></li>
 												<li><%= link_to "Modifier les paramètres", show_parameters_pages_path(id: params[:id]), class: "nav_btn"%></li>
-												<li><a href="#" class="nav_btn">Evolution</a></li>
+												<li><%= link_to "Évolution", show_data_pages_path(id: params[:id]), class:"nav_btn" %></li>
 												<li><a href="#" class="nav_btn">Expériences</a></li>
 												<li><a href="#" class="nav_btn">Gestion du compte</a></li>
 								</ul>

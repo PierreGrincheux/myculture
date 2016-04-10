@@ -3,6 +3,7 @@
 	<th> ID </th>
 	<th> Numéro de série </th>
 	<th> Nom </th>
+	<th> Lié à une école </th>
 	<th colspan='3'> Actions </th>
 
 	<% unless @all_greenhouses.blank? %>
@@ -16,6 +17,13 @@
 				</td>
 				<td>
 					<%= t.name.to_s %>
+				</td>
+				<td>
+					<% unless t.school_id.blank? %>
+						OUI
+					<% else %>
+						NON
+					<% end %>
 				</td>
 				<td>
 								<%= link_to "Voir", admin_greenhouse_path(t) %>

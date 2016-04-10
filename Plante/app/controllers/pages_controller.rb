@@ -1,12 +1,12 @@
 class PagesController < ApplicationController
 	def index
 		if user_signed_in?
-			if params[:all_displays] = true
-				
+			if params[:ana_display] == "true"
 			else
 				if current_user.super_admin?
 					redirect_to admin_schools_path
 				else
+								raise 'tiiti'
 					school_id = current_user.school.id
 					redirect_to show_current_state_pages_path(id: school_id)
 				end
@@ -31,5 +31,10 @@ class PagesController < ApplicationController
 	end
 
 	def show_target_values
+					
+	end
+
+	def show_data
+
 	end
 end
