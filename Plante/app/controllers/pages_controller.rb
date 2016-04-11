@@ -1,5 +1,6 @@
 class PagesController < ApplicationController
 	before_filter :verify_if_teacher, :only => :show_parameters
+	before_filter :get_datas
 	def index
 		if user_signed_in?
 			if params[:ana_display] == "true"
@@ -15,7 +16,6 @@ class PagesController < ApplicationController
 	end
 
 	def show_current_state 
-		@greenhouses = Greenhouse.where(school_id: params[:id])
 		unless params[:selected_greenhouse].blank?
 			@selected_greenhouse = Greenhouse.find(params[:selected_greenhouse])
 		else
@@ -24,15 +24,31 @@ class PagesController < ApplicationController
 
 		unless @selected_greenhouse.blank?
 			@linked_data_cards = DataCard.where(greenhouse_id: @selected_greenhouse.id)
-			@all_value_types = ValueType.all
 			
 			@all_values = Value.where("data_card_id IN (?)", @linked_data_cards.collect(&:id))
 		end
 	end
 
-	def show_target_values
-					
-	end
+	def show_parameters
+		unless params[:selected_greenhouse].blank?
+			@selected_greenhouse = Greenhouse.find(params[:selected_greenhouse])
+		else
+			@selected_greenhouse = Greenhouse.find(@greenhouses[0].id) unless @greenhouses.blank?
+		end
+
+		unless @selected_greenhouse.blank?
+			@value_types.each do |g|
+				target = TargetValue.where("greenhouse_id = ? AND value_type_id = ?", @selected_greenhouse.id, g.id)[0]
+				unless target.blank?
+					target_value = target.value
+				else
+					target_value = 'NA'
+				end
+
+				instance_variable_set("@target_#{g.name}", target_value) 
+			end
+		end
+		end
 
 	def show_data
 
@@ -47,5 +63,10 @@ class PagesController < ApplicationController
 		else
 			flash[:alert] = "Accès autorisé"
 		end
+	end
+
+	def get_datas
+		@greenhouses = Greenhouse.where(school_id: params[:id])
+		@value_types = ValueType.all
 	end
 end

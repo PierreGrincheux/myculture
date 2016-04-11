@@ -14,9 +14,9 @@
 <br/>
 <br/>
 <b>Liste des tyes de valeurs disponibles</b><br/>
-<% unless @all_value_types.blank? %>
+<% unless @value_types.blank? %>
 	<ol>
-		<% @all_value_types.each do |t| %>
+		<% @value_types.each do |t| %>
 				<li>
 					<%= t.id %> --- <%= t.name %>
 				</li>
