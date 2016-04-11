@@ -1,4 +1,5 @@
 class PagesController < ApplicationController
+	before_filter :verify_if_teacher, :only => :show_parameters
 	def index
 		if user_signed_in?
 			if params[:ana_display] == "true"
@@ -6,7 +7,6 @@ class PagesController < ApplicationController
 				if current_user.super_admin?
 					redirect_to admin_schools_path
 				else
-								raise 'tiiti'
 					school_id = current_user.school.id
 					redirect_to show_current_state_pages_path(id: school_id)
 				end
@@ -36,5 +36,16 @@ class PagesController < ApplicationController
 
 	def show_data
 
+	end
+
+	private
+
+	def verify_if_teacher
+		unless current_user.teacher?
+			flash[:alert] = "Vous n'avez pas les droits pour accéder à cette page."
+			redirect_to show_current_state_pages_path(id: params[:id])
+		else
+			flash[:alert] = "Accès autorisé"
+		end
 	end
 end
