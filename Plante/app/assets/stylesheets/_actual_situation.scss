@@ -46,9 +46,24 @@
 .black{
 	background-color: black;
 }
-/*.rect{
-	background-color: orange;
-}*/
+.rect{
+	margin-top: -50px
+}
+.rect1{
+  margin-top: -18%;
+}
+.rect2{
+  margin-top: -12%;
+}
+.rect3{
+  margin-top: -20%;
+}
+.rect4{
+  margin-top: -12%;
+}
+.rect5{
+  margin-top: -18%;
+}
 
 
 /*page situation actuelle*/
@@ -58,4 +73,95 @@
 #plant{
     margin-top: -45%;
     width: 100%;
+}
+
+/* moving cloud */
+
+
+.cloud {
+ -moz-animation: cloudbeat 5s ease alternate infinite; 
+  -webkit-animation: cloudbeat 5s ease alternate infinite; 
+  animation: cloudbeat 5s ease alternate infinite;
+   -moz-transform-origin:center center;
+ -webkit-transform-origin:center center;
+    transform-origin:center center;
+ 
+}
+
+@-moz-keyframes cloudbeat {
+    0% { -moz-transform: scale(1); }
+    30% { -moz-transform: scale(1); }
+    40% { -moz-transform: scale(1.6, 1.1); }
+    50% { -moz-transform: scale(1); }
+    60% { -moz-transform: scale(1); }
+    70% { -moz-transform: scale(1.4, 1.1); }
+    80% { -moz-transform: scale(1); }
+    100% { -moz-transform: scale(1); }
+}
+
+
+@-webkit-keyframes cloudbeat {
+    0% { -webkit-transform: scale(1); }
+    30% { -webkit-transform: scale(1); }
+    40% { -webkit-transform: scale(1.6, 1.1); }
+    50% { -webkit-transform: scale(1); }
+    60% { -webkit-transform: scale(1); }
+    70% { -webkit-transform: scale(1.4,  1.1); }
+    80% { -webkit-transform: scale(1); }
+    100% { -webkit-transform: scale(1); }
+}
+
+@keyframes cloudbeat {
+    0% { transform: scale(1); }
+    30% { transform: scale(1); }
+    40% { transform: scale(1.6, 1.1); }
+    50% { transform: scale(1); }
+    60% { transform: scale(1); }
+    70% { transform: scale(1.4, 1.1); }
+    80% { transform: scale(1); }
+    100% { transform: scale(1); }
+}
+
+.cloud2 {
+ -moz-animation: cloudbeat 5.01s linear infinite; 
+  -webkit-animation: cloudbeat 5.01s linear infinite; 
+  animation: cloudbeat 5.01s linear infinite;
+   -moz-transform-origin:center center;
+ -webkit-transform-origin:center center;
+    transform-origin:center center;
+ 
+}
+
+@-moz-keyframes cloudbeat {
+    0% { -moz-transform: scale(1); }
+    30% { -moz-transform: scale(1); }
+    40% { -moz-transform: scale(1.4, 1.1); }
+    50% { -moz-transform: scale(1); }
+    60% { -moz-transform: scale(1); }
+    70% { -moz-transform: scale(1.4, 1.1); }
+    80% { -moz-transform: scale(1); }
+    100% { -moz-transform: scale(1); }
+}
+
+
+@-webkit-keyframes cloudbeat {
+    0% { -webkit-transform: scale(1); }
+    30% { -webkit-transform: scale(1); }
+    40% { -webkit-transform: scale(1.4, 1.1); }
+    50% { -webkit-transform: scale(1); }
+    60% { -webkit-transform: scale(1); }
+    70% { -webkit-transform: scale(1.4,  1.1); }
+    80% { -webkit-transform: scale(1); }
+    100% { -webkit-transform: scale(1); }
+}
+
+@keyframes cloudbeat {
+    0% { transform: scale(1); }
+    30% { transform: scale(1); }
+    40% { transform: scale(1.4, 1.1); }
+    50% { transform: scale(1); }
+    60% { transform: scale(1); }
+    70% { transform: scale(1.4, 1.1); }
+    80% { transform: scale(1); }
+    100% { transform: scale(1); }
 }

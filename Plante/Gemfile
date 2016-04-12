@@ -27,6 +27,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'autoprefixer-rails'
 
+# Modernizr
+gem 'modernizr-rails', '~> 2.7', '>= 2.7.1'
+
 #snap svg
 gem 'snapsvg-rails', '~> 0.4.1'
 
