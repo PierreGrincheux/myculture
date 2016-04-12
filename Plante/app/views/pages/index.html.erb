@@ -2,11 +2,10 @@
 	<div class="jumbotron">
     <div class="container">
 		<% if user_signed_in? %>
-		<%= render partial: "connected_index" %>
-		<%= render partial: "actual_situation" %>
-
+			<%= render partial: "connected_index" %>
+			<%= render partial: "actual_situation" %>
 		<% else %>
-		<%= render partial: "non_connected_index" %>
+			<%= render partial: "non_connected_index" %>
 		<%end%>
     </div>
   </div>

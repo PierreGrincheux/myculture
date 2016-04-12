@@ -12,4 +12,8 @@ class User < ActiveRecord::Base
 	def self.super_admin?
 		return self.super_admin
 	end
+
+	def self.teacher?
+		return self.teacher
+	end
 end

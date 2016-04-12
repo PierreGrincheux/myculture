@@ -7,6 +7,8 @@ class Admin::DataCardsController < ApplicationController
 
 	def new
 		@data_card = DataCard.new
+		@linkable_control_cards = ControlCard.all
+		@linkable_greenhouses = Greenhouse.all
 	end
 
 	def create
@@ -22,6 +24,10 @@ class Admin::DataCardsController < ApplicationController
 
 	def edit
 		@data_card = DataCard.where(id: params[:id])[0]
+		@linkable_control_cards = ControlCard.all
+		@linkable_greenhouses = Greenhouse.all.select{|t| t.data_card.count < 4}
+		@blank_included = false || true if !@data_card.control_card.blank?
+		@blank_included2 = false || true if !@data_card.greenhouse.blank?
 	end
 
 	def update
@@ -47,12 +53,14 @@ class Admin::DataCardsController < ApplicationController
 	end
 
 	def show
-		@data_card = DataCard.where(id: params[:id].to_i)[0]	
+		@data_card = DataCard.where(id: params[:id].to_i)[0]
+		@linked_greenhouse = @data_card.greenhouse
+		@linked_control_card = @data_card.control_card	
 	end
 
 	private
 
 	def data_card_params
-		params.require(:data_card).permit(:serial_nbr)
+		params.require(:data_card).permit(:serial_nbr, :control_card_id, :greenhouse_id)
 	end
 end

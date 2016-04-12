@@ -27,6 +27,9 @@
 				<td>
 								<%= button_to "Supprimer", admin_school_path(t), method: :delete,  data: {confirm: "Êtes-vous sûre ?"} %>
 				</td>
+				<td>
+					<%= link_to "Accéder à la page de l'école", show_current_state_pages_path(id: t.id) %>
+				</td>
 			</tr>
 		<% end %>
 	<% else %>

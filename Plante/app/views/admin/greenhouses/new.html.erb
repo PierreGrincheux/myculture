@@ -1,6 +1,6 @@
-<h1> Ajout d'une nouvelle carte de commande </h1>
+<h1> Ajout d'une nouvelle serre </h1>
 
-<%= form_for @control_card, url: admin_control_cards_path, method: :post do |f| %>
+<%= form_for @greenhouse, url: admin_greenhouses_path, method: :post do |f| %>
 	<%= f.label :serial_nbr, "Numéro de série" %> : <%= f.text_field :serial_nbr, autofocus: true %><br/>
 	<%= f.label :school_id, "École liée" %> : <%= f.select :school_id, @linkable_schools.collect{|t| ["#{t.name} - #{t.town}", t.id]}, {prompt: "Choisir une école"} %> <br/>
 	<%= f.submit "Créer" %>

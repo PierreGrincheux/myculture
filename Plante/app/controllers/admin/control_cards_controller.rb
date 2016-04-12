@@ -7,6 +7,7 @@ class Admin::ControlCardsController < ApplicationController
 
 	def new
 		@control_card = ControlCard.new
+		@linkable_schools = School.all.select{|y| y.control_card.blank? == true}
 	end
 
 	def create
