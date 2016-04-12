@@ -17,8 +17,8 @@
 
 	<% @value_types.each do |y| %>
 			<tr>
-				<td> <%= VALUE_TYPES[:"#{y.name}"] %></td>
-				<td> <%= instance_variable_get("@target_#{y.name}")%></td>
+				<td> <%= VALUE_TYPES[:"#{y.name}"][0] %></td>
+				<td> <%= instance_variable_get("@target_#{y.name}")%> <%= VALUE_TYPES[:"#{y.name}"][2] %></td>
 			</tr>
 		<% end %>
 

@@ -13,15 +13,19 @@
 
 <br/>
 <br/>
-<b>Liste des tyes de valeurs disponibles</b><br/>
-<% unless @value_types.blank? %>
-	<ol>
-		<% @value_types.each do |t| %>
-				<li>
-					<%= t.id %> --- <%= t.name %>
-				</li>
+<b>Liste des dernières valeurs</b><br/>
+<table>
+		<% @value_types.each do |y| %>
+				<tr>
+						<td>
+										<%= VALUE_TYPES[:"#{y.name}"][0] %> :
+						</td>
+						<td>
+								<%= instance_variable_get("@#{y.name}_values") %>
+						</td>
+				</tr>
 		<% end %>
-<% else %>
-	Aucun "value_type" trouvé <br/><br/>
-<% end %>
+</table>
+
+
 <%= link_to "Ancienne page d'accueil connecté", root_path(ana_display: "true") %>

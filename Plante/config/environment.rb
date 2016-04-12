@@ -5,11 +5,9 @@ require File.expand_path('../application', __FILE__)
 Rails.application.initialize!
 
 VALUE_TYPES = {
-	:temperature => "Température",
-	:air_humidity => "Humidité de l'air",
-	:soil_humidity => "Humidité du sol",
-	:illumination => "Éclairement"
+	:temperature => ["Température","degrés","°C"],
+	:air_humidity => ["Humidité de l'air","pourcent","%"],
+	:soil_humidity => ["Humidité du sol","pourcent","%"],
+	:illumination => ["Éclairement","lux","lux"]
 }
 
-
-	
