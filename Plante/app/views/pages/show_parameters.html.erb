@@ -15,14 +15,27 @@
 	<th> Type de valeur </th>
 	<th> Valeur </th>
 
-	<% @value_types.each do |y| %>
+	<% if current_user.teacher? %>
+		<% @value_types.each do |y| %>
 			<tr>
-				<td> <%= VALUE_TYPES[:"#{y.name}"][0] %></td>
-				<td> <%= instance_variable_get("@target_#{y.name}")%> <%= VALUE_TYPES[:"#{y.name}"][2] %></td>
+				<%= form_for y, url: update_parameters_pages_path, method: :patch do |f| %>
+					<td> <%= print_value_name(y.name) %></td>
+					<td> <%= number_field_tag "#{y.name}_value", instance_variable_get("@target_#{y.name}"), within: 1..50 %> <%=print_unit(y.name) %></td>
+					<%= hidden_field_tag :greenhouse_id, @selected_greenhouse.id %>
+					<%= hidden_field_tag :value_type_id, y.id %>
+					<%= hidden_field_tag :school_id, params[:id] %>
+					<td> <%= f.submit "Modifier"%></td>
+				<% end %>
 			</tr>
 		<% end %>
-
-	
+	<% else %>
+		<% @value_types.each do |y| %>
+			<tr>
+				<td> <%= print_value_name(y.name) %></td>
+				<td> <%= print_value(instance_variable_get("@target_#{y.name}"),y.name) %></td>
+			</tr>
+		<% end %>
+	<% end %>
 </table>
 
 <% else %>

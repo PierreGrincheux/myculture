@@ -49,7 +49,20 @@ class PagesController < ApplicationController
 				instance_variable_set("@target_#{g.name}", target_value) 
 			end
 		end
-		end
+	end
+
+	def update_parameters
+		target = TargetValue.where("greenhouse_id = ? AND value_type_id = ?", params[:greenhouse_id], params[:value_type_id])[0]
+		value_type = ValueType.find(params[:value_type_id])
+		new_value = params[:"#{value_type.name}_value"] 
+		if target.update_attributes(value: new_value)
+			 flash[:notice] = "Modification effectuée"
+			 redirect_to show_parameters_pages_path(id: params[:school_id], selected_greenhouse: params[:greenhouse_id])
+		else
+			 flash[:notice] = "Erreur lors de la modification"
+			 redirect_to :back
+	  end
+	end
 
 	def show_data
 		unless params[:selected_greenhouse].blank?

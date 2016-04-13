@@ -31,7 +31,7 @@
 												<%= convert_date(k.created_at) %>
 										</td>
 										<td>
-												<%= k.value %> <%= VALUE_TYPES[:"#{y.name}"][2] %>
+												<%= print_value(k.value,y.name) %>
 										</td>
 								</tr>
 						<% end %>

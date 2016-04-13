@@ -17,6 +17,7 @@ Rails.application.routes.draw do
 				get 'show_current_state', on: :collection
 				get 'show_parameters', on: :collection
 				get 'show_data', on: :collection
+				patch 'update_parameters', on: :collection
 		 end
 
   # Example resource route with options:

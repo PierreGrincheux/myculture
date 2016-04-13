@@ -18,10 +18,10 @@
 		<% @value_types.each do |y| %>
 				<tr>
 						<td>
-										<%= VALUE_TYPES[:"#{y.name}"][0] %> :
+										<%= print_value_name(y.name) %> :
 						</td>
 						<td>
-								<%= instance_variable_get("@#{y.name}_values") %>
+								<%= print_value(instance_variable_get("@#{y.name}_values"), y.name) %>
 						</td>
 				</tr>
 		<% end %>
