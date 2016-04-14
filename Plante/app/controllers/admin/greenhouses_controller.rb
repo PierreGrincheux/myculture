@@ -11,10 +11,13 @@ class Admin::GreenhousesController < ApplicationController
 	end
 
 	def create
-		@greenhouse = Greenhouse.new(greenhouse_params)
-		if @greenhouse.save
+		greenhouse = Greenhouse.new(greenhouse_params)
+		if greenhouse.save
+			ValueType.all.each do |v|
+				TargetValue.create(greenhouse_id: greenhouse.id, value_type_id: v.id)
+			end
 			flash[:notice] = "Nouvelle serre ajoutée"
-			redirect_to admin_greenhouse_path(@greenhouse)
+			redirect_to admin_greenhouse_path(greenhouse)
 		else
 			flash[:notice] = "Erreur lors de l'enregistrement"
 			render "new"
