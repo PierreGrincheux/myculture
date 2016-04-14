@@ -25,6 +25,7 @@ class PagesController < ApplicationController
 		unless @selected_greenhouse.blank?
 			@linked_data_cards = DataCard.where(greenhouse_id: @selected_greenhouse.id)
 			@value_types.each do |g|
+				instance_variable_set("@target_#{g.name}", TargetValue.where("greenhouse_id = ? AND value_type_id = ?", @selected_greenhouse.id, g.id)[0].value)
 				instance_variable_set("@#{g.name}_values", Value.where("data_card_id in (?)", @linked_data_cards.collect(&:id)).select{|h| h.value_type_id == g.id}.sort{|b,c| b.created_at <=> c.created_at}.collect(&:value)[0])			
 			end
 		end

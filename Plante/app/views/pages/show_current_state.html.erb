@@ -4,7 +4,7 @@
 <% unless @greenhouses.blank? %>
 <ol>
 	<% @greenhouses.each do |y| %>
-					<li><%= y.id %> --- <% if @selected_greenhouse.id == y.id %> Serre actuellement selectionnée <% else %> <%= link_to "Choisir cette serre", show_current_state_pages_path(id: params[:id], selected_greenhouse: y.id) %><% end %></li>
+					<li><b><%= y.serial_nbr %></b> --- <% if @selected_greenhouse.id == y.id %> Serre actuellement selectionnée <% else %> <%= link_to "Choisir cette serre", show_current_state_pages_path(id: params[:id], selected_greenhouse: y.id) %><% end %></li>
 <% end %>
 </ol>
 <% else %>
@@ -17,13 +17,17 @@
 <table class='table'>
 		<th> Type de Valeur </th>
 		<th> Valeur </th>
+		<th> Valeur cible </th>
 		<% @value_types.each do |y| %>
 				<tr>
 						<td>
-										<%= print_value_name(y.name) %> 
+								<%= print_value_name(y.name) %> 
 						</td>
 						<td>
 								<%= print_value(instance_variable_get("@#{y.name}_values"), y.name) %>
+						</td>
+						<td>
+								<%= print_value(instance_variable_get("@target_#{y.name}"), y.name) %>
 						</td>
 				</tr>
 		<% end %>
