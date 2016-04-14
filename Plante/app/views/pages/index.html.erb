@@ -1,5 +1,5 @@
 <% content_for :top_content do %>
-	<div class="jumbotron">
+	
     <div class="container">
 		<% if user_signed_in? %>
 			<%= render partial: "connected_index" %>
@@ -8,5 +8,5 @@
 			<%= render partial: "non_connected_index" %>
 		<%end%>
     </div>
-  </div>
+ 
 <% end %>
