@@ -1,10 +1,10 @@
-<h1> Liste des cartes de contrôle secondaires</h1>
+<h1> Liste des Cartes Secondaires</h1>
 
-<table>
+<table class='table'>
 		<th> ID  </th>
 		<th> Numero de Série </th>
-		<th> Lié à une carte de contrôle </th>
-		<th> Lié à une serre </th>
+		<th> Liée à une carte prinipale </th>
+		<th> Liée à une serre </th>
 		<th colspan='2'> Actions </th>
 		<% @all_data_cards.each do |y| %>
 		<tr>
@@ -38,4 +38,4 @@
 	<% end %>
 </table>
 
-<%= link_to "Ajouter une nouvelle carte de contrôle secondaire", new_admin_data_card_path %>
+<%= link_to "Ajouter une nouvelle carte secondaire", new_admin_data_card_path %>

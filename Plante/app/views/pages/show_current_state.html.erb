@@ -1,6 +1,6 @@
 <h1> SHOW de "Situation Actuelle" </h1>
 
-<b>Liste des serres disponibles</b><br/>
+<b>Liste des Serres Disponibles</b><br/>
 <% unless @greenhouses.blank? %>
 <ol>
 	<% @greenhouses.each do |y| %>
@@ -14,11 +14,13 @@
 <br/>
 <br/>
 <b>Liste des dernières valeurs</b><br/>
-<table>
+<table class='table'>
+		<th> Type de Valeur </th>
+		<th> Valeur </th>
 		<% @value_types.each do |y| %>
 				<tr>
 						<td>
-										<%= print_value_name(y.name) %> :
+										<%= print_value_name(y.name) %> 
 						</td>
 						<td>
 								<%= print_value(instance_variable_get("@#{y.name}_values"), y.name) %>

@@ -10,6 +10,6 @@ class AddNewFk < ActiveRecord::Migration
 		remove_index :control_cards, :school_id
 		remove_column :control_cards, :school_id
 		remove_index :data_cards, :control_card_id
-		remove_column :data_cards, :control_card_id:w
+		remove_column :data_cards, :control_card_id
 	end
 end

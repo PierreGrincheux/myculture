@@ -1,23 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Plante - Admin</title>
-
+  <title>Puissance3 - Admin</title>
+	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <%= stylesheet_link_tag  'welcomes', media: 'all', 'data-turbolinks-track' => true %>
 </head>
 <body>
 
-	<div class="user_info">
-					<% if user_signed_in? %>
-									<h1> Administration </h1>
-			<p>Bonjour <%= current_user.first_name%> <%= current_user.last_name%></p>
-			<p>Accéder à votre <%= link_to 'profil', edit_user_registration_path %></p>
-			<p><%= link_to 'Se déconnecter', destroy_user_session_path %></p>
-		<% else %>			
-			<%= redirect_to "pages/index" %>			
-		<% end %>
-	</div>
+<div class="container">
 
-	<div class="container">
+		<%= render "shared/navbar_admin" %>
 	  <% flash.each do |key, value| %>
 					    <div class="alert alert-<%= key %>">
 	      <%= value %>
@@ -25,8 +20,6 @@
 	  <% end %>
 	</div>
 
-	<%= link_to "Gestion des Écoles", admin_schools_path %> | <%= link_to "Gestion des serres", admin_greenhouses_path %> | <%= link_to "Gestion des cartes de commandes", admin_control_cards_path %> | <%= link_to "Gestion des cartes de commandes secondaires", admin_data_cards_path %>
-	
 	<%= yield :top_content %>
 
 	<div class="container">

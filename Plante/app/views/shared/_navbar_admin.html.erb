@@ -1,0 +1,35 @@
+<nav class="navbar navbar-default ">
+				<div class="navbar-header">
+								<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+												<span class="sr-only">Toggle navigation</span>
+												<span class="icon-bar"></span>
+												<span class="icon-bar"></span>
+												<span class="icon-bar"></span>
+								</button>
+								<a class="navbar-brand" href="#">
+												<%=image_tag("logo.png", alt: "Logo", id: "logo")%>
+								</a>
+				</div>
+
+				<% if user_signed_in? %>
+					<div id="navbar" class="collapse navbar-collapse">
+						<ul class="nav navbar-nav navbar-left">
+							<li><%= link_to "Gestion des Écoles", admin_schools_path, class: "nav_btn" %></li>
+							<li><%= link_to "Gestion des Serres", admin_greenhouses_path, class: "nav_btn"%></li>
+							<li><%= link_to "Gestion des cartes principales", admin_control_cards_path, class:"nav_btn" %></li>
+							<li><%= link_to "Gestion des cartes secondaires", admin_data_cards_path, class: "nav_btn" %></li>
+						</ul>
+					</div><!--/.nav-collapse -->
+				<% end %>
+
+				<div class="col-md-3 col-md-offset-9" style="margin-top: -6%">
+					<div class="user_info">
+						<% if user_signed_in? %>
+										<p>Bonjour <%= current_user.first_name%> <%= current_user.last_name%></p>
+										<p><%= link_to 'Se déconnecter', destroy_user_session_path %></p>
+						<% end %>
+					</div>
+				</div>
+
+
+</nav>
