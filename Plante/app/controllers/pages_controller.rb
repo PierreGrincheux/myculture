@@ -25,7 +25,7 @@ class PagesController < ApplicationController
 		unless @selected_greenhouse.blank?
 			@linked_data_cards = DataCard.where(greenhouse_id: @selected_greenhouse.id)
 			@value_types.each do |g|
-				instance_variable_set("@target_#{g.name}", TargetValue.where("greenhouse_id = ? AND value_type_id = ?", @selected_greenhouse.id, g.id)[0].value)
+				instance_variable_set("@target_#{g.name}", TargetValue.where("greenhouse_id = ? AND value_type_id = ? AND active = ?", @selected_greenhouse.id, g.id, true)[0].value)
 				instance_variable_set("@#{g.name}_values", Value.where("data_card_id in (?)", @linked_data_cards.collect(&:id)).select{|h| h.value_type_id == g.id}.sort{|b,c| b.created_at <=> c.created_at}.collect(&:value)[0])			
 			end
 		end
@@ -40,7 +40,7 @@ class PagesController < ApplicationController
 
 		unless @selected_greenhouse.blank?
 			@value_types.each do |g|
-				target = TargetValue.where("greenhouse_id = ? AND value_type_id = ?", @selected_greenhouse.id, g.id)[0]
+				target = TargetValue.where("greenhouse_id = ? AND value_type_id = ? AND active = ?", @selected_greenhouse.id, g.id, true)[0]
 				unless target.blank?
 					target_value = target.value
 				else
@@ -53,16 +53,27 @@ class PagesController < ApplicationController
 	end
 
 	def update_parameters
-		target = TargetValue.where("greenhouse_id = ? AND value_type_id = ?", params[:greenhouse_id], params[:value_type_id])[0]
+		#On met la target value modifiée a false + deactivated at à Time.now
+		#On crée une nouvelle valeur ensuite
+		old_target = TargetValue.where("greenhouse_id = ? AND value_type_id = ? AND active = ?", params[:greenhouse_id], params[:value_type_id], true)[0]
 		value_type = ValueType.find(params[:value_type_id])
+		
 		new_value = params[:"#{value_type.name}_value"] 
-		if target.update_attributes(value: new_value)
-			 flash[:notice] = "Modification effectuée"
-			 redirect_to show_parameters_pages_path(id: params[:school_id], selected_greenhouse: params[:greenhouse_id])
-		else
-			 flash[:notice] = "Erreur lors de la modification"
-			 redirect_to :back
+
+		begin
+		ActiveRecord::Base.transaction do
+			new_target = TargetValue.create(old_target.attributes.except("id"))
+			new_target.update_attributes(value: new_value, created_at: Time.now, active: true, user_id: current_user.id)
+			old_target.update_attributes(deactivated_at: new_target.created_at, active: false)
 	  end
+
+		flash[:notice] = 'Modification effectuée'
+		redirect_to :back and return
+
+		rescue
+			flash[:notice] = "Erreur lors de la mise à jour"
+			redirect_to :back and return
+		end
 	end
 
 	def show_data
@@ -74,8 +85,17 @@ class PagesController < ApplicationController
 
 		unless @selected_greenhouse.blank?
 			@linked_data_cards = DataCard.where(greenhouse_id: @selected_greenhouse.id)
+			@hash_target_values = Hash.new
 			@value_types.each do |g|
-				instance_variable_set("@#{g.name}_values", Value.where("data_card_id in (?)", @linked_data_cards.collect(&:id)).select{|h| h.value_type_id == g.id}).sort{|b,c| b.created_at <=> c.created_at}
+				max_deactivated_at = TargetValue.where('greenhouse_id = ? AND value_type_id = ?',@selected_greenhouse.id,g.id).order('deactivated_at DESC').first.deactivated_at
+				all_values = Value.where("data_card_id in (?) AND value_type_id = ?", @linked_data_cards.collect(&:id),g.id)
+				
+				all_values.each do |y|
+					target = TargetValue.where('greenhouse_id = ? AND value_type_id = ? AND created_at < ? AND deactivated_at > ?', @selected_greenhouse.id,g.id,y.created_at,y.created_at).first
+					target ||= TargetValue.where('greenhouse_id = ? AND value_type_id = ? AND active = ?',@selected_greenhouse.id,g.id,true).first
+					@hash_target_values[:"id#{y.id}"] = target.value
+				end
+				instance_variable_set("@#{g.name}_values", all_values)
 			end	
 		end
 	end

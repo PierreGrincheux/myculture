@@ -1,6 +1,6 @@
 <h1> SHOW de DATA </h1>
 
-<b>Liste des serres disponibles</b><br/>
+<b>Liste des Serres disponibles</b><br/>
 <% unless @greenhouses.blank? %>
 <ol>
 	<% @greenhouses.each do |y| %>
@@ -11,7 +11,7 @@
 	Aucune serre n'est associée à cette école <br/>
 <% end %>
 
-<b>Liste des valeurs paur chaque types<b><br/><br/>
+<b>Liste des valeurs pour chaque types<b><br/><br/>
 		<% @value_types.each do |y| %>
 				<b> <%= VALUE_TYPES[:"#{y.name}"][0] %> </b>
 				<table class='table'>
@@ -19,8 +19,9 @@
 						<th> DataCard ID </th>
 						<th> Date </th>
 						<th> Valeur </th>
-						<% instance_variable_get("@#{y.name}_values").each do |k| %>
-								<tr> 
+						<th> Valeur cible du moment </th>
+						<% instance_variable_get("@#{y.name}_values").each do |k,v| %>
+								<tr>
 										<td>
 												<%= k.id %>
 										</td>
@@ -32,6 +33,9 @@
 										</td>
 										<td>
 												<%= print_value(k.value,y.name) %>
+										</td>
+										<td>
+												<%= print_value(@hash_target_values[:"id#{k.id}"], y.name) %>
 										</td>
 								</tr>
 						<% end %>

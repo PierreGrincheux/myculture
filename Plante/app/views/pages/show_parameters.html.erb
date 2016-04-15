@@ -1,6 +1,6 @@
 <h1> SHOW de "Modifier les Paramètres"</h1>
 
-<b>Liste des serres disponibles</b><br/>
+<b>Liste des Serres disponibles</b><br/>
 <% unless @greenhouses.blank? %>
 <ol>
 				<% @greenhouses.each do |y| %>
@@ -14,6 +14,7 @@
 <table class="table">
 	<th> Type de valeur </th>
 	<th> Valeur </th>
+	<th> Actions </th>
 
 	<% if current_user.teacher? %>
 		<% @value_types.each do |y| %>
