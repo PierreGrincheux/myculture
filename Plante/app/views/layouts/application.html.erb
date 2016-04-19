@@ -9,10 +9,11 @@
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <%= stylesheet_link_tag  'welcomes', media: 'all', 'data-turbolinks-track' => true %>
 </head>
-<body <% if !user_signed_in? %>class="jungle" <% end %> >
+<body>
 
+<% if user_signed_in? %>
+<div class="container">
 
-	<div class="container">
 
 		  <%= render "shared/navbar" %>
 
@@ -29,6 +30,9 @@
 		<h1><%= yield :header %></h1>
 	  <%= yield %>
 	</div>
+<% else %>
+				<%= yield :top_content%>
+<% end %>
 
 </body>
 </html>

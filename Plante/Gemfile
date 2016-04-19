@@ -39,6 +39,8 @@ gem 'greensock-rails', '~> 1.18', '>= 1.18.2.0'
 # Devise
 gem 'devise', '3.4.1'
 
+#Lodash
+gem 'lodash-rails'
 
 
 # Use ActiveModel has_secure_password
