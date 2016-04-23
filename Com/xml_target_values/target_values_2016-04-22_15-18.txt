@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<target-values type="array">
+  <target-value>
+    <id type="integer">6</id>
+    <value type="float">5.0</value>
+    <active type="boolean">true</active>
+    <user-id type="integer">1</user-id>
+    <value-type-id type="integer">6</value-type-id>
+    <created-at type="dateTime">2016-04-15T11:33:14Z</created-at>
+    <greenhouse-id type="integer">2</greenhouse-id>
+    <deactivated-at type="dateTime" nil="true"/>
+  </target-value>
+  <target-value>
+    <id type="integer">7</id>
+    <value type="float">9.0</value>
+    <active type="boolean">true</active>
+    <user-id type="integer">1</user-id>
+    <value-type-id type="integer">7</value-type-id>
+    <created-at type="dateTime">2016-04-15T11:33:19Z</created-at>
+    <greenhouse-id type="integer">2</greenhouse-id>
+    <deactivated-at type="dateTime" nil="true"/>
+  </target-value>
+  <target-value>
+    <id type="integer">8</id>
+    <value type="float">19.0</value>
+    <active type="boolean">true</active>
+    <user-id type="integer">1</user-id>
+    <value-type-id type="integer">8</value-type-id>
+    <created-at type="dateTime">2016-04-15T11:33:27Z</created-at>
+    <greenhouse-id type="integer">2</greenhouse-id>
+    <deactivated-at type="dateTime" nil="true"/>
+  </target-value>
+  <target-value>
+    <id type="integer">18</id>
+    <value type="float">24.0</value>
+    <active type="boolean">true</active>
+    <user-id type="integer">1</user-id>
+    <value-type-id type="integer">5</value-type-id>
+    <created-at type="dateTime">2016-04-18T19:40:31Z</created-at>
+    <greenhouse-id type="integer">2</greenhouse-id>
+    <deactivated-at type="dateTime">2016-04-15T11:26:09Z</deactivated-at>
+  </target-value>
+</target-values>

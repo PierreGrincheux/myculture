@@ -19,6 +19,9 @@ Rails.application.routes.draw do
 				get 'show_data', on: :collection
 				patch 'update_parameters', on: :collection
 		 end
+		
+		 resources :tests do
+		 end	 
 
   # Example resource route with options:
   #   resources :products do

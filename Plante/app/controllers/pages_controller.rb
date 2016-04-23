@@ -2,6 +2,7 @@ class PagesController < ApplicationController
 	before_filter :get_datas
 	
 	def index
+		puts "hello"
 		if user_signed_in?
 			if params[:ana_display] == "true"
 			else
