@@ -8,8 +8,12 @@ class HttpConnection
 		url = "#{url}" 
 		uri = URI.parse(url)
 		res = Net::HTTP.post_form(uri,hash_params)
+		
+		unless path_file == ""
+			File.open("#{path_file}", 'w') { |file| file.write(res.body) }
+			puts "XML file written"
+		else
 
-		File.open("#{path_file}", 'w') { |file| file.write(res.body) }
-		puts "XML file written"
+		end
 	end
 end

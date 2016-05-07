@@ -15,9 +15,10 @@
 <br/>
 <b>Liste des dernières valeurs</b><br/>
 <table class='table'>
-		<th> Type de Valeur </th>
-		<th> Valeur </th>
-		<th> Valeur cible </th>
+		<% @value_types_header.each do |v| %>
+			<th><%="#{v}"%></th>
+		<% end %>
+
 		<% @value_types.each do |y| %>
 				<tr>
 						<td>

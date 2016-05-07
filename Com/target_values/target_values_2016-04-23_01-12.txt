@@ -1,5 +1,0 @@
-value_type_id!!!value
-["value-type-id", "value-type-id", "value-type-id", "value-type-id"]!!!["value", "value", "value", "value"]
-["value-type-id", "value-type-id", "value-type-id", "value-type-id"]!!!["value", "value", "value", "value"]
-["value-type-id", "value-type-id", "value-type-id", "value-type-id"]!!!["value", "value", "value", "value"]
-["value-type-id", "value-type-id", "value-type-id", "value-type-id"]!!!["value", "value", "value", "value"]

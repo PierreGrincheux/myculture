@@ -23,6 +23,8 @@ class PagesController < ApplicationController
 			@selected_greenhouse = Greenhouse.find(@greenhouses[0].id) unless @greenhouses.blank?
 		end
 
+		@value_types_header = ['Type de valeur','Valeur','Valeur cible']
+
 		unless @selected_greenhouse.blank?
 			@linked_data_cards = DataCard.where(greenhouse_id: @selected_greenhouse.id)
 			@value_types.each do |g|
