@@ -8,6 +8,11 @@ class Action
 	def initialize
 	end
 
+	def setup
+		Dir.mkdir('files_xml') unless File.directory?('files_xml')
+		Dir.mkdir('files_processed') unless File.directory?('files_processed')
+	end
+
 	
 	def get_data(type)
 		f = File.open('log/supervision.log','a')
@@ -21,14 +26,14 @@ class Action
 		case type
 			when "value_types"
 				hash_params = {request_type: "get_value_types", greenhouse_serial_nbr: GREENHOUSE_SERIAL_NBR}
-				xml_file_path = "xml_files/value_types.txt"
-				processed_file_path = "processed_files/value_types.txt"
+				xml_file_path = "files_xml/value_types.txt"
+				processed_file_path = "files_processed/value_types.txt"
 				to_save = ['id','name']
 
 			when "target_values"
 				hash_params = {request_type: "get_target_value", greenhouse_serial_nbr: GREENHOUSE_SERIAL_NBR}
-				xml_file_path = "xml_files/target_values.txt"
-				processed_file_path = "processed_files/target_values.txt"
+				xml_file_path = "files_xml/target_values.txt"
+				processed_file_path = "files_processed/target_values.txt"
 				to_save = ['value-type-id','value']
 			end
 
@@ -110,6 +115,11 @@ class Action
 		end
 	end
 
+
+	#############################################################
+	################## PREVIOUS METHOD PARTIALS #################
+	#############################################################
+
 	def value_types(db,array_values,f)
 		array_values.each do |v|
 			f.puts "Values => #{v.join(', ')}"
@@ -138,6 +148,7 @@ class Action
 		end
 	end
 
+
 	def target_values(db,array_values,f)
 		array_values.each do |v|
 			f.puts "Values => #{v.join(', ')}"
@@ -165,6 +176,9 @@ class Action
 		end
 	end
 
+	###########################################################
+	###########################################################
+	###########################################################
 
 	def post_new_values
 		f = File.open("log/supervision.log", "a")
