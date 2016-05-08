@@ -11,3 +11,7 @@ VALUE_TYPES = {
 	:illumination => ["Éclairement","lux","lux"]
 }
 
+HTTP_CONNECTION_TYPES = {
+				:get_value_types => ['envoie des types de valeurs'],
+				:get_target_value => ['envoie des valeurs cibles']
+}

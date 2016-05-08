@@ -1,8 +1,8 @@
 class PagesController < ApplicationController
+	before_filter :verify_authorization, except: ["index"] 
 	before_filter :get_datas
 	
 	def index
-		puts "hello"
 		if user_signed_in?
 			if params[:ana_display] == "true"
 			else
@@ -104,6 +104,16 @@ class PagesController < ApplicationController
 	end
 
 	private
+
+	def verify_authorization
+		if current_user.super_admin?
+			return true
+		end
+
+		if current_user.school.id != params[:id]
+			raise
+		end
+	end
 
 	def get_datas
 		@greenhouses = Greenhouse.where(school_id: params[:id])

@@ -1,0 +1,14 @@
+<h1> Index de teacher/supervisions </h1>
+<br/><br/>
+<h3>État des connections des serres avec le serveur web</h3>
+<% index = 1 %>
+<% HTTP_CONNECTION_TYPES.each do |k,v| %>
+				<%= index %> - <%= v[0].capitalize%><br/>
+			<% unless @logs[:"#{k}"].blank? %>
+			<% @logs[:"#{k}"].each do |v| %>
+							Serre : <%= "#{v[0]}" %> - Dernière connexion : <%= "#{v[1]}" %><br/>
+			<% end %>
+		<% end %>
+		<% index += 1 %>
+		<br/>
+<% end %>

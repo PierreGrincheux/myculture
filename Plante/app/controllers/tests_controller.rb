@@ -12,12 +12,13 @@ skip_before_filter  :verify_authenticity_token
 				f.info "######## STARTING get_value_types ########"
 				f.info ""
 
+				greenhouse_id = Greenhouse.where(serial_nbr: params[:greenhouse_serial_nbr]).first.id
 				@result = ValueType.all
 				respond_to do |format|
 					format.xml{render xml: @result}
 				end		
 				f.info "Answer sent"
-
+				
 			#Envoie à la serre les target value
 			when "get_target_value"
 				f = Logger.new("log/http_request_supervision.log")
@@ -31,10 +32,17 @@ skip_before_filter  :verify_authenticity_token
 				end
 				f.info "Answer sent"
 
+
 			#Reçoit les nouvelles valeurs et les intègres à la bdd
 			when "post_new_values"
+				greenhouse_id = Greenhouse.where(serial_nbr: params[:greenhouse_serial_nbr]).first.id
 				post_new_values
 		end
+
+		log = HttpConnectionLog.new
+		log.connection_type = params[:request_type]
+		log.greenhouse_id = greenhouse_id
+		log.save
 			
 	end
 

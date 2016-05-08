@@ -189,7 +189,7 @@ class Action
 
 		f.puts "Starting 'post_new_values method at #{Time.now}"
 
-		hash_params = {request_type: "post_new_values", greenhouse_id: @@greenhouse_id}
+		hash_params = {request_type: "post_new_values", greenhouse_serial_nbr: GREENHOUSE_SERIAL_NBR }
 
 		array_values = parse_csv_file("new_values","!!!")
 		f.puts "csv file parsed ; array returned : #{array_values}"
