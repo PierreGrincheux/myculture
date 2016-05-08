@@ -1,3 +1,5 @@
+<%= render :partial => "teacher/nav" %>
+
 <h1> Index de teacher/supervisions </h1>
 <br/><br/>
 <h3>État des connections des serres avec le serveur web</h3>
@@ -6,7 +8,7 @@
 				<%= index %> - <%= v[0].capitalize%><br/>
 			<% unless @logs[:"#{k}"].blank? %>
 			<% @logs[:"#{k}"].each do |v| %>
-							Serre : <%= "#{v[0]}" %> - Dernière connexion : <%= "#{v[1]}" %><br/>
+							Serre : <b><%= "#{v[0]}" %></b> - Dernière connexion : <b><%= "#{v[1]}" %></b><br/>
 			<% end %>
 		<% end %>
 		<% index += 1 %>
