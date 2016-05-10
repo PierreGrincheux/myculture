@@ -3,13 +3,30 @@ class Teacher::SupervisionsController < ApplicationController
 
 	def index
 		all_operations = HTTP_CONNECTION_TYPES.keys
-		all_greenhouses = Greenhouse.where("school_id = ?", params[:id])
+		@all_greenhouses = Greenhouse.where("school_id = ?", params[:id])
+		
+		##### VALUE TYPES
+		value_types = ValueType.all
+		@all_value_types = Hash.new
+		value_types.each do |v|
+			@all_value_types[:"#{v.id}"] = v.name
+		end
+		
+		
+		##### HTTP LOGS
 		@logs = Hash.new
-		all_operations.each do |v|
-			@logs[:"#{v}"] = Array.new
-			all_greenhouses.each do |t|
-				@logs[:"#{v}"] << [t.serial_nbr, HttpConnectionLog.where("connection_type = ? AND greenhouse_id = ?", v.to_s, t.id).reverse.first.created_at.localtime.strftime("%d/%m/%Y %H:%M:%S")]
+		@all_greenhouses.each do |t|
+			@logs[:"#{t.serial_nbr}"] = Array.new
+			all_operations.each do |v|
+				@logs[:"#{t.serial_nbr}"] << [v, HttpConnectionLog.where("connection_type = ? AND greenhouse_id = ?", v.to_s, t.id).reverse.first.created_at.localtime.strftime("%d/%m/%Y %H:%M:%S")]
 			end
+		end
+
+		##### TARGET VALUES
+		@all_target_values = Array.new
+		req = TargetValue.where("greenhouse_id IN (?) AND active = ?", @all_greenhouses.collect(&:id), true)
+		req.each do |k|
+			@all_target_values << [k.value_type_id,k.value]
 		end
 	end
 
@@ -20,7 +37,7 @@ private
 			return true
 		end
 
-		if current_user.school.id != params[:id]
+		if current_user.school.id != params[:id] || !current_user.teacher?
 			raise
 		end
 	end

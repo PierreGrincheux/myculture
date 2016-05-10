@@ -1,0 +1,20 @@
+<% if !@media_file.errors.empty? %>
+  <div class = "alert alert-error">
+      
+		<ul>
+			<% @media_file.errors.full_messages.each do |msg| %>
+			  <li><%= msg %></li>
+			<% end %>
+		</ul>
+					       
+	</div>
+<% end %>
+
+<div class = "well">
+	<%= form_for @media_file, url: teacher_media_file_handlers_path, html: { multipart: true } do |f| %>
+		<%= f.label :title %>&nbsp<%= f.text_field :title %><br/>
+		<%= f.label :description %>&nbsp<%= f.text_area :description %><br/>
+		<%= f.label :attachement %>&nbsp<%= f.file_field :attachement %><br/>
+		<%= f.submit "Enregistrer", class: "btn" %>
+	<% end %>
+</div>

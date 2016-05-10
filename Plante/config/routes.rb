@@ -1,4 +1,28 @@
 Rails.application.routes.draw do
+  namespace :teacher do
+  get 'media_file_handlers/index'
+  end
+
+  namespace :teacher do
+  get 'media_file_handlers/new'
+  end
+
+  namespace :teacher do
+  get 'media_file_handlers/create'
+  end
+
+  namespace :teacher do
+  get 'media_file_handlers/destroy'
+  end
+
+  get 'media_file_handlers/index'
+
+  get 'media_file_handlers/new'
+
+  get 'media_file_handlers/create'
+
+  get 'media_file_handlers/destroy'
+
   devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -77,7 +101,9 @@ Rails.application.routes.draw do
 
 		namespace :teacher do
 			resources :supervisions do
+			end
 
+			resources :media_file_handlers do
 			end
 		end
 

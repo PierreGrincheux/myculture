@@ -3,14 +3,14 @@
 <h1> Index de teacher/supervisions </h1>
 <br/><br/>
 <h3>État des connections des serres avec le serveur web</h3>
-<% index = 1 %>
-<% HTTP_CONNECTION_TYPES.each do |k,v| %>
-				<%= index %> - <%= v[0].capitalize%><br/>
-			<% unless @logs[:"#{k}"].blank? %>
-			<% @logs[:"#{k}"].each do |v| %>
-							Serre : <b><%= "#{v[0]}" %></b> - Dernière connexion : <b><%= "#{v[1]}" %></b><br/>
-			<% end %>
-		<% end %>
-		<% index += 1 %>
-		<br/>
+
+<% @all_greenhouses.collect(&:serial_nbr).each do |v| %>
+	<h2> Serre <%= v %></h2>
+	
+	<b> HTTP logs :</b><br/>
+	<% @logs[:"#{v}"].each do |t|	%>
+		<%= HTTP_CONNECTION_TYPES[:"#{t[0]}"][0].capitalize %> => <b><%= t[1] %></b><br/>
+	<% end %>
+
 <% end %>
+

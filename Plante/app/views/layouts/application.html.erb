@@ -14,15 +14,15 @@
 
 	<div class="container">
 
-		  <%= render "shared/navbar" %>
-
-	  <% flash.each do |key, value| %>
-					    <div class="alert alert-<%= key %>">
-	      <%= value %>
-	    </div>
-	  <% end %>
+		<%= render "shared/navbar" %>
+		<br/><br/>
+		<% if !flash[:notice].blank? %>
+			<div class = "alert alert-info">
+				<%= flash[:notice] %>
+			</div>
+		<% end %>
 	</div>
-	
+
 	<%= yield :top_content %>
 
 	<div class="container">

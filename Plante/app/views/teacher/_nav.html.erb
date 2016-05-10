@@ -1,1 +1,11 @@
-<%= link_to "Vision Générale", teacher_supervisions_path(id: params[:id]) %> | <%= link_to "Fichiers sur le serveur", "" %> | <%= link_to "Template vue élève" %>
+<ul class="nav nav-tabs">
+	<li class="nav-item <%= "active" if request.env['PATH_INFO'] == teacher_supervisions_path %>">
+		<%= link_to "Vision Générale", teacher_supervisions_path(id: params[:id]) %>
+	</li>
+	<li class="nav-item <%= "active" if request.env['PATH_INFO'] == teacher_media_file_handlers_path %>">
+		<%= link_to "Fichiers sur le serveur", teacher_media_file_handlers_path(id: params[:id]) %>
+	</li>
+	<li class="nav-item <%= "active" if request.env['PATH_INFO'] == true %>">
+		<%= link_to "Template vue élève" %>
+	</li>
+</ul>

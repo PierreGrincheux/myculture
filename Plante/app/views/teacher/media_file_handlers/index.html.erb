@@ -1,0 +1,31 @@
+
+
+<%= render :partial => "teacher/nav" %>
+<br/><br/>
+<%= link_to "Nouveau fichier", new_teacher_media_file_handler_path, class: "btn btn-primary" %>
+<br />
+<br />
+
+<table class = "table table-bordered table-striped">
+	<thead>.
+	  <tr>
+			<th>Titre</th>
+			<th>Description</th>
+	    <th width=25% colspan="2">Actions</th>
+		</tr>
+	</thead>
+	
+  <tbody>
+    <% @media_files.each do |media_file| %>
+					          
+      <tr>
+				<td><%= media_file.title %></td>
+				<td><%= media_file.description %>
+				<td><%= link_to "Télécharger", media_file.attachement_url, class: "btn btn-primary" %></td>
+				<td><%= button_to "Supprimer", teacher_media_file_handler_path(id: media_file.id), method: :delete, class: "btn btn-danger", confirm: "Are you sure that you wish to delete #{media_file}?" %></td></td>
+			</tr>
+							          
+		<% end %>
+	</tbody>
+													   
+</table>
