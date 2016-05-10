@@ -10,11 +10,13 @@
 	</div>
 <% end %>
 
+
 <div class = "well">
+	<h1> Importer un nouveau fichier </h1><br/><br/>
 	<%= form_for @media_file, url: teacher_media_file_handlers_path, html: { multipart: true } do |f| %>
-		<%= f.label :title %>&nbsp<%= f.text_field :title %><br/>
-		<%= f.label :description %>&nbsp<%= f.text_area :description %><br/>
-		<%= f.label :attachement %>&nbsp<%= f.file_field :attachement %><br/>
-		<%= f.submit "Enregistrer", class: "btn" %>
+					<%= f.label :title, "Titre :", :class => "col-md-3" %><%= f.text_field :title, :class => "col-md-3" %><br/><br/>
+					<%= f.label :description, "Description :", :class => "col-md-3" %><%= f.text_area :description, :class => "col-md-3" %><br/><br><br/><br/>
+					<%= f.label :attachement, "Fichier à ajouter :", :class => "col-md-3" %><%= f.file_field :attachement, :class => "col-md-3" %><br/><br><br/><br/>
+					<%= f.submit "Enregistrer", class: "btn btn-primary" %>
 	<% end %>
 </div>

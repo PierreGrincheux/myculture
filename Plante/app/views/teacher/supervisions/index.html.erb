@@ -1,13 +1,11 @@
 <%= render :partial => "teacher/nav" %>
 
-<h1> Index de teacher/supervisions </h1>
-<br/><br/>
-<h3>État des connections des serres avec le serveur web</h3>
-
+<h1> Synthèse de l'état des différentes serres </h1>
+<br/>
 <% @all_greenhouses.collect(&:serial_nbr).each do |v| %>
-	<h2> Serre <%= v %></h2>
+	<h3> Serre <%= v %></h3>
 	
-	<b> HTTP logs :</b><br/>
+	<b> Logs échanges serre/serveur :</b><br/>
 	<% @logs[:"#{v}"].each do |t|	%>
 		<%= HTTP_CONNECTION_TYPES[:"#{t[0]}"][0].capitalize %> => <b><%= t[1] %></b><br/>
 	<% end %>

@@ -7,9 +7,10 @@
 <br />
 
 <table class = "table table-bordered table-striped">
-	<thead>.
+	<thead>
 	  <tr>
-			<th>Titre</th>
+			<th width=15%>Titre</th>
+			<th width=20%>Nom du fichier</th>
 			<th>Description</th>
 	    <th width=25% colspan="2">Actions</th>
 		</tr>
@@ -20,7 +21,8 @@
 					          
       <tr>
 				<td><%= media_file.title %></td>
-				<td><%= media_file.description %>
+				<td><%= media_file.attachement.to_s.split('/')[-1] %></td>
+				<td><%= media_file.description %></td>
 				<td><%= link_to "Télécharger", media_file.attachement_url, class: "btn btn-primary" %></td>
 				<td><%= button_to "Supprimer", teacher_media_file_handler_path(id: media_file.id), method: :delete, class: "btn btn-danger", confirm: "Are you sure that you wish to delete #{media_file}?" %></td></td>
 			</tr>
