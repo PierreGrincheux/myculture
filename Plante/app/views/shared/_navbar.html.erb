@@ -17,7 +17,7 @@
 							<li><%= link_to "Situation actuelle", show_current_state_pages_path(id: params[:id], selected_greenhouse: params[:selected_greenhouse]), class: "nav_btn" %></li>
 							<li><%= link_to "Modifier les paramètres", show_parameters_pages_path(id: params[:id], selected_greenhouse: params[:selected_greenhouse]), class: "nav_btn"%></li>
 							<li><%= link_to "Évolution", show_data_pages_path(id: params[:id], selected_greenhouse: params[:selected_greenhouse]), class:"nav_btn" %></li>
-							<li><%= link_to "Expériences", "", class: "nav_btn" %></li>
+							<li><%= link_to "Supports Éducatifs", show_media_file_pages_path(id: params[:id]), class: "nav_btn" %></li>
 							<% if current_user.super_admin? || current_user.teacher? %>
 								<li class="dropdown">
 	      	    	  <a data-toggle="dropdown" class="dropdown-toggle" href="#">Administration<b class="caret"></b></a>

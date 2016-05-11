@@ -7,6 +7,10 @@ module ApplicationHelper
 		return date.strftime("%d/%m/%Y %H:%M").to_s
 	end
 
+	def convert_date_short(date)
+		return date.strftime("%d/%m/%Y").to_s
+	end
+
 	def print_value(value, name)
 		value ||= 'NA'
 		return "#{value} #{VALUE_TYPES[:"#{name}"][2]}"

@@ -103,6 +103,10 @@ class PagesController < ApplicationController
 		end
 	end
 
+	def show_media_file
+		@media_files = MediaFile.all.select{|t| t.school.collect(&:id).include?(params[:id].to_i)}
+	end
+
 	private
 
 	def verify_authorization
