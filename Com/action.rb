@@ -187,7 +187,7 @@ class Action
 		f.puts "#######################################"
 		f.puts ""
 
-		f.puts "Starting 'post_new_values method at #{Time.now}"
+		f.puts "Starting 'post_new_values' method at #{Time.now}"
 
 		hash_params = {request_type: "post_new_values", greenhouse_serial_nbr: GREENHOUSE_SERIAL_NBR }
 
