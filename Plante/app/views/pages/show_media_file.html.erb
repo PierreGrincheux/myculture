@@ -1,0 +1,23 @@
+<h1> Supports éducatifs </h1>
+<br/><br/>
+
+<% @media_files.each do |media_file| %>
+ <div class="well">
+	<h3><%= media_file.title.capitalize %>&nbsp &nbsp<small>Ajouté le <%= convert_date_short(media_file.created_at) %></small></h3	>
+
+	<table class="table table-condensed">
+		<tr>
+			<td class="col-md-6">
+				<h4>Description :</h4>
+				<%= media_file.description %>
+			</td>
+			<td class="col-md-6">
+				<h4> Télécharger <i><%= media_file.attachement.to_s.split('/')[-1] %></i> :</h4>
+				<%= link_to media_file.attachement_url, class: "btn btn-primary" do %>
+					<span class="glyphicon glyphicon-save" aria-hidden="true"></span> Télécharger
+				<% end %>
+			</td>
+		</tr>
+	</table>
+ </div>
+<% end %>
