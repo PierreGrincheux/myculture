@@ -15,7 +15,23 @@
 //= require turbolinks
 //= require bootstrap-sprockets
 //= require snapsvg
+//= require fullpage
 //= require 'greensock/TweenLite'
 //= require 'greensock/easing/EasePack'
 //= require 'greensock/jquery.gsap.js'
 //= require_tree .
+
+
+$(document).ready(function (){
+/*fullpage on home page*/
+
+    $(function(){
+      $('#landing .container').fullpage({
+        //anchors: ['firstPage', 'secondPage', '3rdPage','4thPage','5thPage','6thPage'],
+        navigation: false,
+        //navigationPosition: 'right',
+        //navigationTooltips: ['Départ', 'Date', 'Budget', 'Ambiances', 'Villes', 'Validation']
+      });
+    });
+
+});

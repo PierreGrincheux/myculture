@@ -33,6 +33,9 @@ gem 'modernizr-rails', '~> 2.7', '>= 2.7.1'
 #snap svg
 gem 'snapsvg-rails', '~> 0.4.1'
 
+#fullpage
+gem 'fullpage-rails', '~> 0.0.1'
+
 #greenSock
 gem 'greensock-rails', '~> 1.18', '>= 1.18.2.0'
 
