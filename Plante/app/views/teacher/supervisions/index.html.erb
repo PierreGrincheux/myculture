@@ -3,12 +3,16 @@
 <h1> Synthèse de l'état des différentes serres </h1>
 <br/>
 <% @all_greenhouses.collect(&:serial_nbr).each do |v| %>
-	<h3> Serre <%= v %></h3>
-	
-	<b> Logs échanges serre/serveur :</b><br/>
-	<% @logs[:"#{v}"].each do |t|	%>
-		<%= HTTP_CONNECTION_TYPES[:"#{t[0]}"][0].capitalize %> => <b><%= t[1] %></b><br/>
-	<% end %>
-
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h4><b>Serre "<%= v %>"</b></h4>
+		</div>
+		<div class="panel-body">
+			<b> Logs échanges serre/serveur :</b><br/>
+			<% @logs[:"#{v}"].each do |t|	%>
+				<%= HTTP_CONNECTION_TYPES[:"#{t[0]}"][0].capitalize %> => <b><%= t[1] %></b><br/>
+			<% end %>
+		</div>
+	</div>
 <% end %>
 

@@ -1,6 +1,15 @@
 <h1> Supports éducatifs </h1>
 <br/><br/>
 
+<b>Trier par type de fichiers:</b>
+<div class="btn-group btn-group-justified" role="group"	aria-label="...">
+	<%= link_to "Tous", show_media_file_pages_path(id: params[:id], search_type: "all"), class:"btn btn-default #{"active" if (params[:search_type] == "all" || params[:search_type].blank?)}" %>
+	<% @media_file_types.each do |v| %>
+		<%= link_to v.translated_name, show_media_file_pages_path(id: params[:id], search_type: v.name), class: "btn btn-default #{"active" if params[:search_type] == v.name}" %>
+	<% end %>
+</div>
+<br/><br/>
+
 <% @media_files.each do |media_file| %>
  <div class="well">
 	<h3><%= media_file.title.capitalize %>&nbsp &nbsp<small>Ajouté le <%= convert_date_short(media_file.created_at) %></small></h3	>
