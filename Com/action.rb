@@ -217,6 +217,31 @@ class Action
 		f.close
 	end
 
+	def take_picture
+		i=0
+		while i < 9 do
+		nb_pics_taken = 8 
+		puts "Taking photo"
+		
+		Dir.chdir('/home/pierre/Documents/Cours/Puissance3/myculture/Com/pictures/unprocessed') do 
+		puts "moved to #{Dir.pwd}"
+		system "mplayer tv:// -tv driver=v4l2:width=720:height=480:device=/dev/video1 -vo png -frames #{nb_pics_taken}"
+		end
+
+		all_files = Dir.entries('/home/pierre/Documents/Cours/Puissance3/myculture/Com/pictures/unprocessed')
+		puts "all_files = #{all_files}"
+
+		namefile = all_files.sort.drop(nb_pics_taken + 1)[0]
+		puts "namefile = #{namefile}"
+
+		File.rename("/home/pierre/Documents/Cours/Puissance3/myculture/Com/pictures/unprocessed/#{namefile}", "/home/pierre/Documents/Cours/Puissance3/myculture/Com/pictures/processed/#{Time.now.strftime("%Y%m%d%H%M%S")}_#{GREENHOUSE_SERIAL_NBR}_pic.png")
+		
+		puts "done"
+		i += 1
+		end
+
+	end
+
 	private
 
 	def parse_csv_file(type,delimiter)

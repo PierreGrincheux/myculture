@@ -17,7 +17,8 @@
 					<%= hidden_field_tag :school_id, params[:school_id] %>
 					<%= f.label :title, "Titre :", :class => "col-md-3" %><%= f.text_field :title, :class => "col-md-3" %><br/><br/>
 					<%= f.label :description, "Description :", :class => "col-md-3" %><%= f.text_area :description, :class => "col-md-3" %><br/><br><br/><br/>
-					<%= f.label :to_show, "À afficher dans la partie élève ?", :class => "col-md-3" %><%= f.select :to_show, [["NON",false],["OUI",true]] %><br/><br>
+					<%= f.label :type, "Type de fichier :", :class => "col-md-3" %><%= f.select :media_file_type_id, MediaFileType.all.collect{|t| [t.translated_name,t.id]}, {:prompt => "-- choisir un type de fichier --"},:class => "col-md-3" %><br/><br/><br/>
+					<%= f.label :to_show, "Afficher dans la partie élève ?", :class => "col-md-3" %><%= f.select :to_show, [["NON",false],["OUI",true]] %><br/><br/>
 					<%= f.label :attachement, "Fichier à ajouter :", :class => "col-md-3" %><%= f.file_field :attachement, :class => "col-md-3" %><br/><br><br/><br/>
 					<%= f.submit "Enregistrer", class: "btn btn-primary" %>
 	<% end %>

@@ -6,24 +6,33 @@
 <br />
 <br />
 
+<b>Trier par type de fichiers:</b>
+<div class="btn-group btn-group-justified" role="group"	aria-label="...">
+	<%= link_to "Tous", teacher_media_file_handlers_path(id: params[:id], search_type: "all"), class:"btn btn-default #{"active" if (params[:search_type] == "all" || params[:search_type].blank?)}" %>
+	<% @media_file_types.each do |v| %>
+		<%= link_to v.translated_name, teacher_media_file_handlers_path(id: params[:id], search_type: v.name), class: "btn btn-default #{"active" if params[:search_type] == v.name}" %>
+	<% end %>
+</div>
+
+<br/>
+
 <table class = "table table-bordered table-striped">
 	<thead>
 	  <tr>
-			<th width=15%>Titre</th>
-			<th width=20%>Nom du fichier</th>
-			<th>Description</th>
+			<th width=40%>Titre</th>
+			<th width=25%>Nom du fichier</th>
+			<th width=15%>Type</th>
 			<th width=5%>Actif</th>
 	    <th width=15% colspan="3">Actions</th>
 		</tr>
 	</thead>
 	
-  <tbody>
+	<tbody>
     <% @media_files.each do |media_file| %>
-					          
       <tr>
 				<td><%= media_file.title %></td>
 				<td><%= media_file.attachement.to_s.split('/')[-1] %></td>
-				<td><%= media_file.description %></td>
+				<td><%= media_file.media_file_type.translated_name %></td>
 				<td><%= media_file.to_show == true ? "V" : "F" %></td>
 				<td>
 					<%= link_to media_file.attachement_url, class: "btn btn-primary" do %>
