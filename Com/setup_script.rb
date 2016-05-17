@@ -96,14 +96,14 @@ end
 
 action = Action.new
 
-#### Preparing different foldersa
-puts "setup"
-action.setup
-
-#### Adding value_types to database
-puts "get value_types"
-action.get_data('value_types')
-
-#### Adding target_values to database
-puts "get target_values"
-action.get_data('target_values')
+##### Preparing different folders
+#puts "setup"
+#action.setup
+#
+##### Adding value_types to database
+#puts "get value_types"
+#action.get_data('value_types')
+#
+##### Adding target_values to database
+#puts "get target_values"
+#action.get_data('target_values')

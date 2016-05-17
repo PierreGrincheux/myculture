@@ -11,6 +11,9 @@ class Action
 	def setup
 		Dir.mkdir('files_xml') unless File.directory?('files_xml')
 		Dir.mkdir('files_processed') unless File.directory?('files_processed')
+		Dir.mkdir('pictures') unless File.directory?('pictures')
+		Dir.mkdir('pictures/unprocessed') unless File.directory?('pictures/unprocessed')
+		Dir.mkdir('pictures/processed') unless File.directory?('pictures/processed')
 	end
 
 	
@@ -181,8 +184,8 @@ class Action
 	###########################################################
 
 	def post_new_values
-		f = File.open("log/supervision.log", "a")
 
+		f = File.open("log/supervision.log", "a")
 		f.puts ""
 		f.puts "#######################################"
 		f.puts ""
@@ -199,7 +202,7 @@ class Action
 				#v[1] = value_type_id ; v[2] = value ; v[3] = created_at
 					
 					f.puts "Looking for value type name in db"
-					db = SQLite3::Database.open @@db_name
+					db = SQLite3::Database.open DB_NAME
 						value_type_name = db.execute "SELECT name FROM value_type WHERE rowid = #{v[0]}"
 					db.close
 
@@ -211,36 +214,60 @@ class Action
 		end
 		
 		f.puts "SENDING VALUES"
-		HttpConnection.new(@@target_url,"",hash_params)
+		HttpConnection.new(TARGET_URL,"",hash_params)
 		f.puts "HTTP CONNECTION DONE"
 
 		f.close
 	end
 
+
+
+
 	def take_picture
-		i=0
-		while i < 9 do
-		nb_pics_taken = 8 
-		puts "Taking photo"
-		
-		Dir.chdir('/home/pierre/Documents/Cours/Puissance3/myculture/Com/pictures/unprocessed') do 
-		puts "moved to #{Dir.pwd}"
-		system "mplayer tv:// -tv driver=v4l2:width=720:height=480:device=/dev/video1 -vo png -frames #{nb_pics_taken}"
+		f = File.open("log/supervision.log", "a")
+		f.puts ""
+		f.puts "#######################################"
+		f.puts ""
+
+		f.puts "Starting 'take_picture' methood at #{Time.now}"
+
+		unless File.exist?(WEBCAM_PATH)
+			puts "ERROR NO WEBCAM FOUND"
+			f.puts "ERROR OCCURED : NO WEBCAM FOUND AT #{WEBCAM_PATH}"
+			online = false
+		else
+			online = true
+			i=0
+			nb_pics_taken = 8 
+			f.puts "Nb photos taken : #{nb_pics_taken}"
+			puts ""
+			puts ""
+			puts "Taking photo"
+			
+			#Dir.chdir(UNPROCESSED_PICS_PATH) do 
+			#puts "moved to #{Dir.pwd}"
+			f.puts "Taking photo ..."
+			system  WEBCAM_COMMAND + "#{nb_pics_taken}"
+			system "mv *.png #{UNPROCESSED_PICS_PATH}"
+			#end
+
+			all_files = Dir.entries(UNPROCESSED_PICS_PATH)
+			puts "all_files = #{all_files}"
+			f.puts "All files = #{all_files}"
+
+			namefile = all_files.sort.drop(nb_pics_taken + 1)[0]
+			puts "namefile = #{namefile}"
+			puts "Namefile = #{namefile}"
+
+			File.rename("#{UNPROCESSED_PICS_PATH}/#{namefile}", "#{PROCESSED_PICS_PATH}/#{Time.now.strftime("%Y%m%d%H%M%S")}_#{GREENHOUSE_SERIAL_NBR}_pic.png")
+			
+			f.puts "PHOTO PROCESS DONE"
+			i += 1
 		end
-
-		all_files = Dir.entries('/home/pierre/Documents/Cours/Puissance3/myculture/Com/pictures/unprocessed')
-		puts "all_files = #{all_files}"
-
-		namefile = all_files.sort.drop(nb_pics_taken + 1)[0]
-		puts "namefile = #{namefile}"
-
-		File.rename("/home/pierre/Documents/Cours/Puissance3/myculture/Com/pictures/unprocessed/#{namefile}", "/home/pierre/Documents/Cours/Puissance3/myculture/Com/pictures/processed/#{Time.now.strftime("%Y%m%d%H%M%S")}_#{GREENHOUSE_SERIAL_NBR}_pic.png")
-		
-		puts "done"
-		i += 1
-		end
-
 	end
+
+
+
 
 	private
 
