@@ -1,3 +1,4 @@
+
 <h1> SHOW de DATA </h1>
 
 <b>Liste des Serres disponibles</b><br/>
@@ -11,15 +12,27 @@
 	Aucune serre n'est associée à cette école <br/>
 <% end %>
 
+<div style="width:100%;height:400px;">
+<svg id="chart">
+</svg>
+<% @value_types.collect(&:name).each do |v|%>
+<div id="<%= v %>-value" data-source="<%=  ( ["#{VALUE_TYPES[:"#{v}"][0]}"] + instance_variable_get("@#{v}_values").collect{ |y| y.value}).join('!')  %>"></div>
+<div id="<%= v %>-date" data-source="<%= (['x'] + @temperature_values.collect{ |y| y.created_at.iso8601}).join('!')  %>"></div>
+<% end %>  		
+</div>
+
+
 <b>Liste des valeurs pour chaque types<b><br/><br/>
 		<% @value_types.each do |y| %>
 				<b> <%= VALUE_TYPES[:"#{y.name}"][0] %> </b>
-				<table class='table'>
+				<table class='table table-hover table-bordered'>
+					<tr style="background-color:white;">
 						<th> ID </th>
 						<th> DataCard ID </th>
 						<th> Date </th>
 						<th> Valeur </th>
 						<th> Valeur cible du moment </th>
+					</tr>
 						<% instance_variable_get("@#{y.name}_values").each do |k,v| %>
 								<tr>
 										<td>
@@ -45,8 +58,4 @@
 <br/>
 <br/>
 
-
-
-
-<svg class="chart"></svg>
-   		
+<%= javascript_include_tag "data_show.js" %>

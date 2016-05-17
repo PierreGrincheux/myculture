@@ -13,6 +13,11 @@ class PagesController < ApplicationController
 					redirect_to show_current_state_pages_path(id: school_id)
 				end
 			end
+		else
+			render "index"
+			#respond_to do |format|
+					#format.js {render inline: "location.reload();" }
+			#end	
 		end
 	end
 
