@@ -4680,3 +4680,5633 @@ Values => 5, 31.0
 Found - [[4]]
 Updated - value = 31.0
 Data added successfully
+
+#####################################################
+
+Starting setup at 2016-05-16 17:22:14 +0200
+database created
+after dropping all tables if exists
+after target_value table creation
+after value_type table creation
+after value table created
+
+#####################################################
+
+Starting setup at 2016-05-16 17:22:42 +0200
+database created
+after dropping all tables if exists
+after target_value table creation
+after value_type table creation
+after value table created
+
+#################################################
+
+STARTING 'get_datas' for value_types at 2016-05-16 17:22:42 +0200
+
+#################################################
+
+STARTING 'get_datas' for value_types at 2016-05-16 17:23:09 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for value_types at 2016-05-16 17:23:09 +0200
+New datas => [["5", "temperature"], ["6", "air_humidity"], ["7", "soil_humidity"], ["8", "illumination"]]
+Database opened
+Values => 5, temperature
+cc_value_type_id = []
+Not found
+Inserted - value = temperature
+Values => 6, air_humidity
+cc_value_type_id = []
+Not found
+Inserted - value = air_humidity
+Values => 7, soil_humidity
+cc_value_type_id = []
+Not found
+Inserted - value = soil_humidity
+Values => 8, illumination
+cc_value_type_id = []
+Not found
+Inserted - value = illumination
+Data added successfully
+
+#####################################################
+
+Starting setup at 2016-05-16 17:23:09 +0200
+database created
+after dropping all tables if exists
+after target_value table creation
+after value_type table creation
+after value table created
+
+#################################################
+
+STARTING 'get_datas' for value_types at 2016-05-16 17:24:15 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for value_types at 2016-05-16 17:24:15 +0200
+New datas => [["5", "temperature"], ["6", "air_humidity"], ["7", "soil_humidity"], ["8", "illumination"]]
+Database opened
+Values => 5, temperature
+cc_value_type_id = []
+Not found
+Inserted - value = temperature
+Values => 6, air_humidity
+cc_value_type_id = []
+Not found
+Inserted - value = air_humidity
+Values => 7, soil_humidity
+cc_value_type_id = []
+Not found
+Inserted - value = soil_humidity
+Values => 8, illumination
+cc_value_type_id = []
+Not found
+Inserted - value = illumination
+Data added successfully
+
+#####################################################
+
+Starting setup at 2016-05-16 17:24:15 +0200
+database created
+after dropping all tables if exists
+after target_value table creation
+after value_type table creation
+after value table created
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 17:24:16 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 17:24:16 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 17:24:17 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 17:24:18 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:24:17 +0200
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:24:16 +0200
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:24:18 +0200
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:24:16 +0200
+
+#################################################
+
+STARTING 'get_datas' for value_types at 2016-05-16 17:27:31 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for value_types at 2016-05-16 17:27:31 +0200
+New datas => [["5", "temperature"], ["6", "air_humidity"], ["7", "soil_humidity"], ["8", "illumination"]]
+Database opened
+Values => 5, temperature
+cc_value_type_id = []
+Not found
+Inserted - value = temperature
+Values => 6, air_humidity
+cc_value_type_id = []
+Not found
+Inserted - value = air_humidity
+Values => 7, soil_humidity
+cc_value_type_id = []
+Not found
+Inserted - value = soil_humidity
+Values => 8, illumination
+cc_value_type_id = []
+Not found
+Inserted - value = illumination
+Data added successfully
+
+#####################################################
+
+Starting setup at 2016-05-16 17:27:31 +0200
+database created
+after dropping all tables if exists
+after target_value table creation
+after value_type table creation
+after value table created
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 17:27:32 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 17:27:33 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 17:27:34 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 17:27:35 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 17:27:37 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 17:27:38 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 17:27:46 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 17:27:47 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 17:27:49 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 17:27:50 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 17:27:52 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 17:27:54 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:27:53 +0200
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:27:38 +0200
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:27:51 +0200
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:27:32 +0200
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:27:52 +0200
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:27:34 +0200
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:27:55 +0200
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:27:52 +0200
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:27:45 +0200
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:27:43 +0200
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:27:40 +0200
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:27:40 +0200
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:27:39 +0200
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:27:36 +0200
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:27:35 +0200
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:27:32 +0200
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:27:31 +0200
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:27:35 +0200
+
+#################################################
+
+STARTING 'get_datas' for value_types at 2016-05-16 17:28:21 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for value_types at 2016-05-16 17:28:21 +0200
+New datas => [["5", "temperature"], ["6", "air_humidity"], ["7", "soil_humidity"], ["8", "illumination"]]
+Database opened
+Values => 5, temperature
+cc_value_type_id = []
+Not found
+Inserted - value = temperature
+Values => 6, air_humidity
+cc_value_type_id = []
+Not found
+Inserted - value = air_humidity
+Values => 7, soil_humidity
+cc_value_type_id = []
+Not found
+Inserted - value = soil_humidity
+Values => 8, illumination
+cc_value_type_id = []
+Not found
+Inserted - value = illumination
+Data added successfully
+
+#####################################################
+
+Starting setup at 2016-05-16 17:28:21 +0200
+database created
+after dropping all tables if exists
+after target_value table creation
+after value_type table creation
+after value table created
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 17:28:22 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 17:28:22 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:28:21 +0200
+
+#################################################
+
+STARTING 'get_datas' for value_types at 2016-05-16 17:29:14 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for value_types at 2016-05-16 17:29:14 +0200
+New datas => [["5", "temperature"], ["6", "air_humidity"], ["7", "soil_humidity"], ["8", "illumination"]]
+Database opened
+Values => 5, temperature
+cc_value_type_id = []
+Not found
+Inserted - value = temperature
+Values => 6, air_humidity
+cc_value_type_id = []
+Not found
+Inserted - value = air_humidity
+Values => 7, soil_humidity
+cc_value_type_id = []
+Not found
+Inserted - value = soil_humidity
+Values => 8, illumination
+cc_value_type_id = []
+Not found
+Inserted - value = illumination
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:29:14 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 17:29:14 +0200
+New datas => [["6", "5.0"], ["7", "9.0"], ["8", "19.0"], ["5", "31.0"]]
+Database opened
+Values => 6, 5.0
+Found - []
+Inserted - value = 5.0
+Values => 7, 9.0
+Found - []
+Inserted - value = 9.0
+Values => 8, 19.0
+Found - []
+Inserted - value = 19.0
+Values => 5, 31.0
+Found - []
+Inserted - value = 31.0
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:29:24 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 17:29:24 +0200
+New datas => [["6", "5.0"], ["7", "9.0"], ["8", "19.0"], ["5", "31.0"]]
+Database opened
+Values => 6, 5.0
+Found - [[1]]
+Updated - value = 5.0
+Values => 7, 9.0
+Found - [[2]]
+Updated - value = 9.0
+Values => 8, 19.0
+Found - [[3]]
+Updated - value = 19.0
+Values => 5, 31.0
+Found - [[4]]
+Updated - value = 31.0
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:29:34 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 17:29:34 +0200
+New datas => [["6", "5.0"], ["7", "9.0"], ["8", "19.0"], ["5", "31.0"]]
+Database opened
+Values => 6, 5.0
+Found - [[1]]
+Updated - value = 5.0
+Values => 7, 9.0
+Found - [[2]]
+Updated - value = 9.0
+Values => 8, 19.0
+Found - [[3]]
+Updated - value = 19.0
+Values => 5, 31.0
+Found - [[4]]
+Updated - value = 31.0
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:29:44 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 17:29:44 +0200
+New datas => [["6", "5.0"], ["7", "9.0"], ["8", "19.0"], ["5", "31.0"]]
+Database opened
+Values => 6, 5.0
+Found - [[1]]
+Updated - value = 5.0
+Values => 7, 9.0
+Found - [[2]]
+Updated - value = 9.0
+Values => 8, 19.0
+Found - [[3]]
+Updated - value = 19.0
+Values => 5, 31.0
+Found - [[4]]
+Updated - value = 31.0
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:29:54 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 17:29:54 +0200
+New datas => [["6", "5.0"], ["7", "9.0"], ["8", "19.0"], ["5", "31.0"]]
+Database opened
+Values => 6, 5.0
+Found - [[1]]
+Updated - value = 5.0
+Values => 7, 9.0
+Found - [[2]]
+Updated - value = 9.0
+Values => 8, 19.0
+Found - [[3]]
+Updated - value = 19.0
+Values => 5, 31.0
+Found - [[4]]
+Updated - value = 31.0
+Data added successfully
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 17:29:59 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 17:29:19 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 17:29:29 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 17:29:49 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 17:29:39 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#####################################################
+
+Starting setup at 2016-05-16 17:29:14 +0200
+database created
+after dropping all tables if exists
+after target_value table creation
+after value_type table creation
+after value table created
+
+#################################################
+
+STARTING 'get_datas' for value_types at 2016-05-16 17:31:06 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for value_types at 2016-05-16 17:31:06 +0200
+New datas => [["5", "temperature"], ["6", "air_humidity"], ["7", "soil_humidity"], ["8", "illumination"]]
+Database opened
+Values => 5, temperature
+cc_value_type_id = []
+Not found
+Inserted - value = temperature
+Values => 6, air_humidity
+cc_value_type_id = []
+Not found
+Inserted - value = air_humidity
+Values => 7, soil_humidity
+cc_value_type_id = []
+Not found
+Inserted - value = soil_humidity
+Values => 8, illumination
+cc_value_type_id = []
+Not found
+Inserted - value = illumination
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:31:06 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 17:31:06 +0200
+New datas => [["6", "5.0"], ["7", "9.0"], ["8", "19.0"], ["5", "31.0"]]
+Database opened
+Values => 6, 5.0
+Found - []
+Inserted - value = 5.0
+Values => 7, 9.0
+Found - []
+Inserted - value = 9.0
+Values => 8, 19.0
+Found - []
+Inserted - value = 19.0
+Values => 5, 31.0
+Found - []
+Inserted - value = 31.0
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:31:16 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 17:31:16 +0200
+New datas => [["6", "5.0"], ["7", "9.0"], ["8", "19.0"], ["5", "31.0"]]
+Database opened
+Values => 6, 5.0
+Found - [[1]]
+Updated - value = 5.0
+Values => 7, 9.0
+Found - [[2]]
+Updated - value = 9.0
+Values => 8, 19.0
+Found - [[3]]
+Updated - value = 19.0
+Values => 5, 31.0
+Found - [[4]]
+Updated - value = 31.0
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:31:26 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 17:31:26 +0200
+New datas => [["6", "5.0"], ["7", "9.0"], ["8", "19.0"], ["5", "31.0"]]
+Database opened
+Values => 6, 5.0
+Found - [[1]]
+Updated - value = 5.0
+Values => 7, 9.0
+Found - [[2]]
+Updated - value = 9.0
+Values => 8, 19.0
+Found - [[3]]
+Updated - value = 19.0
+Values => 5, 31.0
+Found - [[4]]
+Updated - value = 31.0
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:31:36 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 17:31:36 +0200
+New datas => [["6", "5.0"], ["7", "9.0"], ["8", "19.0"], ["5", "31.0"]]
+Database opened
+Values => 6, 5.0
+Found - [[1]]
+Updated - value = 5.0
+Values => 7, 9.0
+Found - [[2]]
+Updated - value = 9.0
+Values => 8, 19.0
+Found - [[3]]
+Updated - value = 19.0
+Values => 5, 31.0
+Found - [[4]]
+Updated - value = 31.0
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:31:46 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 17:31:46 +0200
+New datas => [["6", "5.0"], ["7", "9.0"], ["8", "19.0"], ["5", "31.0"]]
+Database opened
+Values => 6, 5.0
+Found - [[1]]
+Updated - value = 5.0
+Values => 7, 9.0
+Found - [[2]]
+Updated - value = 9.0
+Values => 8, 19.0
+Found - [[3]]
+Updated - value = 19.0
+Values => 5, 31.0
+Found - [[4]]
+Updated - value = 31.0
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:31:56 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 17:31:56 +0200
+New datas => [["6", "5.0"], ["7", "9.0"], ["8", "19.0"], ["5", "31.0"]]
+Database opened
+Values => 6, 5.0
+Found - [[1]]
+Updated - value = 5.0
+Values => 7, 9.0
+Found - [[2]]
+Updated - value = 9.0
+Values => 8, 19.0
+Found - [[3]]
+Updated - value = 19.0
+Values => 5, 31.0
+Found - [[4]]
+Updated - value = 31.0
+Data added successfully
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 17:31:51 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 17:31:11 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 17:31:21 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 17:31:41 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 17:31:31 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#####################################################
+
+Starting setup at 2016-05-16 17:31:06 +0200
+database created
+after dropping all tables if exists
+after target_value table creation
+after value_type table creation
+after value table created
+
+#################################################
+
+STARTING 'get_datas' for value_types at 2016-05-16 17:34:38 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for value_types at 2016-05-16 17:34:38 +0200
+New datas => [["5", "temperature"], ["6", "air_humidity"], ["7", "soil_humidity"], ["8", "illumination"]]
+Database opened
+Values => 5, temperature
+cc_value_type_id = []
+Not found
+Inserted - value = temperature
+Values => 6, air_humidity
+cc_value_type_id = []
+Not found
+Inserted - value = air_humidity
+Values => 7, soil_humidity
+cc_value_type_id = []
+Not found
+Inserted - value = soil_humidity
+Values => 8, illumination
+cc_value_type_id = []
+Not found
+Inserted - value = illumination
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:34:38 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 17:34:38 +0200
+New datas => [["6", "5.0"], ["7", "9.0"], ["8", "19.0"], ["5", "31.0"]]
+Database opened
+Values => 6, 5.0
+Found - []
+Inserted - value = 5.0
+Values => 7, 9.0
+Found - []
+Inserted - value = 9.0
+Values => 8, 19.0
+Found - []
+Inserted - value = 19.0
+Values => 5, 31.0
+Found - []
+Inserted - value = 31.0
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:34:48 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 17:34:48 +0200
+New datas => [["6", "5.0"], ["7", "9.0"], ["8", "19.0"], ["5", "31.0"]]
+Database opened
+Values => 6, 5.0
+Found - [[1]]
+Updated - value = 5.0
+Values => 7, 9.0
+Found - [[2]]
+Updated - value = 9.0
+Values => 8, 19.0
+Found - [[3]]
+Updated - value = 19.0
+Values => 5, 31.0
+Found - [[4]]
+Updated - value = 31.0
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:34:58 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 17:34:58 +0200
+New datas => [["6", "5.0"], ["7", "9.0"], ["8", "19.0"], ["5", "31.0"]]
+Database opened
+Values => 6, 5.0
+Found - [[1]]
+Updated - value = 5.0
+Values => 7, 9.0
+Found - [[2]]
+Updated - value = 9.0
+Values => 8, 19.0
+Found - [[3]]
+Updated - value = 19.0
+Values => 5, 31.0
+Found - [[4]]
+Updated - value = 31.0
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:35:08 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 17:35:08 +0200
+New datas => [["6", "5.0"], ["7", "9.0"], ["8", "19.0"], ["5", "31.0"]]
+Database opened
+Values => 6, 5.0
+Found - [[1]]
+Updated - value = 5.0
+Values => 7, 9.0
+Found - [[2]]
+Updated - value = 9.0
+Values => 8, 19.0
+Found - [[3]]
+Updated - value = 19.0
+Values => 5, 31.0
+Found - [[4]]
+Updated - value = 31.0
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:35:18 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 17:35:18 +0200
+New datas => [["6", "5.0"], ["7", "9.0"], ["8", "19.0"], ["5", "31.0"]]
+Database opened
+Values => 6, 5.0
+Found - [[1]]
+Updated - value = 5.0
+Values => 7, 9.0
+Found - [[2]]
+Updated - value = 9.0
+Values => 8, 19.0
+Found - [[3]]
+Updated - value = 19.0
+Values => 5, 31.0
+Found - [[4]]
+Updated - value = 31.0
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:35:28 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 17:35:28 +0200
+New datas => [["6", "5.0"], ["7", "9.0"], ["8", "19.0"], ["5", "34.0"]]
+Database opened
+Values => 6, 5.0
+Found - [[1]]
+Updated - value = 5.0
+Values => 7, 9.0
+Found - [[2]]
+Updated - value = 9.0
+Values => 8, 19.0
+Found - [[3]]
+Updated - value = 19.0
+Values => 5, 34.0
+Found - [[4]]
+Updated - value = 34.0
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:35:38 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 17:35:38 +0200
+New datas => [["6", "5.0"], ["7", "9.0"], ["8", "19.0"], ["5", "34.0"]]
+Database opened
+Values => 6, 5.0
+Found - [[1]]
+Updated - value = 5.0
+Values => 7, 9.0
+Found - [[2]]
+Updated - value = 9.0
+Values => 8, 19.0
+Found - [[3]]
+Updated - value = 19.0
+Values => 5, 34.0
+Found - [[4]]
+Updated - value = 34.0
+Data added successfully
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 17:35:33 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 17:35:23 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:35:48 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 17:35:48 +0200
+New datas => [["6", "5.0"], ["7", "9.0"], ["8", "19.0"], ["5", "34.0"]]
+Database opened
+Values => 6, 5.0
+Found - [[1]]
+Updated - value = 5.0
+Values => 7, 9.0
+Found - [[2]]
+Updated - value = 9.0
+Values => 8, 19.0
+Found - [[3]]
+Updated - value = 19.0
+Values => 5, 34.0
+Found - [[4]]
+Updated - value = 34.0
+Data added successfully
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 17:35:13 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 17:35:03 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 17:34:53 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 17:34:43 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:35:58 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 17:35:58 +0200
+New datas => [["6", "5.0"], ["7", "9.0"], ["8", "19.0"], ["5", "34.0"]]
+Database opened
+Values => 6, 5.0
+Found - [[1]]
+Updated - value = 5.0
+Values => 7, 9.0
+Found - [[2]]
+Updated - value = 9.0
+Values => 8, 19.0
+Found - [[3]]
+Updated - value = 19.0
+Values => 5, 34.0
+Found - [[4]]
+Updated - value = 34.0
+Data added successfully
+
+#####################################################
+
+Starting setup at 2016-05-16 17:34:38 +0200
+database created
+after dropping all tables if exists
+after target_value table creation
+after value_type table creation
+after value table created
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:36:08 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 17:36:08 +0200
+New datas => [["6", "5.0"], ["7", "9.0"], ["8", "19.0"], ["5", "34.0"]]
+Database opened
+Values => 6, 5.0
+Found - [[1]]
+Updated - value = 5.0
+Values => 7, 9.0
+Found - [[2]]
+Updated - value = 9.0
+Values => 8, 19.0
+Found - [[3]]
+Updated - value = 19.0
+Values => 5, 34.0
+Found - [[4]]
+Updated - value = 34.0
+Data added successfully
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 17:35:43 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 17:35:53 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 17:36:03 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#################################################
+
+STARTING 'get_datas' for value_types at 2016-05-16 17:40:41 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for value_types at 2016-05-16 17:40:41 +0200
+New datas => [["5", "temperature"], ["6", "air_humidity"], ["7", "soil_humidity"], ["8", "illumination"]]
+Database opened
+Values => 5, temperature
+cc_value_type_id = []
+Not found
+Inserted - value = temperature
+Values => 6, air_humidity
+cc_value_type_id = []
+Not found
+Inserted - value = air_humidity
+Values => 7, soil_humidity
+cc_value_type_id = []
+Not found
+Inserted - value = soil_humidity
+Values => 8, illumination
+cc_value_type_id = []
+Not found
+Inserted - value = illumination
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:40:41 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 17:40:41 +0200
+New datas => [["6", "5.0"], ["7", "9.0"], ["8", "19.0"], ["5", "34.0"]]
+Database opened
+Values => 6, 5.0
+Found - []
+Inserted - value = 5.0
+Values => 7, 9.0
+Found - []
+Inserted - value = 9.0
+Values => 8, 19.0
+Found - []
+Inserted - value = 19.0
+Values => 5, 34.0
+Found - []
+Inserted - value = 34.0
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:40:51 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 17:40:51 +0200
+New datas => [["6", "5.0"], ["7", "9.0"], ["8", "19.0"], ["5", "34.0"]]
+Database opened
+Values => 6, 5.0
+Found - [[1]]
+Updated - value = 5.0
+Values => 7, 9.0
+Found - [[2]]
+Updated - value = 9.0
+Values => 8, 19.0
+Found - [[3]]
+Updated - value = 19.0
+Values => 5, 34.0
+Found - [[4]]
+Updated - value = 34.0
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:41:01 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 17:41:01 +0200
+New datas => [["6", "5.0"], ["7", "9.0"], ["8", "19.0"], ["5", "34.0"]]
+Database opened
+Values => 6, 5.0
+Found - [[1]]
+Updated - value = 5.0
+Values => 7, 9.0
+Found - [[2]]
+Updated - value = 9.0
+Values => 8, 19.0
+Found - [[3]]
+Updated - value = 19.0
+Values => 5, 34.0
+Found - [[4]]
+Updated - value = 34.0
+Data added successfully
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 17:40:46 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 17:40:56 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#####################################################
+
+Starting setup at 2016-05-16 17:40:41 +0200
+database created
+after dropping all tables if exists
+after target_value table creation
+after value_type table creation
+after value table created
+
+#################################################
+
+STARTING 'get_datas' for value_types at 2016-05-16 17:44:07 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for value_types at 2016-05-16 17:44:07 +0200
+New datas => [["5", "temperature"], ["6", "air_humidity"], ["7", "soil_humidity"], ["8", "illumination"]]
+Database opened
+Values => 5, temperature
+cc_value_type_id = []
+Not found
+Inserted - value = temperature
+Values => 6, air_humidity
+cc_value_type_id = []
+Not found
+Inserted - value = air_humidity
+Values => 7, soil_humidity
+cc_value_type_id = []
+Not found
+Inserted - value = soil_humidity
+Values => 8, illumination
+cc_value_type_id = []
+Not found
+Inserted - value = illumination
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:44:07 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 17:44:07 +0200
+New datas => [["6", "5.0"], ["7", "9.0"], ["8", "19.0"], ["5", "34.0"]]
+Database opened
+Values => 6, 5.0
+Found - []
+Inserted - value = 5.0
+Values => 7, 9.0
+Found - []
+Inserted - value = 9.0
+Values => 8, 19.0
+Found - []
+Inserted - value = 19.0
+Values => 5, 34.0
+Found - []
+Inserted - value = 34.0
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:44:17 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 17:44:17 +0200
+New datas => [["6", "5.0"], ["7", "9.0"], ["8", "19.0"], ["5", "34.0"]]
+Database opened
+Values => 6, 5.0
+Found - [[1]]
+Updated - value = 5.0
+Values => 7, 9.0
+Found - [[2]]
+Updated - value = 9.0
+Values => 8, 19.0
+Found - [[3]]
+Updated - value = 19.0
+Values => 5, 34.0
+Found - [[4]]
+Updated - value = 34.0
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:44:27 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 17:44:27 +0200
+New datas => [["6", "5.0"], ["7", "9.0"], ["8", "19.0"], ["5", "34.0"]]
+Database opened
+Values => 6, 5.0
+Found - [[1]]
+Updated - value = 5.0
+Values => 7, 9.0
+Found - [[2]]
+Updated - value = 9.0
+Values => 8, 19.0
+Found - [[3]]
+Updated - value = 19.0
+Values => 5, 34.0
+Found - [[4]]
+Updated - value = 34.0
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:44:37 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 17:44:37 +0200
+New datas => [["6", "5.0"], ["7", "9.0"], ["8", "19.0"], ["5", "34.0"]]
+Database opened
+Values => 6, 5.0
+Found - [[1]]
+Updated - value = 5.0
+Values => 7, 9.0
+Found - [[2]]
+Updated - value = 9.0
+Values => 8, 19.0
+Found - [[3]]
+Updated - value = 19.0
+Values => 5, 34.0
+Found - [[4]]
+Updated - value = 34.0
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:44:47 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 17:44:47 +0200
+New datas => [["6", "5.0"], ["7", "9.0"], ["8", "19.0"], ["5", "34.0"]]
+Database opened
+Values => 6, 5.0
+Found - [[1]]
+Updated - value = 5.0
+Values => 7, 9.0
+Found - [[2]]
+Updated - value = 9.0
+Values => 8, 19.0
+Found - [[3]]
+Updated - value = 19.0
+Values => 5, 34.0
+Found - [[4]]
+Updated - value = 34.0
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:44:57 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 17:44:57 +0200
+New datas => [["6", "5.0"], ["7", "9.0"], ["8", "19.0"], ["5", "34.0"]]
+Database opened
+Values => 6, 5.0
+Found - [[1]]
+Updated - value = 5.0
+Values => 7, 9.0
+Found - [[2]]
+Updated - value = 9.0
+Values => 8, 19.0
+Found - [[3]]
+Updated - value = 19.0
+Values => 5, 34.0
+Found - [[4]]
+Updated - value = 34.0
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:45:07 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 17:45:07 +0200
+New datas => [["6", "5.0"], ["7", "9.0"], ["8", "19.0"], ["5", "34.0"]]
+Database opened
+Values => 6, 5.0
+Found - [[1]]
+Updated - value = 5.0
+Values => 7, 9.0
+Found - [[2]]
+Updated - value = 9.0
+Values => 8, 19.0
+Found - [[3]]
+Updated - value = 19.0
+Values => 5, 34.0
+Found - [[4]]
+Updated - value = 34.0
+Data added successfully
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 17:45:02 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:45:17 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 17:45:17 +0200
+New datas => [["6", "5.0"], ["7", "9.0"], ["8", "19.0"], ["5", "34.0"]]
+Database opened
+Values => 6, 5.0
+Found - [[1]]
+Updated - value = 5.0
+Values => 7, 9.0
+Found - [[2]]
+Updated - value = 9.0
+Values => 8, 19.0
+Found - [[3]]
+Updated - value = 19.0
+Values => 5, 34.0
+Found - [[4]]
+Updated - value = 34.0
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:45:27 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 17:45:27 +0200
+New datas => [["6", "5.0"], ["7", "9.0"], ["8", "19.0"], ["5", "34.0"]]
+Database opened
+Values => 6, 5.0
+Found - [[1]]
+Updated - value = 5.0
+Values => 7, 9.0
+Found - [[2]]
+Updated - value = 9.0
+Values => 8, 19.0
+Found - [[3]]
+Updated - value = 19.0
+Values => 5, 34.0
+Found - [[4]]
+Updated - value = 34.0
+Data added successfully
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 17:44:42 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 17:44:32 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 17:44:22 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 17:44:12 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:45:37 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 17:45:37 +0200
+New datas => [["6", "5.0"], ["7", "9.0"], ["8", "19.0"], ["5", "34.0"]]
+Database opened
+Values => 6, 5.0
+Found - [[1]]
+Updated - value = 5.0
+Values => 7, 9.0
+Found - [[2]]
+Updated - value = 9.0
+Values => 8, 19.0
+Found - [[3]]
+Updated - value = 19.0
+Values => 5, 34.0
+Found - [[4]]
+Updated - value = 34.0
+Data added successfully
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 17:45:12 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 17:44:52 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#####################################################
+
+Starting setup at 2016-05-16 17:44:07 +0200
+database created
+after dropping all tables if exists
+after target_value table creation
+after value_type table creation
+after value table created
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 17:45:32 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 17:45:22 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 17:45:42 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#################################################
+
+STARTING 'get_datas' for value_types at 2016-05-16 17:46:36 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for value_types at 2016-05-16 17:46:36 +0200
+New datas => [["5", "temperature"], ["6", "air_humidity"], ["7", "soil_humidity"], ["8", "illumination"]]
+Database opened
+Values => 5, temperature
+cc_value_type_id = []
+Not found
+Inserted - value = temperature
+Values => 6, air_humidity
+cc_value_type_id = []
+Not found
+Inserted - value = air_humidity
+Values => 7, soil_humidity
+cc_value_type_id = []
+Not found
+Inserted - value = soil_humidity
+Values => 8, illumination
+cc_value_type_id = []
+Not found
+Inserted - value = illumination
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:46:36 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 17:46:36 +0200
+New datas => [["6", "5.0"], ["7", "9.0"], ["8", "19.0"], ["5", "34.0"]]
+Database opened
+Values => 6, 5.0
+Found - []
+Inserted - value = 5.0
+Values => 7, 9.0
+Found - []
+Inserted - value = 9.0
+Values => 8, 19.0
+Found - []
+Inserted - value = 19.0
+Values => 5, 34.0
+Found - []
+Inserted - value = 34.0
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:46:46 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 17:46:46 +0200
+New datas => [["6", "5.0"], ["7", "9.0"], ["8", "19.0"], ["5", "34.0"]]
+Database opened
+Values => 6, 5.0
+Found - [[1]]
+Updated - value = 5.0
+Values => 7, 9.0
+Found - [[2]]
+Updated - value = 9.0
+Values => 8, 19.0
+Found - [[3]]
+Updated - value = 19.0
+Values => 5, 34.0
+Found - [[4]]
+Updated - value = 34.0
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:46:56 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 17:46:56 +0200
+New datas => [["6", "5.0"], ["7", "9.0"], ["8", "19.0"], ["5", "34.0"]]
+Database opened
+Values => 6, 5.0
+Found - [[1]]
+Updated - value = 5.0
+Values => 7, 9.0
+Found - [[2]]
+Updated - value = 9.0
+Values => 8, 19.0
+Found - [[3]]
+Updated - value = 19.0
+Values => 5, 34.0
+Found - [[4]]
+Updated - value = 34.0
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:47:06 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 17:47:06 +0200
+New datas => [["6", "5.0"], ["7", "9.0"], ["8", "19.0"], ["5", "34.0"]]
+Database opened
+Values => 6, 5.0
+Found - [[1]]
+Updated - value = 5.0
+Values => 7, 9.0
+Found - [[2]]
+Updated - value = 9.0
+Values => 8, 19.0
+Found - [[3]]
+Updated - value = 19.0
+Values => 5, 34.0
+Found - [[4]]
+Updated - value = 34.0
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:47:16 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 17:47:16 +0200
+New datas => [["6", "5.0"], ["7", "9.0"], ["8", "19.0"], ["5", "34.0"]]
+Database opened
+Values => 6, 5.0
+Found - [[1]]
+Updated - value = 5.0
+Values => 7, 9.0
+Found - [[2]]
+Updated - value = 9.0
+Values => 8, 19.0
+Found - [[3]]
+Updated - value = 19.0
+Values => 5, 34.0
+Found - [[4]]
+Updated - value = 34.0
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:47:26 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 17:47:26 +0200
+New datas => [["6", "5.0"], ["7", "9.0"], ["8", "19.0"], ["5", "34.0"]]
+Database opened
+Values => 6, 5.0
+Found - [[1]]
+Updated - value = 5.0
+Values => 7, 9.0
+Found - [[2]]
+Updated - value = 9.0
+Values => 8, 19.0
+Found - [[3]]
+Updated - value = 19.0
+Values => 5, 34.0
+Found - [[4]]
+Updated - value = 34.0
+Data added successfully
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 17:47:21 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 17:47:11 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:47:36 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 17:47:36 +0200
+New datas => [["6", "5.0"], ["7", "9.0"], ["8", "19.0"], ["5", "34.0"]]
+Database opened
+Values => 6, 5.0
+Found - [[1]]
+Updated - value = 5.0
+Values => 7, 9.0
+Found - [[2]]
+Updated - value = 9.0
+Values => 8, 19.0
+Found - [[3]]
+Updated - value = 19.0
+Values => 5, 34.0
+Found - [[4]]
+Updated - value = 34.0
+Data added successfully
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 17:47:01 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 17:46:51 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:47:46 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 17:47:46 +0200
+New datas => [["6", "5.0"], ["7", "9.0"], ["8", "19.0"], ["5", "34.0"]]
+Database opened
+Values => 6, 5.0
+Found - [[1]]
+Updated - value = 5.0
+Values => 7, 9.0
+Found - [[2]]
+Updated - value = 9.0
+Values => 8, 19.0
+Found - [[3]]
+Updated - value = 19.0
+Values => 5, 34.0
+Found - [[4]]
+Updated - value = 34.0
+Data added successfully
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 17:46:41 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:47:56 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 17:47:56 +0200
+New datas => [["6", "5.0"], ["7", "9.0"], ["8", "19.0"], ["5", "34.0"]]
+Database opened
+Values => 6, 5.0
+Found - [[1]]
+Updated - value = 5.0
+Values => 7, 9.0
+Found - [[2]]
+Updated - value = 9.0
+Values => 8, 19.0
+Found - [[3]]
+Updated - value = 19.0
+Values => 5, 34.0
+Found - [[4]]
+Updated - value = 34.0
+Data added successfully
+
+#####################################################
+
+Starting setup at 2016-05-16 17:46:36 +0200
+database created
+after dropping all tables if exists
+after target_value table creation
+after value_type table creation
+after value table created
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:48:06 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 17:48:06 +0200
+New datas => [["6", "5.0"], ["7", "9.0"], ["8", "19.0"], ["5", "34.0"]]
+Database opened
+Values => 6, 5.0
+Found - [[1]]
+Updated - value = 5.0
+Values => 7, 9.0
+Found - [[2]]
+Updated - value = 9.0
+Values => 8, 19.0
+Found - [[3]]
+Updated - value = 19.0
+Values => 5, 34.0
+Found - [[4]]
+Updated - value = 34.0
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:48:16 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 17:48:16 +0200
+New datas => [["6", "5.0"], ["7", "9.0"], ["8", "19.0"], ["5", "34.0"]]
+Database opened
+Values => 6, 5.0
+Found - [[1]]
+Updated - value = 5.0
+Values => 7, 9.0
+Found - [[2]]
+Updated - value = 9.0
+Values => 8, 19.0
+Found - [[3]]
+Updated - value = 19.0
+Values => 5, 34.0
+Found - [[4]]
+Updated - value = 34.0
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:48:26 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 17:48:26 +0200
+New datas => [["6", "5.0"], ["7", "9.0"], ["8", "19.0"], ["5", "34.0"]]
+Database opened
+Values => 6, 5.0
+Found - [[1]]
+Updated - value = 5.0
+Values => 7, 9.0
+Found - [[2]]
+Updated - value = 9.0
+Values => 8, 19.0
+Found - [[3]]
+Updated - value = 19.0
+Values => 5, 34.0
+Found - [[4]]
+Updated - value = 34.0
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:48:36 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 17:48:36 +0200
+New datas => [["6", "5.0"], ["7", "9.0"], ["8", "19.0"], ["5", "34.0"]]
+Database opened
+Values => 6, 5.0
+Found - [[1]]
+Updated - value = 5.0
+Values => 7, 9.0
+Found - [[2]]
+Updated - value = 9.0
+Values => 8, 19.0
+Found - [[3]]
+Updated - value = 19.0
+Values => 5, 34.0
+Found - [[4]]
+Updated - value = 34.0
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:48:46 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 17:48:46 +0200
+New datas => [["6", "5.0"], ["7", "9.0"], ["8", "19.0"], ["5", "34.0"]]
+Database opened
+Values => 6, 5.0
+Found - [[1]]
+Updated - value = 5.0
+Values => 7, 9.0
+Found - [[2]]
+Updated - value = 9.0
+Values => 8, 19.0
+Found - [[3]]
+Updated - value = 19.0
+Values => 5, 34.0
+Found - [[4]]
+Updated - value = 34.0
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:48:56 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 17:48:56 +0200
+New datas => [["6", "5.0"], ["7", "9.0"], ["8", "19.0"], ["5", "34.0"]]
+Database opened
+Values => 6, 5.0
+Found - [[1]]
+Updated - value = 5.0
+Values => 7, 9.0
+Found - [[2]]
+Updated - value = 9.0
+Values => 8, 19.0
+Found - [[3]]
+Updated - value = 19.0
+Values => 5, 34.0
+Found - [[4]]
+Updated - value = 34.0
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:49:06 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 17:49:06 +0200
+New datas => [["6", "5.0"], ["7", "9.0"], ["8", "19.0"], ["5", "34.0"]]
+Database opened
+Values => 6, 5.0
+Found - [[1]]
+Updated - value = 5.0
+Values => 7, 9.0
+Found - [[2]]
+Updated - value = 9.0
+Values => 8, 19.0
+Found - [[3]]
+Updated - value = 19.0
+Values => 5, 34.0
+Found - [[4]]
+Updated - value = 34.0
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:49:16 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 17:49:16 +0200
+New datas => [["6", "5.0"], ["7", "9.0"], ["8", "19.0"], ["5", "34.0"]]
+Database opened
+Values => 6, 5.0
+Found - [[1]]
+Updated - value = 5.0
+Values => 7, 9.0
+Found - [[2]]
+Updated - value = 9.0
+Values => 8, 19.0
+Found - [[3]]
+Updated - value = 19.0
+Values => 5, 34.0
+Found - [[4]]
+Updated - value = 34.0
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:49:26 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 17:49:26 +0200
+New datas => [["6", "5.0"], ["7", "9.0"], ["8", "19.0"], ["5", "34.0"]]
+Database opened
+Values => 6, 5.0
+Found - [[1]]
+Updated - value = 5.0
+Values => 7, 9.0
+Found - [[2]]
+Updated - value = 9.0
+Values => 8, 19.0
+Found - [[3]]
+Updated - value = 19.0
+Values => 5, 34.0
+Found - [[4]]
+Updated - value = 34.0
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:49:36 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 17:49:36 +0200
+New datas => [["6", "5.0"], ["7", "9.0"], ["8", "19.0"], ["5", "34.0"]]
+Database opened
+Values => 6, 5.0
+Found - [[1]]
+Updated - value = 5.0
+Values => 7, 9.0
+Found - [[2]]
+Updated - value = 9.0
+Values => 8, 19.0
+Found - [[3]]
+Updated - value = 19.0
+Values => 5, 34.0
+Found - [[4]]
+Updated - value = 34.0
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:49:46 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 17:49:46 +0200
+New datas => [["6", "5.0"], ["7", "9.0"], ["8", "19.0"], ["5", "34.0"]]
+Database opened
+Values => 6, 5.0
+Found - [[1]]
+Updated - value = 5.0
+Values => 7, 9.0
+Found - [[2]]
+Updated - value = 9.0
+Values => 8, 19.0
+Found - [[3]]
+Updated - value = 19.0
+Values => 5, 34.0
+Found - [[4]]
+Updated - value = 34.0
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:49:56 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 17:49:56 +0200
+New datas => [["6", "5.0"], ["7", "9.0"], ["8", "19.0"], ["5", "34.0"]]
+Database opened
+Values => 6, 5.0
+Found - [[1]]
+Updated - value = 5.0
+Values => 7, 9.0
+Found - [[2]]
+Updated - value = 9.0
+Values => 8, 19.0
+Found - [[3]]
+Updated - value = 19.0
+Values => 5, 34.0
+Found - [[4]]
+Updated - value = 34.0
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:50:06 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 17:50:06 +0200
+New datas => [["6", "5.0"], ["7", "9.0"], ["8", "19.0"], ["5", "34.0"]]
+Database opened
+Values => 6, 5.0
+Found - [[1]]
+Updated - value = 5.0
+Values => 7, 9.0
+Found - [[2]]
+Updated - value = 9.0
+Values => 8, 19.0
+Found - [[3]]
+Updated - value = 19.0
+Values => 5, 34.0
+Found - [[4]]
+Updated - value = 34.0
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:50:16 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 17:50:16 +0200
+New datas => [["6", "5.0"], ["7", "9.0"], ["8", "19.0"], ["5", "34.0"]]
+Database opened
+Values => 6, 5.0
+Found - [[1]]
+Updated - value = 5.0
+Values => 7, 9.0
+Found - [[2]]
+Updated - value = 9.0
+Values => 8, 19.0
+Found - [[3]]
+Updated - value = 19.0
+Values => 5, 34.0
+Found - [[4]]
+Updated - value = 34.0
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:50:26 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 17:50:26 +0200
+New datas => [["6", "5.0"], ["7", "9.0"], ["8", "19.0"], ["5", "34.0"]]
+Database opened
+Values => 6, 5.0
+Found - [[1]]
+Updated - value = 5.0
+Values => 7, 9.0
+Found - [[2]]
+Updated - value = 9.0
+Values => 8, 19.0
+Found - [[3]]
+Updated - value = 19.0
+Values => 5, 34.0
+Found - [[4]]
+Updated - value = 34.0
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:50:36 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 17:50:36 +0200
+New datas => [["6", "5.0"], ["7", "9.0"], ["8", "19.0"], ["5", "34.0"]]
+Database opened
+Values => 6, 5.0
+Found - [[1]]
+Updated - value = 5.0
+Values => 7, 9.0
+Found - [[2]]
+Updated - value = 9.0
+Values => 8, 19.0
+Found - [[3]]
+Updated - value = 19.0
+Values => 5, 34.0
+Found - [[4]]
+Updated - value = 34.0
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:50:46 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 17:50:46 +0200
+New datas => [["6", "5.0"], ["7", "9.0"], ["8", "19.0"], ["5", "34.0"]]
+Database opened
+Values => 6, 5.0
+Found - [[1]]
+Updated - value = 5.0
+Values => 7, 9.0
+Found - [[2]]
+Updated - value = 9.0
+Values => 8, 19.0
+Found - [[3]]
+Updated - value = 19.0
+Values => 5, 34.0
+Found - [[4]]
+Updated - value = 34.0
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:50:56 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 17:50:56 +0200
+New datas => [["6", "5.0"], ["7", "9.0"], ["8", "19.0"], ["5", "34.0"]]
+Database opened
+Values => 6, 5.0
+Found - [[1]]
+Updated - value = 5.0
+Values => 7, 9.0
+Found - [[2]]
+Updated - value = 9.0
+Values => 8, 19.0
+Found - [[3]]
+Updated - value = 19.0
+Values => 5, 34.0
+Found - [[4]]
+Updated - value = 34.0
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:51:06 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 17:51:06 +0200
+New datas => [["6", "5.0"], ["7", "9.0"], ["8", "19.0"], ["5", "34.0"]]
+Database opened
+Values => 6, 5.0
+Found - [[1]]
+Updated - value = 5.0
+Values => 7, 9.0
+Found - [[2]]
+Updated - value = 9.0
+Values => 8, 19.0
+Found - [[3]]
+Updated - value = 19.0
+Values => 5, 34.0
+Found - [[4]]
+Updated - value = 34.0
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:51:16 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 17:51:16 +0200
+New datas => [["6", "5.0"], ["7", "9.0"], ["8", "19.0"], ["5", "34.0"]]
+Database opened
+Values => 6, 5.0
+Found - [[1]]
+Updated - value = 5.0
+Values => 7, 9.0
+Found - [[2]]
+Updated - value = 9.0
+Values => 8, 19.0
+Found - [[3]]
+Updated - value = 19.0
+Values => 5, 34.0
+Found - [[4]]
+Updated - value = 34.0
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:51:26 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 17:51:26 +0200
+New datas => [["6", "5.0"], ["7", "9.0"], ["8", "19.0"], ["5", "34.0"]]
+Database opened
+Values => 6, 5.0
+Found - [[1]]
+Updated - value = 5.0
+Values => 7, 9.0
+Found - [[2]]
+Updated - value = 9.0
+Values => 8, 19.0
+Found - [[3]]
+Updated - value = 19.0
+Values => 5, 34.0
+Found - [[4]]
+Updated - value = 34.0
+Data added successfully
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 17:51:31 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:51:36 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 17:51:36 +0200
+New datas => [["6", "5.0"], ["7", "9.0"], ["8", "19.0"], ["5", "34.0"]]
+Database opened
+Values => 6, 5.0
+Found - [[1]]
+Updated - value = 5.0
+Values => 7, 9.0
+Found - [[2]]
+Updated - value = 9.0
+Values => 8, 19.0
+Found - [[3]]
+Updated - value = 19.0
+Values => 5, 34.0
+Found - [[4]]
+Updated - value = 34.0
+Data added successfully
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 17:51:11 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 17:51:01 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 17:50:51 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 17:50:41 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 17:50:31 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 17:50:21 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 17:50:11 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 17:50:01 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 17:49:51 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 17:49:41 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 17:49:31 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 17:49:21 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 17:49:11 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 17:49:01 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 17:48:51 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 17:48:41 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 17:48:31 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 17:48:21 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 17:48:11 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 17:48:01 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 17:47:51 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 17:47:41 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 17:47:31 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 17:51:21 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#################################################
+
+STARTING 'get_datas' for value_types at 2016-05-16 17:54:04 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for value_types at 2016-05-16 17:54:04 +0200
+New datas => [["5", "temperature"], ["6", "air_humidity"], ["7", "soil_humidity"], ["8", "illumination"]]
+Database opened
+Values => 5, temperature
+cc_value_type_id = []
+Not found
+Inserted - value = temperature
+Values => 6, air_humidity
+cc_value_type_id = []
+Not found
+Inserted - value = air_humidity
+Values => 7, soil_humidity
+cc_value_type_id = []
+Not found
+Inserted - value = soil_humidity
+Values => 8, illumination
+cc_value_type_id = []
+Not found
+Inserted - value = illumination
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:54:04 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 17:54:04 +0200
+New datas => [["6", "5.0"], ["7", "9.0"], ["8", "19.0"], ["5", "34.0"]]
+Database opened
+Values => 6, 5.0
+Found - []
+Inserted - value = 5.0
+Values => 7, 9.0
+Found - []
+Inserted - value = 9.0
+Values => 8, 19.0
+Found - []
+Inserted - value = 19.0
+Values => 5, 34.0
+Found - []
+Inserted - value = 34.0
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:54:14 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 17:54:14 +0200
+New datas => [["6", "5.0"], ["7", "9.0"], ["8", "19.0"], ["5", "34.0"]]
+Database opened
+Values => 6, 5.0
+Found - [[1]]
+Updated - value = 5.0
+Values => 7, 9.0
+Found - [[2]]
+Updated - value = 9.0
+Values => 8, 19.0
+Found - [[3]]
+Updated - value = 19.0
+Values => 5, 34.0
+Found - [[4]]
+Updated - value = 34.0
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:54:24 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 17:54:24 +0200
+New datas => [["6", "5.0"], ["7", "9.0"], ["8", "19.0"], ["5", "34.0"]]
+Database opened
+Values => 6, 5.0
+Found - [[1]]
+Updated - value = 5.0
+Values => 7, 9.0
+Found - [[2]]
+Updated - value = 9.0
+Values => 8, 19.0
+Found - [[3]]
+Updated - value = 19.0
+Values => 5, 34.0
+Found - [[4]]
+Updated - value = 34.0
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:54:34 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 17:54:34 +0200
+New datas => [["6", "5.0"], ["7", "9.0"], ["8", "19.0"], ["5", "34.0"]]
+Database opened
+Values => 6, 5.0
+Found - [[1]]
+Updated - value = 5.0
+Values => 7, 9.0
+Found - [[2]]
+Updated - value = 9.0
+Values => 8, 19.0
+Found - [[3]]
+Updated - value = 19.0
+Values => 5, 34.0
+Found - [[4]]
+Updated - value = 34.0
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:54:44 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 17:54:44 +0200
+New datas => [["6", "5.0"], ["7", "9.0"], ["8", "19.0"], ["5", "34.0"]]
+Database opened
+Values => 6, 5.0
+Found - [[1]]
+Updated - value = 5.0
+Values => 7, 9.0
+Found - [[2]]
+Updated - value = 9.0
+Values => 8, 19.0
+Found - [[3]]
+Updated - value = 19.0
+Values => 5, 34.0
+Found - [[4]]
+Updated - value = 34.0
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:54:54 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 17:54:54 +0200
+New datas => [["6", "5.0"], ["7", "9.0"], ["8", "19.0"], ["5", "34.0"]]
+Database opened
+Values => 6, 5.0
+Found - [[1]]
+Updated - value = 5.0
+Values => 7, 9.0
+Found - [[2]]
+Updated - value = 9.0
+Values => 8, 19.0
+Found - [[3]]
+Updated - value = 19.0
+Values => 5, 34.0
+Found - [[4]]
+Updated - value = 34.0
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:55:04 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 17:55:04 +0200
+New datas => [["6", "5.0"], ["7", "9.0"], ["8", "19.0"], ["5", "34.0"]]
+Database opened
+Values => 6, 5.0
+Found - [[1]]
+Updated - value = 5.0
+Values => 7, 9.0
+Found - [[2]]
+Updated - value = 9.0
+Values => 8, 19.0
+Found - [[3]]
+Updated - value = 19.0
+Values => 5, 34.0
+Found - [[4]]
+Updated - value = 34.0
+Data added successfully
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 17:54:59 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 17:54:49 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 17:54:39 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:55:14 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 17:55:14 +0200
+New datas => [["6", "5.0"], ["7", "9.0"], ["8", "19.0"], ["5", "34.0"]]
+Database opened
+Values => 6, 5.0
+Found - [[1]]
+Updated - value = 5.0
+Values => 7, 9.0
+Found - [[2]]
+Updated - value = 9.0
+Values => 8, 19.0
+Found - [[3]]
+Updated - value = 19.0
+Values => 5, 34.0
+Found - [[4]]
+Updated - value = 34.0
+Data added successfully
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 17:54:29 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 17:54:19 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 17:54:09 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:55:24 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 17:55:24 +0200
+New datas => [["6", "5.0"], ["7", "9.0"], ["8", "19.0"], ["5", "34.0"]]
+Database opened
+Values => 6, 5.0
+Found - [[1]]
+Updated - value = 5.0
+Values => 7, 9.0
+Found - [[2]]
+Updated - value = 9.0
+Values => 8, 19.0
+Found - [[3]]
+Updated - value = 19.0
+Values => 5, 34.0
+Found - [[4]]
+Updated - value = 34.0
+Data added successfully
+
+#####################################################
+
+Starting setup at 2016-05-16 17:54:04 +0200
+database created
+after dropping all tables if exists
+after target_value table creation
+after value_type table creation
+after value table created
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:55:34 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 17:55:34 +0200
+New datas => [["6", "5.0"], ["7", "9.0"], ["8", "19.0"], ["5", "34.0"]]
+Database opened
+Values => 6, 5.0
+Found - [[1]]
+Updated - value = 5.0
+Values => 7, 9.0
+Found - [[2]]
+Updated - value = 9.0
+Values => 8, 19.0
+Found - [[3]]
+Updated - value = 19.0
+Values => 5, 34.0
+Found - [[4]]
+Updated - value = 34.0
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:55:44 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 17:55:44 +0200
+New datas => [["6", "5.0"], ["7", "9.0"], ["8", "19.0"], ["5", "34.0"]]
+Database opened
+Values => 6, 5.0
+Found - [[1]]
+Updated - value = 5.0
+Values => 7, 9.0
+Found - [[2]]
+Updated - value = 9.0
+Values => 8, 19.0
+Found - [[3]]
+Updated - value = 19.0
+Values => 5, 34.0
+Found - [[4]]
+Updated - value = 34.0
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:55:54 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 17:55:54 +0200
+New datas => [["6", "5.0"], ["7", "9.0"], ["8", "19.0"], ["5", "34.0"]]
+Database opened
+Values => 6, 5.0
+Found - [[1]]
+Updated - value = 5.0
+Values => 7, 9.0
+Found - [[2]]
+Updated - value = 9.0
+Values => 8, 19.0
+Found - [[3]]
+Updated - value = 19.0
+Values => 5, 34.0
+Found - [[4]]
+Updated - value = 34.0
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:56:04 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 17:56:04 +0200
+New datas => [["6", "5.0"], ["7", "9.0"], ["8", "19.0"], ["5", "34.0"]]
+Database opened
+Values => 6, 5.0
+Found - [[1]]
+Updated - value = 5.0
+Values => 7, 9.0
+Found - [[2]]
+Updated - value = 9.0
+Values => 8, 19.0
+Found - [[3]]
+Updated - value = 19.0
+Values => 5, 34.0
+Found - [[4]]
+Updated - value = 34.0
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:56:14 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 17:56:14 +0200
+New datas => [["6", "5.0"], ["7", "9.0"], ["8", "19.0"], ["5", "34.0"]]
+Database opened
+Values => 6, 5.0
+Found - [[1]]
+Updated - value = 5.0
+Values => 7, 9.0
+Found - [[2]]
+Updated - value = 9.0
+Values => 8, 19.0
+Found - [[3]]
+Updated - value = 19.0
+Values => 5, 34.0
+Found - [[4]]
+Updated - value = 34.0
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:56:24 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 17:56:24 +0200
+New datas => [["6", "5.0"], ["7", "9.0"], ["8", "19.0"], ["5", "34.0"]]
+Database opened
+Values => 6, 5.0
+Found - [[1]]
+Updated - value = 5.0
+Values => 7, 9.0
+Found - [[2]]
+Updated - value = 9.0
+Values => 8, 19.0
+Found - [[3]]
+Updated - value = 19.0
+Values => 5, 34.0
+Found - [[4]]
+Updated - value = 34.0
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:56:34 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 17:56:34 +0200
+New datas => [["6", "5.0"], ["7", "9.0"], ["8", "19.0"], ["5", "34.0"]]
+Database opened
+Values => 6, 5.0
+Found - [[1]]
+Updated - value = 5.0
+Values => 7, 9.0
+Found - [[2]]
+Updated - value = 9.0
+Values => 8, 19.0
+Found - [[3]]
+Updated - value = 19.0
+Values => 5, 34.0
+Found - [[4]]
+Updated - value = 34.0
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:56:44 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 17:56:44 +0200
+New datas => [["6", "5.0"], ["7", "9.0"], ["8", "19.0"], ["5", "34.0"]]
+Database opened
+Values => 6, 5.0
+Found - [[1]]
+Updated - value = 5.0
+Values => 7, 9.0
+Found - [[2]]
+Updated - value = 9.0
+Values => 8, 19.0
+Found - [[3]]
+Updated - value = 19.0
+Values => 5, 34.0
+Found - [[4]]
+Updated - value = 34.0
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:56:54 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 17:56:54 +0200
+New datas => [["6", "5.0"], ["7", "9.0"], ["8", "19.0"], ["5", "34.0"]]
+Database opened
+Values => 6, 5.0
+Found - [[1]]
+Updated - value = 5.0
+Values => 7, 9.0
+Found - [[2]]
+Updated - value = 9.0
+Values => 8, 19.0
+Found - [[3]]
+Updated - value = 19.0
+Values => 5, 34.0
+Found - [[4]]
+Updated - value = 34.0
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:57:04 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 17:57:04 +0200
+New datas => [["6", "5.0"], ["7", "9.0"], ["8", "19.0"], ["5", "34.0"]]
+Database opened
+Values => 6, 5.0
+Found - [[1]]
+Updated - value = 5.0
+Values => 7, 9.0
+Found - [[2]]
+Updated - value = 9.0
+Values => 8, 19.0
+Found - [[3]]
+Updated - value = 19.0
+Values => 5, 34.0
+Found - [[4]]
+Updated - value = 34.0
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:57:14 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 17:57:14 +0200
+New datas => [["6", "5.0"], ["7", "9.0"], ["8", "19.0"], ["5", "34.0"]]
+Database opened
+Values => 6, 5.0
+Found - [[1]]
+Updated - value = 5.0
+Values => 7, 9.0
+Found - [[2]]
+Updated - value = 9.0
+Values => 8, 19.0
+Found - [[3]]
+Updated - value = 19.0
+Values => 5, 34.0
+Found - [[4]]
+Updated - value = 34.0
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:57:24 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 17:57:24 +0200
+New datas => [["6", "5.0"], ["7", "9.0"], ["8", "19.0"], ["5", "34.0"]]
+Database opened
+Values => 6, 5.0
+Found - [[1]]
+Updated - value = 5.0
+Values => 7, 9.0
+Found - [[2]]
+Updated - value = 9.0
+Values => 8, 19.0
+Found - [[3]]
+Updated - value = 19.0
+Values => 5, 34.0
+Found - [[4]]
+Updated - value = 34.0
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:57:34 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 17:57:34 +0200
+New datas => [["6", "5.0"], ["7", "9.0"], ["8", "19.0"], ["5", "34.0"]]
+Database opened
+Values => 6, 5.0
+Found - [[1]]
+Updated - value = 5.0
+Values => 7, 9.0
+Found - [[2]]
+Updated - value = 9.0
+Values => 8, 19.0
+Found - [[3]]
+Updated - value = 19.0
+Values => 5, 34.0
+Found - [[4]]
+Updated - value = 34.0
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:57:44 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 17:57:44 +0200
+New datas => [["6", "5.0"], ["7", "9.0"], ["8", "19.0"], ["5", "34.0"]]
+Database opened
+Values => 6, 5.0
+Found - [[1]]
+Updated - value = 5.0
+Values => 7, 9.0
+Found - [[2]]
+Updated - value = 9.0
+Values => 8, 19.0
+Found - [[3]]
+Updated - value = 19.0
+Values => 5, 34.0
+Found - [[4]]
+Updated - value = 34.0
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:57:54 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 17:57:54 +0200
+New datas => [["6", "5.0"], ["7", "9.0"], ["8", "19.0"], ["5", "34.0"]]
+Database opened
+Values => 6, 5.0
+Found - [[1]]
+Updated - value = 5.0
+Values => 7, 9.0
+Found - [[2]]
+Updated - value = 9.0
+Values => 8, 19.0
+Found - [[3]]
+Updated - value = 19.0
+Values => 5, 34.0
+Found - [[4]]
+Updated - value = 34.0
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:58:04 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 17:58:04 +0200
+New datas => [["6", "5.0"], ["7", "9.0"], ["8", "19.0"], ["5", "34.0"]]
+Database opened
+Values => 6, 5.0
+Found - [[1]]
+Updated - value = 5.0
+Values => 7, 9.0
+Found - [[2]]
+Updated - value = 9.0
+Values => 8, 19.0
+Found - [[3]]
+Updated - value = 19.0
+Values => 5, 34.0
+Found - [[4]]
+Updated - value = 34.0
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:58:14 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 17:58:14 +0200
+New datas => [["6", "5.0"], ["7", "9.0"], ["8", "19.0"], ["5", "34.0"]]
+Database opened
+Values => 6, 5.0
+Found - [[1]]
+Updated - value = 5.0
+Values => 7, 9.0
+Found - [[2]]
+Updated - value = 9.0
+Values => 8, 19.0
+Found - [[3]]
+Updated - value = 19.0
+Values => 5, 34.0
+Found - [[4]]
+Updated - value = 34.0
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:58:24 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 17:58:24 +0200
+New datas => [["6", "5.0"], ["7", "9.0"], ["8", "19.0"], ["5", "34.0"]]
+Database opened
+Values => 6, 5.0
+Found - [[1]]
+Updated - value = 5.0
+Values => 7, 9.0
+Found - [[2]]
+Updated - value = 9.0
+Values => 8, 19.0
+Found - [[3]]
+Updated - value = 19.0
+Values => 5, 34.0
+Found - [[4]]
+Updated - value = 34.0
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:58:34 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 17:58:34 +0200
+New datas => [["6", "5.0"], ["7", "9.0"], ["8", "19.0"], ["5", "34.0"]]
+Database opened
+Values => 6, 5.0
+Found - [[1]]
+Updated - value = 5.0
+Values => 7, 9.0
+Found - [[2]]
+Updated - value = 9.0
+Values => 8, 19.0
+Found - [[3]]
+Updated - value = 19.0
+Values => 5, 34.0
+Found - [[4]]
+Updated - value = 34.0
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:58:44 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 17:58:44 +0200
+New datas => [["6", "5.0"], ["7", "9.0"], ["8", "19.0"], ["5", "34.0"]]
+Database opened
+Values => 6, 5.0
+Found - [[1]]
+Updated - value = 5.0
+Values => 7, 9.0
+Found - [[2]]
+Updated - value = 9.0
+Values => 8, 19.0
+Found - [[3]]
+Updated - value = 19.0
+Values => 5, 34.0
+Found - [[4]]
+Updated - value = 34.0
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:58:54 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 17:58:54 +0200
+New datas => [["6", "5.0"], ["7", "9.0"], ["8", "19.0"], ["5", "34.0"]]
+Database opened
+Values => 6, 5.0
+Found - [[1]]
+Updated - value = 5.0
+Values => 7, 9.0
+Found - [[2]]
+Updated - value = 9.0
+Values => 8, 19.0
+Found - [[3]]
+Updated - value = 19.0
+Values => 5, 34.0
+Found - [[4]]
+Updated - value = 34.0
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:59:04 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 17:59:04 +0200
+New datas => [["6", "5.0"], ["7", "9.0"], ["8", "19.0"], ["5", "34.0"]]
+Database opened
+Values => 6, 5.0
+Found - [[1]]
+Updated - value = 5.0
+Values => 7, 9.0
+Found - [[2]]
+Updated - value = 9.0
+Values => 8, 19.0
+Found - [[3]]
+Updated - value = 19.0
+Values => 5, 34.0
+Found - [[4]]
+Updated - value = 34.0
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:59:14 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 17:59:14 +0200
+New datas => [["6", "5.0"], ["7", "9.0"], ["8", "19.0"], ["5", "34.0"]]
+Database opened
+Values => 6, 5.0
+Found - [[1]]
+Updated - value = 5.0
+Values => 7, 9.0
+Found - [[2]]
+Updated - value = 9.0
+Values => 8, 19.0
+Found - [[3]]
+Updated - value = 19.0
+Values => 5, 34.0
+Found - [[4]]
+Updated - value = 34.0
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:59:24 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 17:59:24 +0200
+New datas => [["6", "5.0"], ["7", "9.0"], ["5", "34.0"], ["8", "32.0"]]
+Database opened
+Values => 6, 5.0
+Found - [[1]]
+Updated - value = 5.0
+Values => 7, 9.0
+Found - [[2]]
+Updated - value = 9.0
+Values => 5, 34.0
+Found - [[4]]
+Updated - value = 34.0
+Values => 8, 32.0
+Found - [[3]]
+Updated - value = 32.0
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:59:34 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 17:59:34 +0200
+New datas => [["5", "34.0"], ["8", "32.0"], ["7", "21.0"], ["6", "19.0"]]
+Database opened
+Values => 5, 34.0
+Found - [[4]]
+Updated - value = 34.0
+Values => 8, 32.0
+Found - [[3]]
+Updated - value = 32.0
+Values => 7, 21.0
+Found - [[2]]
+Updated - value = 21.0
+Values => 6, 19.0
+Found - [[1]]
+Updated - value = 19.0
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:59:44 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 17:59:44 +0200
+New datas => [["5", "34.0"], ["8", "32.0"], ["7", "21.0"], ["6", "19.0"]]
+Database opened
+Values => 5, 34.0
+Found - [[4]]
+Updated - value = 34.0
+Values => 8, 32.0
+Found - [[3]]
+Updated - value = 32.0
+Values => 7, 21.0
+Found - [[2]]
+Updated - value = 21.0
+Values => 6, 19.0
+Found - [[1]]
+Updated - value = 19.0
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 17:59:54 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 17:59:54 +0200
+New datas => [["5", "34.0"], ["8", "32.0"], ["7", "21.0"], ["6", "19.0"]]
+Database opened
+Values => 5, 34.0
+Found - [[4]]
+Updated - value = 34.0
+Values => 8, 32.0
+Found - [[3]]
+Updated - value = 32.0
+Values => 7, 21.0
+Found - [[2]]
+Updated - value = 21.0
+Values => 6, 19.0
+Found - [[1]]
+Updated - value = 19.0
+Data added successfully
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 17:55:29 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 17:59:49 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 17:55:09 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 17:59:59 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 17:55:19 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 17:55:39 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 17:55:49 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 17:55:59 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 17:56:09 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 17:56:19 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 17:56:29 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 17:56:39 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 17:56:49 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 17:56:59 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 17:57:09 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 17:57:19 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 17:57:29 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 17:57:39 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 17:57:49 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 17:57:59 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 17:58:19 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 17:58:29 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 17:58:39 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 17:58:49 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 17:58:09 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 17:58:59 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 17:59:09 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 17:59:19 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 17:59:29 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 17:59:39 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#################################################
+
+STARTING 'get_datas' for value_types at 2016-05-16 18:29:33 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for value_types at 2016-05-16 18:29:34 +0200
+New datas => [["5", "temperature"], ["6", "air_humidity"], ["7", "soil_humidity"], ["8", "illumination"]]
+Database opened
+Values => 5, temperature
+cc_value_type_id = []
+Not found
+Inserted - value = temperature
+Values => 6, air_humidity
+cc_value_type_id = []
+Not found
+Inserted - value = air_humidity
+Values => 7, soil_humidity
+cc_value_type_id = []
+Not found
+Inserted - value = soil_humidity
+Values => 8, illumination
+cc_value_type_id = []
+Not found
+Inserted - value = illumination
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 18:29:34 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 18:29:34 +0200
+New datas => [["5", "34.0"], ["8", "32.0"], ["7", "21.0"], ["6", "19.0"]]
+Database opened
+Values => 5, 34.0
+Found - []
+Inserted - value = 34.0
+Values => 8, 32.0
+Found - []
+Inserted - value = 32.0
+Values => 7, 21.0
+Found - []
+Inserted - value = 21.0
+Values => 6, 19.0
+Found - []
+Inserted - value = 19.0
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 18:29:44 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 18:29:44 +0200
+New datas => [["5", "34.0"], ["8", "32.0"], ["7", "21.0"], ["6", "19.0"]]
+Database opened
+Values => 5, 34.0
+Found - [[1]]
+Updated - value = 34.0
+Values => 8, 32.0
+Found - [[2]]
+Updated - value = 32.0
+Values => 7, 21.0
+Found - [[3]]
+Updated - value = 21.0
+Values => 6, 19.0
+Found - [[4]]
+Updated - value = 19.0
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 18:29:54 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 18:29:54 +0200
+New datas => [["5", "34.0"], ["8", "32.0"], ["7", "21.0"], ["6", "19.0"]]
+Database opened
+Values => 5, 34.0
+Found - [[1]]
+Updated - value = 34.0
+Values => 8, 32.0
+Found - [[2]]
+Updated - value = 32.0
+Values => 7, 21.0
+Found - [[3]]
+Updated - value = 21.0
+Values => 6, 19.0
+Found - [[4]]
+Updated - value = 19.0
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 18:30:04 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 18:30:04 +0200
+New datas => [["5", "34.0"], ["8", "32.0"], ["7", "21.0"], ["6", "19.0"]]
+Database opened
+Values => 5, 34.0
+Found - [[1]]
+Updated - value = 34.0
+Values => 8, 32.0
+Found - [[2]]
+Updated - value = 32.0
+Values => 7, 21.0
+Found - [[3]]
+Updated - value = 21.0
+Values => 6, 19.0
+Found - [[4]]
+Updated - value = 19.0
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 18:30:14 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 18:30:14 +0200
+New datas => [["5", "34.0"], ["8", "32.0"], ["7", "21.0"], ["6", "19.0"]]
+Database opened
+Values => 5, 34.0
+Found - [[1]]
+Updated - value = 34.0
+Values => 8, 32.0
+Found - [[2]]
+Updated - value = 32.0
+Values => 7, 21.0
+Found - [[3]]
+Updated - value = 21.0
+Values => 6, 19.0
+Found - [[4]]
+Updated - value = 19.0
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 18:30:24 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 18:30:24 +0200
+New datas => [["5", "34.0"], ["8", "32.0"], ["7", "21.0"], ["6", "19.0"]]
+Database opened
+Values => 5, 34.0
+Found - [[1]]
+Updated - value = 34.0
+Values => 8, 32.0
+Found - [[2]]
+Updated - value = 32.0
+Values => 7, 21.0
+Found - [[3]]
+Updated - value = 21.0
+Values => 6, 19.0
+Found - [[4]]
+Updated - value = 19.0
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 18:30:34 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 18:30:34 +0200
+New datas => [["5", "34.0"], ["8", "32.0"], ["7", "21.0"], ["6", "19.0"]]
+Database opened
+Values => 5, 34.0
+Found - [[1]]
+Updated - value = 34.0
+Values => 8, 32.0
+Found - [[2]]
+Updated - value = 32.0
+Values => 7, 21.0
+Found - [[3]]
+Updated - value = 21.0
+Values => 6, 19.0
+Found - [[4]]
+Updated - value = 19.0
+Data added successfully
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 18:30:29 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 18:30:19 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 18:30:09 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 18:30:44 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 18:30:44 +0200
+New datas => [["5", "34.0"], ["8", "32.0"], ["7", "21.0"], ["6", "19.0"]]
+Database opened
+Values => 5, 34.0
+Found - [[1]]
+Updated - value = 34.0
+Values => 8, 32.0
+Found - [[2]]
+Updated - value = 32.0
+Values => 7, 21.0
+Found - [[3]]
+Updated - value = 21.0
+Values => 6, 19.0
+Found - [[4]]
+Updated - value = 19.0
+Data added successfully
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 18:29:59 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 18:29:49 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 18:29:39 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 18:30:54 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 18:30:54 +0200
+New datas => [["5", "34.0"], ["8", "32.0"], ["7", "21.0"], ["6", "19.0"]]
+Database opened
+Values => 5, 34.0
+Found - [[1]]
+Updated - value = 34.0
+Values => 8, 32.0
+Found - [[2]]
+Updated - value = 32.0
+Values => 7, 21.0
+Found - [[3]]
+Updated - value = 21.0
+Values => 6, 19.0
+Found - [[4]]
+Updated - value = 19.0
+Data added successfully
+
+#####################################################
+
+Starting setup at 2016-05-16 18:29:33 +0200
+database created
+after dropping all tables if exists
+after target_value table creation
+after value_type table creation
+after value table created
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 18:30:39 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 18:30:59 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 18:30:49 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#################################################
+
+STARTING 'get_datas' for value_types at 2016-05-16 19:24:10 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for value_types at 2016-05-16 19:24:10 +0200
+New datas => [["5", "temperature"], ["6", "air_humidity"], ["7", "soil_humidity"], ["8", "illumination"]]
+Database opened
+Values => 5, temperature
+cc_value_type_id = []
+Not found
+Inserted - value = temperature
+Values => 6, air_humidity
+cc_value_type_id = []
+Not found
+Inserted - value = air_humidity
+Values => 7, soil_humidity
+cc_value_type_id = []
+Not found
+Inserted - value = soil_humidity
+Values => 8, illumination
+cc_value_type_id = []
+Not found
+Inserted - value = illumination
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 19:24:10 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 19:24:11 +0200
+New datas => [["5", "34.0"], ["8", "32.0"], ["7", "21.0"], ["6", "19.0"]]
+Database opened
+Values => 5, 34.0
+Found - []
+Inserted - value = 34.0
+Values => 8, 32.0
+Found - []
+Inserted - value = 32.0
+Values => 7, 21.0
+Found - []
+Inserted - value = 21.0
+Values => 6, 19.0
+Found - []
+Inserted - value = 19.0
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 19:24:21 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 19:24:21 +0200
+New datas => [["5", "34.0"], ["8", "32.0"], ["7", "21.0"], ["6", "19.0"]]
+Database opened
+Values => 5, 34.0
+Found - [[1]]
+Updated - value = 34.0
+Values => 8, 32.0
+Found - [[2]]
+Updated - value = 32.0
+Values => 7, 21.0
+Found - [[3]]
+Updated - value = 21.0
+Values => 6, 19.0
+Found - [[4]]
+Updated - value = 19.0
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 19:24:31 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 19:24:31 +0200
+New datas => [["5", "34.0"], ["8", "32.0"], ["7", "21.0"], ["6", "19.0"]]
+Database opened
+Values => 5, 34.0
+Found - [[1]]
+Updated - value = 34.0
+Values => 8, 32.0
+Found - [[2]]
+Updated - value = 32.0
+Values => 7, 21.0
+Found - [[3]]
+Updated - value = 21.0
+Values => 6, 19.0
+Found - [[4]]
+Updated - value = 19.0
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 19:24:41 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 19:24:41 +0200
+New datas => [["5", "34.0"], ["8", "32.0"], ["7", "21.0"], ["6", "19.0"]]
+Database opened
+Values => 5, 34.0
+Found - [[1]]
+Updated - value = 34.0
+Values => 8, 32.0
+Found - [[2]]
+Updated - value = 32.0
+Values => 7, 21.0
+Found - [[3]]
+Updated - value = 21.0
+Values => 6, 19.0
+Found - [[4]]
+Updated - value = 19.0
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 19:24:51 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 19:24:51 +0200
+New datas => [["5", "34.0"], ["8", "32.0"], ["7", "21.0"], ["6", "19.0"]]
+Database opened
+Values => 5, 34.0
+Found - [[1]]
+Updated - value = 34.0
+Values => 8, 32.0
+Found - [[2]]
+Updated - value = 32.0
+Values => 7, 21.0
+Found - [[3]]
+Updated - value = 21.0
+Values => 6, 19.0
+Found - [[4]]
+Updated - value = 19.0
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 19:25:01 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 19:25:01 +0200
+New datas => [["5", "34.0"], ["8", "32.0"], ["7", "21.0"], ["6", "19.0"]]
+Database opened
+Values => 5, 34.0
+Found - [[1]]
+Updated - value = 34.0
+Values => 8, 32.0
+Found - [[2]]
+Updated - value = 32.0
+Values => 7, 21.0
+Found - [[3]]
+Updated - value = 21.0
+Values => 6, 19.0
+Found - [[4]]
+Updated - value = 19.0
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 19:25:11 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 19:25:11 +0200
+New datas => [["5", "34.0"], ["8", "32.0"], ["7", "21.0"], ["6", "19.0"]]
+Database opened
+Values => 5, 34.0
+Found - [[1]]
+Updated - value = 34.0
+Values => 8, 32.0
+Found - [[2]]
+Updated - value = 32.0
+Values => 7, 21.0
+Found - [[3]]
+Updated - value = 21.0
+Values => 6, 19.0
+Found - [[4]]
+Updated - value = 19.0
+Data added successfully
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 19:25:06 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 19:24:56 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 19:24:46 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 19:25:21 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 19:25:21 +0200
+New datas => [["5", "34.0"], ["8", "32.0"], ["7", "21.0"], ["6", "19.0"]]
+Database opened
+Values => 5, 34.0
+Found - [[1]]
+Updated - value = 34.0
+Values => 8, 32.0
+Found - [[2]]
+Updated - value = 32.0
+Values => 7, 21.0
+Found - [[3]]
+Updated - value = 21.0
+Values => 6, 19.0
+Found - [[4]]
+Updated - value = 19.0
+Data added successfully
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 19:24:36 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 19:24:26 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 19:25:31 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 19:25:31 +0200
+New datas => [["5", "34.0"], ["8", "32.0"], ["7", "21.0"], ["6", "19.0"]]
+Database opened
+Values => 5, 34.0
+Found - [[1]]
+Updated - value = 34.0
+Values => 8, 32.0
+Found - [[2]]
+Updated - value = 32.0
+Values => 7, 21.0
+Found - [[3]]
+Updated - value = 21.0
+Values => 6, 19.0
+Found - [[4]]
+Updated - value = 19.0
+Data added successfully
+
+#####################################################
+
+Starting setup at 2016-05-16 19:24:10 +0200
+database created
+after dropping all tables if exists
+after target_value table creation
+after value_type table creation
+after value table created
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 19:24:16 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 19:25:26 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 19:25:16 +0200
+csv file parsed ; array returned : [["1", "25", "2016-05-03 12:19", "wxcv"], ["2", "46", "2016-05-03 12:19", "wxcv"]]
+Looking for value type name in db
+
+#################################################
+
+STARTING 'get_datas' for value_types at 2016-05-16 19:36:18 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for value_types at 2016-05-16 19:36:18 +0200
+New datas => [["5", "temperature"], ["6", "air_humidity"], ["7", "soil_humidity"], ["8", "illumination"]]
+Database opened
+Values => 5, temperature
+cc_value_type_id = []
+Not found
+Inserted - value = temperature
+Values => 6, air_humidity
+cc_value_type_id = []
+Not found
+Inserted - value = air_humidity
+Values => 7, soil_humidity
+cc_value_type_id = []
+Not found
+Inserted - value = soil_humidity
+Values => 8, illumination
+cc_value_type_id = []
+Not found
+Inserted - value = illumination
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 19:36:18 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 19:36:18 +0200
+New datas => [["5", "34.0"], ["8", "32.0"], ["7", "21.0"], ["6", "19.0"]]
+Database opened
+Values => 5, 34.0
+Found - []
+Inserted - value = 34.0
+Values => 8, 32.0
+Found - []
+Inserted - value = 32.0
+Values => 7, 21.0
+Found - []
+Inserted - value = 21.0
+Values => 6, 19.0
+Found - []
+Inserted - value = 19.0
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 19:36:28 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 19:36:28 +0200
+New datas => [["5", "34.0"], ["8", "32.0"], ["7", "21.0"], ["6", "19.0"]]
+Database opened
+Values => 5, 34.0
+Found - [[1]]
+Updated - value = 34.0
+Values => 8, 32.0
+Found - [[2]]
+Updated - value = 32.0
+Values => 7, 21.0
+Found - [[3]]
+Updated - value = 21.0
+Values => 6, 19.0
+Found - [[4]]
+Updated - value = 19.0
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 19:36:38 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 19:36:38 +0200
+New datas => [["5", "34.0"], ["8", "32.0"], ["7", "21.0"], ["6", "19.0"]]
+Database opened
+Values => 5, 34.0
+Found - [[1]]
+Updated - value = 34.0
+Values => 8, 32.0
+Found - [[2]]
+Updated - value = 32.0
+Values => 7, 21.0
+Found - [[3]]
+Updated - value = 21.0
+Values => 6, 19.0
+Found - [[4]]
+Updated - value = 19.0
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 19:36:48 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 19:36:48 +0200
+New datas => [["5", "34.0"], ["8", "32.0"], ["7", "21.0"], ["6", "19.0"]]
+Database opened
+Values => 5, 34.0
+Found - [[1]]
+Updated - value = 34.0
+Values => 8, 32.0
+Found - [[2]]
+Updated - value = 32.0
+Values => 7, 21.0
+Found - [[3]]
+Updated - value = 21.0
+Values => 6, 19.0
+Found - [[4]]
+Updated - value = 19.0
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 19:36:58 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 19:36:58 +0200
+New datas => [["5", "34.0"], ["8", "32.0"], ["7", "21.0"], ["6", "19.0"]]
+Database opened
+Values => 5, 34.0
+Found - [[1]]
+Updated - value = 34.0
+Values => 8, 32.0
+Found - [[2]]
+Updated - value = 32.0
+Values => 7, 21.0
+Found - [[3]]
+Updated - value = 21.0
+Values => 6, 19.0
+Found - [[4]]
+Updated - value = 19.0
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 19:37:08 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 19:37:08 +0200
+New datas => [["5", "34.0"], ["8", "32.0"], ["7", "21.0"], ["6", "19.0"]]
+Database opened
+Values => 5, 34.0
+Found - [[1]]
+Updated - value = 34.0
+Values => 8, 32.0
+Found - [[2]]
+Updated - value = 32.0
+Values => 7, 21.0
+Found - [[3]]
+Updated - value = 21.0
+Values => 6, 19.0
+Found - [[4]]
+Updated - value = 19.0
+Data added successfully
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 19:37:13 +0200
+csv file parsed ; array returned : [["1", "34", "2016-05-16 12:45", "wxcv"], ["2", "33", "2016-05-16 12:45", "wxcv"]]
+Looking for value type name in db
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 19:37:18 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 19:37:18 +0200
+New datas => [["5", "34.0"], ["8", "32.0"], ["7", "21.0"], ["6", "19.0"]]
+Database opened
+Values => 5, 34.0
+Found - [[1]]
+Updated - value = 34.0
+Values => 8, 32.0
+Found - [[2]]
+Updated - value = 32.0
+Values => 7, 21.0
+Found - [[3]]
+Updated - value = 21.0
+Values => 6, 19.0
+Found - [[4]]
+Updated - value = 19.0
+Data added successfully
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 19:37:03 +0200
+csv file parsed ; array returned : [["1", "34", "2016-05-16 12:45", "wxcv"], ["2", "33", "2016-05-16 12:45", "wxcv"]]
+Looking for value type name in db
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 19:37:28 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 19:37:28 +0200
+New datas => [["5", "34.0"], ["8", "32.0"], ["7", "21.0"], ["6", "19.0"]]
+Database opened
+Values => 5, 34.0
+Found - [[1]]
+Updated - value = 34.0
+Values => 8, 32.0
+Found - [[2]]
+Updated - value = 32.0
+Values => 7, 21.0
+Found - [[3]]
+Updated - value = 21.0
+Values => 6, 19.0
+Found - [[4]]
+Updated - value = 19.0
+Data added successfully
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 19:36:53 +0200
+csv file parsed ; array returned : [["1", "34", "2016-05-16 12:45", "wxcv"], ["2", "33", "2016-05-16 12:45", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 19:36:43 +0200
+csv file parsed ; array returned : [["1", "34", "2016-05-16 12:45", "wxcv"], ["2", "33", "2016-05-16 12:45", "wxcv"]]
+Looking for value type name in db
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 19:37:38 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 19:37:38 +0200
+New datas => [["5", "34.0"], ["8", "32.0"], ["7", "21.0"], ["6", "19.0"]]
+Database opened
+Values => 5, 34.0
+Found - [[1]]
+Updated - value = 34.0
+Values => 8, 32.0
+Found - [[2]]
+Updated - value = 32.0
+Values => 7, 21.0
+Found - [[3]]
+Updated - value = 21.0
+Values => 6, 19.0
+Found - [[4]]
+Updated - value = 19.0
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 19:37:48 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 19:37:48 +0200
+New datas => [["5", "34.0"], ["8", "32.0"], ["7", "21.0"], ["6", "19.0"]]
+Database opened
+Values => 5, 34.0
+Found - [[1]]
+Updated - value = 34.0
+Values => 8, 32.0
+Found - [[2]]
+Updated - value = 32.0
+Values => 7, 21.0
+Found - [[3]]
+Updated - value = 21.0
+Values => 6, 19.0
+Found - [[4]]
+Updated - value = 19.0
+Data added successfully
+
+#####################################################
+
+Starting setup at 2016-05-16 19:36:18 +0200
+database created
+after dropping all tables if exists
+after target_value table creation
+after value_type table creation
+after value table created
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 19:37:58 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 19:37:58 +0200
+New datas => [["5", "34.0"], ["8", "32.0"], ["7", "21.0"], ["6", "19.0"]]
+Database opened
+Values => 5, 34.0
+Found - [[1]]
+Updated - value = 34.0
+Values => 8, 32.0
+Found - [[2]]
+Updated - value = 32.0
+Values => 7, 21.0
+Found - [[3]]
+Updated - value = 21.0
+Values => 6, 19.0
+Found - [[4]]
+Updated - value = 19.0
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 19:38:08 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 19:38:08 +0200
+New datas => [["5", "34.0"], ["8", "32.0"], ["7", "21.0"], ["6", "19.0"]]
+Database opened
+Values => 5, 34.0
+Found - [[1]]
+Updated - value = 34.0
+Values => 8, 32.0
+Found - [[2]]
+Updated - value = 32.0
+Values => 7, 21.0
+Found - [[3]]
+Updated - value = 21.0
+Values => 6, 19.0
+Found - [[4]]
+Updated - value = 19.0
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 19:38:18 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 19:38:18 +0200
+New datas => [["5", "34.0"], ["8", "32.0"], ["7", "21.0"], ["6", "19.0"]]
+Database opened
+Values => 5, 34.0
+Found - [[1]]
+Updated - value = 34.0
+Values => 8, 32.0
+Found - [[2]]
+Updated - value = 32.0
+Values => 7, 21.0
+Found - [[3]]
+Updated - value = 21.0
+Values => 6, 19.0
+Found - [[4]]
+Updated - value = 19.0
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 19:38:28 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 19:38:28 +0200
+New datas => [["5", "34.0"], ["8", "32.0"], ["7", "21.0"], ["6", "19.0"]]
+Database opened
+Values => 5, 34.0
+Found - [[1]]
+Updated - value = 34.0
+Values => 8, 32.0
+Found - [[2]]
+Updated - value = 32.0
+Values => 7, 21.0
+Found - [[3]]
+Updated - value = 21.0
+Values => 6, 19.0
+Found - [[4]]
+Updated - value = 19.0
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 19:38:38 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 19:38:38 +0200
+New datas => [["5", "34.0"], ["8", "32.0"], ["7", "21.0"], ["6", "19.0"]]
+Database opened
+Values => 5, 34.0
+Found - [[1]]
+Updated - value = 34.0
+Values => 8, 32.0
+Found - [[2]]
+Updated - value = 32.0
+Values => 7, 21.0
+Found - [[3]]
+Updated - value = 21.0
+Values => 6, 19.0
+Found - [[4]]
+Updated - value = 19.0
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 19:38:48 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 19:38:48 +0200
+New datas => [["5", "34.0"], ["8", "32.0"], ["7", "21.0"], ["6", "19.0"]]
+Database opened
+Values => 5, 34.0
+Found - [[1]]
+Updated - value = 34.0
+Values => 8, 32.0
+Found - [[2]]
+Updated - value = 32.0
+Values => 7, 21.0
+Found - [[3]]
+Updated - value = 21.0
+Values => 6, 19.0
+Found - [[4]]
+Updated - value = 19.0
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 19:38:58 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 19:38:58 +0200
+New datas => [["5", "34.0"], ["8", "32.0"], ["7", "21.0"], ["6", "19.0"]]
+Database opened
+Values => 5, 34.0
+Found - [[1]]
+Updated - value = 34.0
+Values => 8, 32.0
+Found - [[2]]
+Updated - value = 32.0
+Values => 7, 21.0
+Found - [[3]]
+Updated - value = 21.0
+Values => 6, 19.0
+Found - [[4]]
+Updated - value = 19.0
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 19:39:08 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 19:39:08 +0200
+New datas => [["5", "34.0"], ["8", "32.0"], ["7", "21.0"], ["6", "19.0"]]
+Database opened
+Values => 5, 34.0
+Found - [[1]]
+Updated - value = 34.0
+Values => 8, 32.0
+Found - [[2]]
+Updated - value = 32.0
+Values => 7, 21.0
+Found - [[3]]
+Updated - value = 21.0
+Values => 6, 19.0
+Found - [[4]]
+Updated - value = 19.0
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 19:39:18 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 19:39:18 +0200
+New datas => [["5", "34.0"], ["8", "32.0"], ["7", "21.0"], ["6", "19.0"]]
+Database opened
+Values => 5, 34.0
+Found - [[1]]
+Updated - value = 34.0
+Values => 8, 32.0
+Found - [[2]]
+Updated - value = 32.0
+Values => 7, 21.0
+Found - [[3]]
+Updated - value = 21.0
+Values => 6, 19.0
+Found - [[4]]
+Updated - value = 19.0
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 19:39:28 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 19:39:28 +0200
+New datas => [["5", "34.0"], ["8", "32.0"], ["7", "21.0"], ["6", "19.0"]]
+Database opened
+Values => 5, 34.0
+Found - [[1]]
+Updated - value = 34.0
+Values => 8, 32.0
+Found - [[2]]
+Updated - value = 32.0
+Values => 7, 21.0
+Found - [[3]]
+Updated - value = 21.0
+Values => 6, 19.0
+Found - [[4]]
+Updated - value = 19.0
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 19:39:38 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 19:39:38 +0200
+New datas => [["5", "34.0"], ["8", "32.0"], ["7", "21.0"], ["6", "19.0"]]
+Database opened
+Values => 5, 34.0
+Found - [[1]]
+Updated - value = 34.0
+Values => 8, 32.0
+Found - [[2]]
+Updated - value = 32.0
+Values => 7, 21.0
+Found - [[3]]
+Updated - value = 21.0
+Values => 6, 19.0
+Found - [[4]]
+Updated - value = 19.0
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 19:39:48 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 19:39:48 +0200
+New datas => [["5", "34.0"], ["8", "32.0"], ["7", "21.0"], ["6", "19.0"]]
+Database opened
+Values => 5, 34.0
+Found - [[1]]
+Updated - value = 34.0
+Values => 8, 32.0
+Found - [[2]]
+Updated - value = 32.0
+Values => 7, 21.0
+Found - [[3]]
+Updated - value = 21.0
+Values => 6, 19.0
+Found - [[4]]
+Updated - value = 19.0
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 19:39:58 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 19:39:58 +0200
+New datas => [["5", "34.0"], ["8", "32.0"], ["7", "21.0"], ["6", "19.0"]]
+Database opened
+Values => 5, 34.0
+Found - [[1]]
+Updated - value = 34.0
+Values => 8, 32.0
+Found - [[2]]
+Updated - value = 32.0
+Values => 7, 21.0
+Found - [[3]]
+Updated - value = 21.0
+Values => 6, 19.0
+Found - [[4]]
+Updated - value = 19.0
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 19:40:08 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 19:40:08 +0200
+New datas => [["5", "34.0"], ["8", "32.0"], ["7", "21.0"], ["6", "19.0"]]
+Database opened
+Values => 5, 34.0
+Found - [[1]]
+Updated - value = 34.0
+Values => 8, 32.0
+Found - [[2]]
+Updated - value = 32.0
+Values => 7, 21.0
+Found - [[3]]
+Updated - value = 21.0
+Values => 6, 19.0
+Found - [[4]]
+Updated - value = 19.0
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 19:40:18 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 19:40:18 +0200
+New datas => [["5", "34.0"], ["8", "32.0"], ["7", "21.0"], ["6", "19.0"]]
+Database opened
+Values => 5, 34.0
+Found - [[1]]
+Updated - value = 34.0
+Values => 8, 32.0
+Found - [[2]]
+Updated - value = 32.0
+Values => 7, 21.0
+Found - [[3]]
+Updated - value = 21.0
+Values => 6, 19.0
+Found - [[4]]
+Updated - value = 19.0
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 19:40:28 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 19:40:28 +0200
+New datas => [["5", "34.0"], ["8", "32.0"], ["7", "21.0"], ["6", "19.0"]]
+Database opened
+Values => 5, 34.0
+Found - [[1]]
+Updated - value = 34.0
+Values => 8, 32.0
+Found - [[2]]
+Updated - value = 32.0
+Values => 7, 21.0
+Found - [[3]]
+Updated - value = 21.0
+Values => 6, 19.0
+Found - [[4]]
+Updated - value = 19.0
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 19:40:38 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 19:40:38 +0200
+New datas => [["5", "34.0"], ["8", "32.0"], ["7", "21.0"], ["6", "19.0"]]
+Database opened
+Values => 5, 34.0
+Found - [[1]]
+Updated - value = 34.0
+Values => 8, 32.0
+Found - [[2]]
+Updated - value = 32.0
+Values => 7, 21.0
+Found - [[3]]
+Updated - value = 21.0
+Values => 6, 19.0
+Found - [[4]]
+Updated - value = 19.0
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 19:40:48 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 19:40:48 +0200
+New datas => [["5", "34.0"], ["8", "32.0"], ["7", "21.0"], ["6", "19.0"]]
+Database opened
+Values => 5, 34.0
+Found - [[1]]
+Updated - value = 34.0
+Values => 8, 32.0
+Found - [[2]]
+Updated - value = 32.0
+Values => 7, 21.0
+Found - [[3]]
+Updated - value = 21.0
+Values => 6, 19.0
+Found - [[4]]
+Updated - value = 19.0
+Data added successfully
+
+#################################################
+
+STARTING 'get_datas' for target_values at 2016-05-16 19:40:58 +0200
+Request sent
+Starting to parse XML file
+Opening data_file
+Data file closed
+END OF PROCESS
+
+
+Starting importing new datas for target_values at 2016-05-16 19:40:58 +0200
+New datas => [["5", "34.0"], ["8", "32.0"], ["7", "21.0"], ["6", "19.0"]]
+Database opened
+Values => 5, 34.0
+Found - [[1]]
+Updated - value = 34.0
+Values => 8, 32.0
+Found - [[2]]
+Updated - value = 32.0
+Values => 7, 21.0
+Found - [[3]]
+Updated - value = 21.0
+Values => 6, 19.0
+Found - [[4]]
+Updated - value = 19.0
+Data added successfully
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 19:36:33 +0200
+csv file parsed ; array returned : [["1", "34", "2016-05-16 12:45", "wxcv"], ["2", "33", "2016-05-16 12:45", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 19:36:23 +0200
+csv file parsed ; array returned : [["1", "34", "2016-05-16 12:45", "wxcv"], ["2", "33", "2016-05-16 12:45", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 19:37:33 +0200
+csv file parsed ; array returned : [["1", "34", "2016-05-16 12:45", "wxcv"], ["2", "33", "2016-05-16 12:45", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 19:37:43 +0200
+csv file parsed ; array returned : [["1", "34", "2016-05-16 12:45", "wxcv"], ["2", "33", "2016-05-16 12:45", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 19:37:23 +0200
+csv file parsed ; array returned : [["1", "34", "2016-05-16 12:45", "wxcv"], ["2", "33", "2016-05-16 12:45", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 19:37:53 +0200
+csv file parsed ; array returned : [["1", "34", "2016-05-16 12:45", "wxcv"], ["2", "33", "2016-05-16 12:45", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 19:38:03 +0200
+csv file parsed ; array returned : [["1", "34", "2016-05-16 12:45", "wxcv"], ["2", "33", "2016-05-16 12:45", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 19:38:13 +0200
+csv file parsed ; array returned : [["1", "34", "2016-05-16 12:45", "wxcv"], ["2", "33", "2016-05-16 12:45", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 19:38:23 +0200
+csv file parsed ; array returned : [["1", "34", "2016-05-16 12:45", "wxcv"], ["2", "33", "2016-05-16 12:45", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 19:38:33 +0200
+csv file parsed ; array returned : [["1", "34", "2016-05-16 12:45", "wxcv"], ["2", "33", "2016-05-16 12:45", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 19:38:43 +0200
+csv file parsed ; array returned : [["1", "34", "2016-05-16 12:45", "wxcv"], ["2", "33", "2016-05-16 12:45", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 19:38:53 +0200
+csv file parsed ; array returned : [["1", "34", "2016-05-16 12:45", "wxcv"], ["2", "33", "2016-05-16 12:45", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 19:39:03 +0200
+csv file parsed ; array returned : [["1", "34", "2016-05-16 12:45", "wxcv"], ["2", "33", "2016-05-16 12:45", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 19:39:13 +0200
+csv file parsed ; array returned : [["1", "34", "2016-05-16 12:45", "wxcv"], ["2", "33", "2016-05-16 12:45", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 19:39:23 +0200
+csv file parsed ; array returned : [["1", "34", "2016-05-16 12:45", "wxcv"], ["2", "33", "2016-05-16 12:45", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 19:39:33 +0200
+csv file parsed ; array returned : [["1", "34", "2016-05-16 12:45", "wxcv"], ["2", "33", "2016-05-16 12:45", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 19:39:43 +0200
+csv file parsed ; array returned : [["1", "34", "2016-05-16 12:45", "wxcv"], ["2", "33", "2016-05-16 12:45", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 19:39:53 +0200
+csv file parsed ; array returned : [["1", "34", "2016-05-16 12:45", "wxcv"], ["2", "33", "2016-05-16 12:45", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 19:40:03 +0200
+csv file parsed ; array returned : [["1", "34", "2016-05-16 12:45", "wxcv"], ["2", "33", "2016-05-16 12:45", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 19:40:13 +0200
+csv file parsed ; array returned : [["1", "34", "2016-05-16 12:45", "wxcv"], ["2", "33", "2016-05-16 12:45", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 19:40:23 +0200
+csv file parsed ; array returned : [["1", "34", "2016-05-16 12:45", "wxcv"], ["2", "33", "2016-05-16 12:45", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 19:40:43 +0200
+csv file parsed ; array returned : [["1", "34", "2016-05-16 12:45", "wxcv"], ["2", "33", "2016-05-16 12:45", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 19:40:33 +0200
+csv file parsed ; array returned : [["1", "34", "2016-05-16 12:45", "wxcv"], ["2", "33", "2016-05-16 12:45", "wxcv"]]
+Looking for value type name in db
+
+#######################################
+
+Starting 'post_new_values' method at 2016-05-16 19:40:53 +0200
+csv file parsed ; array returned : [["1", "34", "2016-05-16 12:45", "wxcv"], ["2", "33", "2016-05-16 12:45", "wxcv"]]
+Looking for value type name in db
