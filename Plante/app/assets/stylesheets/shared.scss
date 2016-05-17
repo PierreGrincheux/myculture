@@ -1,3 +1,31 @@
+/*GENERAL CSS*/
+body{
+	background-color: #CCE3D8;
+}
+
+.container{
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+}
+
 .jumbotron{
 	background-color: white;
+}
+
+.form-connexion{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-image: url("images/jungle.jpeg");
+	text-align: center;
+}
+
+.co{
+	margin-top: 10%;
+}
+
+.transparent-co{
+	background-color: rgba(255,255,255, 0.7);
+	padding:4% 0% 4% 0%;
 }

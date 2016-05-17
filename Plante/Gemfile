@@ -36,6 +36,15 @@ gem 'snapsvg-rails', '~> 0.4.1'
 #fullpage
 gem 'fullpage-rails', '~> 0.0.1'
 
+#chart.js
+gem 'chart-js-rails'
+
+#c3.js
+gem 'c3-rails'
+
+#d3
+gem 'd3_rails'
+
 #greenSock
 gem 'greensock-rails', '~> 1.18', '>= 1.18.2.0'
 
