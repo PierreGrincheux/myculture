@@ -12,6 +12,11 @@
 	Aucune serre n'est associée à cette école <br/>
 <% end %>
 
+
+<!-- ############################################################## GESTION DU TRI DES DONNEES PAR DATES ######################################################################################## -->
+
+
+
 <b> Trier par : </b><br/>
 <div class="btn-group btn-justified" role="group" aria-label="...">
 	<div>
@@ -71,6 +76,13 @@
 	<br/>
 	<%= link_to "Remise à zéro", url_for(params.merge({day: "", month: "", year: ""})), class: "btn btn-default" %>
 </div>
+
+
+
+<!-- ######################################################################################################################################################### -->
+
+
+
 <div style="width:100%;height:400px;">
 	<b><%= @selected_date %></b>
 
