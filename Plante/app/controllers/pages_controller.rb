@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
 	before_filter :verify_authorization, except: ["index"] 
-	before_filter :get_datas
+	before_filter :get_datas, except: ["index"]
 	
 	def index
 		if user_signed_in?
@@ -94,9 +94,40 @@ class PagesController < ApplicationController
 		unless @selected_greenhouse.blank?
 			@linked_data_cards = DataCard.where(greenhouse_id: @selected_greenhouse.id)
 			@hash_target_values = Hash.new
+			@start_year = Value.maximum("created_at").year
+			@end_year = Value.minimum("created_at").year
+			@selected_date = String.new
+			@display_div_months = "hidden"
+			@display_div_days = "hidden"
+			@days_in_month = 1
+			condition = ["",""]
+			condition[0] += "AND created_at BETWEEN ? AND ?"
+			unless params[:year].blank?
+				date = Time.mktime(params[:year].to_i)
+				condition[1] = ["#{date}","#{date + 1.years}"]
+				@selected_date = "#{params[:year]}"
+				@display_div_months = ""
+				unless params[:month].blank?
+					date = Time.mktime(params[:year].to_i,params[:month].to_i)
+					condition[1] = ["#{date}","#{date + 1.months}"]
+					@days_in_month = (Time.days_in_month(params[:month].to_i, params[:year].to_i))
+					@display_div_days = ""
+					@selected_date = "#{FRENCH_MONTHS["#{date.month}"]} #{date.year}"
+					unless params[:day].blank?
+						date = Time.mktime(params[:year].to_i,params[:month].to_i,params[:day].split('!').map(&:to_i).sort[0].to_i)
+						date2 = Time.mktime(params[:year].to_i,params[:month].to_i,params[:day].split('!').map(&:to_i).sort[-1].to_i) + 1.days - 1.seconds
+						condition[1] = ["#{date}","#{date2}"]
+						@selected_date = "#{date.day}-#{date2.day} #{FRENCH_MONTHS["#{date.month}"]} #{date.year}"
+					end
+				end
+			else
+				condition[1] = [["#{Time.mktime(Time.now.year)}"],["#{Time.mktime(Time.now.year) + 1.years}"]] 
+				@selected_date = "#{Time.now.year}"
+			end
+
 			@value_types.each do |g|
 				max_deactivated_at = TargetValue.where('greenhouse_id = ? AND value_type_id = ?',@selected_greenhouse.id,g.id).order('deactivated_at DESC').first.deactivated_at
-				all_values = Value.where("data_card_id in (?) AND value_type_id = ?", @linked_data_cards.collect(&:id),g.id)
+				all_values = Value.where("data_card_id in (?) AND value_type_id = ? #{condition[0]}", @linked_data_cards.collect(&:id),g.id, condition[1][0], condition[1][1])
 				
 				all_values.each do |y|
 					target = TargetValue.where('greenhouse_id = ? AND value_type_id = ? AND created_at < ? AND deactivated_at > ?', @selected_greenhouse.id,g.id,y.created_at,y.created_at).first
@@ -135,7 +166,7 @@ class PagesController < ApplicationController
 	end
 
 	def get_datas
-		@greenhouses = Greenhouse.where(school_id: params[:id])
+		@greenhouses = Greenhouse.where("ID in (?)", School.find(params[:id]).greenhouse.collect(&:id))
 		@value_types = ValueType.all
 	end
 end

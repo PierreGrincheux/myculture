@@ -12,13 +12,74 @@
 	Aucune serre n'est associée à cette école <br/>
 <% end %>
 
+<b> Trier par : </b><br/>
+<div class="btn-group btn-justified" role="group" aria-label="...">
+	<div>
+		<b>Année</b> 
+		<% for i in @start_year..@end_year %>
+						<% if params[:year].to_i == i %>
+							<%= link_to i.to_s, url_for(params.merge({year: "", month: "", day: ""})), class:"btn btn-default #{"active" if i == params[:year].to_i}" %>
+						<% else %>
+							<%= link_to i.to_s, url_for(params.merge({year: i.to_s})), class:"btn btn-default #{"active" if i == params[:year].to_i}" %>				
+						<% end %>
+		<% end %>
+	</div>
+	<br/>
+	<div style="visibility:<%= @display_div_months %>">
+		<b>Mois</b>
+		<% for i in 1..12 %>
+						<% if params[:month].to_i == i %>
+							<%= link_to FRENCH_MONTHS["#{i}"], url_for(params.merge({month: "", day: ""})), class:"btn btn-default #{"active" if i == params[:month].to_i}" %>	
+						<% else %>
+							<%= link_to FRENCH_MONTHS["#{i}"], url_for(params.merge({month: i.to_s})), class:"btn btn-default #{"active" if i == params[:month].to_i}" %>
+			<% end %>
+
+			<% if i%6 == 0 %><br/><% end %>
+
+		<% end %>
+	</div>
+	<br/>
+	<div style="visibility:<%= @display_div_days %>">
+		<b>Jour</b>
+		<% for i in 1..@days_in_month %>
+						<% if params[:day].split('!').include?(i.to_s) %>
+										<% array_day = params[:day].split('!') %>
+										<% array_day.delete(i.to_s)%>
+
+										<% if array_day == [] %>
+														<% param = "" %>
+										<% else %>
+														<% param = array_day.join('!') %>
+										<% end %>
+
+						<% else %>
+										<% param = params[:day].split('!').push(i.to_s).join('!') %>
+						<% end %>
+
+						<% if params[:day].blank? || ([i, (i - 1), (i + 1)].any?{|x| params[:day].split('!').map(&:to_i).include?(x)} && ![i, (i - 1), (i + 1)].all?{|x| params[:day].split('!').map(&:to_i).include?(x)})%>
+										<% disabled = "" %>
+						<% else %>
+										<% disabled = "disabled" %>
+						<% end %>
+
+						 
+
+						<%= link_to i.to_s, url_for(params.merge({day: param})), class:"btn btn-default #{disabled ||= ""} #{"active" if params[:day].split('!').map(&:to_i).include?(i)}" %>
+						<% if i%5 == 0 %><br/><% end %>
+		<% end %>
+	</div>
+	<br/>
+	<%= link_to "Remise à zéro", url_for(params.merge({day: "", month: "", year: ""})), class: "btn btn-default" %>
+</div>
 <div style="width:100%;height:400px;">
-<svg id="chart">
-</svg>
-<% @value_types.collect(&:name).each do |v|%>
-<div id="<%= v %>-value" data-source="<%=  ( ["#{VALUE_TYPES[:"#{v}"][0]}"] + instance_variable_get("@#{v}_values").collect{ |y| y.value}).join('!')  %>"></div>
-<div id="<%= v %>-date" data-source="<%= (['x'] + @temperature_values.collect{ |y| y.created_at.iso8601}).join('!')  %>"></div>
-<% end %>  		
+	<b><%= @selected_date %></b>
+
+	<svg id="chart">
+	</svg>
+	<% @value_types.collect(&:name).each do |v|%>
+	<div id="<%= v %>-value" data-source="<%=  ( ["#{VALUE_TYPES[:"#{v}"][0]}"] + instance_variable_get("@#{v}_values").collect{ |y| y.value}).join('!')  %>"></div>
+	<div id="<%= v %>-date" data-source="<%= (['x'] + @temperature_values.collect{ |y| y.created_at.iso8601}).join('!')  %>"></div>
+	<% end %>  		
 </div>
 
 
