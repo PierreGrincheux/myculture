@@ -1,3 +1,6 @@
+<div class="row center-row" style="margin-top:9%">
+	<div class="col-md-12">
+
 <h1> SHOW de "Modifier les Paramètres"</h1>
 
 <b>Liste des Serres disponibles</b><br/>
@@ -11,11 +14,13 @@
 <br/>
 <br/>
 
-<table class="table">
-	<th> Type de valeur </th>
-	<th> Valeur </th>
-	<th> Actions </th>
-
+<table class="table table-stripped white-back">
+	<thead>
+		<th> Type de valeur </th>
+		<th> Valeur </th>
+		<th> Actions </th>
+	</thead>
+	<tbody>
 	<% if current_user.teacher? %>
 		<% @value_types.each do |y| %>
 			<tr>
@@ -37,6 +42,7 @@
 			</tr>
 		<% end %>
 	<% end %>
+</tbody>
 </table>
 
 <% else %>
@@ -44,6 +50,9 @@
 <% end %>
 <br/>
 <br/>
+
+</div>
+</div>
 
 
 

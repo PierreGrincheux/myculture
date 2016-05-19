@@ -1,11 +1,15 @@
+<div class="row center-row" >
+	<div class="col-md-12">
 <h1> Liste des Serres </h1>
-<table class="table table-stripped">
-	<th> ID </th>
-	<th> Numéro de série </th>
-	<th> Nom </th>
-	<th> Liée à une école </th>
-	<th colspan='3'> Actions </th>
-
+<table class="table table-hover table-stripped white-back">
+	<thead>
+		<th> ID </th>
+		<th> Numéro de série </th>
+		<th> Nom </th>
+		<th> Liée à une école </th>
+		<th colspan='3'> Actions </th>
+	</thead>
+	<tbody>
 	<% unless @all_greenhouses.blank? %>
 		<% @all_greenhouses.each do |t| %>
 			<tr>
@@ -29,7 +33,7 @@
 								<%= link_to "Voir", admin_greenhouse_path(t) %>
 				</td>
 				<td>
-								<%= button_to "Supprimer", admin_greenhouse_path(t), method: :delete,  data: {confirm: "Êtes-vous sûre ?"} %>
+								<%= button_to "Supprimer", admin_greenhouse_path(t), method: :delete,  data: {confirm: "Êtes-vous sûre ?"},class: 'btn btn-warning'  %>
 				</td>
 			</tr>
 		<% end %>
@@ -40,6 +44,9 @@
 			</td>
 		</tr>
 	<% end %>
+</tbody>
 </table>
 
 <%= link_to "Ajouter une serre", new_admin_greenhouse_path %>
+</div>
+</div>

@@ -1,10 +1,17 @@
+<div class="row">
+	<div class="col-md-4 col-md-offset-4 transparent-co" style="text-align: center">
 <h1> Modification des informations de la serre </h1>
 
 <%= form_for @greenhouse, url: admin_greenhouse_path, method: :patch do |f| %>
+<div class="form-group col-md-12">
 	<%= f.label :serial_nbr, "Numéro de série" %> : <%= f.text_field :serial_nbr, autofocus: true %><br/>
+</div>
+<div class="form-group col-md-12">
 	<%= f.label :school_id, "École liée" %> : <%= f.select :school_id, @linkable_schools.collect{|t| ["#{t.name} - #{t.town}", t.id]}, {prompt: "Choisir une école", include_blank: @blank_included} %> <br/>
-
-	<%= f.submit "Modifier" %>
+</div>
+	<%= f.submit "Modifier",class: 'btn btn-default' %>
+	<%= render partial: "return_link" %>
 <% end %>
 
-<%= render partial: "return_link" %>
+</div>
+</div>

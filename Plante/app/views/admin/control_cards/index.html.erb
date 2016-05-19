@@ -1,10 +1,15 @@
+<div class="row center-row" >
+	<div class="col-md-12">
 <h1> Liste des Cartes Principales </h1>
 
-<table class='table'>
+<table class="table table-stripped table-hover white-back">
+	<thead>
 		<th> ID  </th>
 		<th> Numero de Série </th>
 		<th> Liée à une école </th>
 		<th colspan='2'> Actions </th>
+	</thead>
+	</tbody>
 	<% @all_control_cards.each do |y| %>
 		<tr>
 				<td> 
@@ -24,10 +29,13 @@
 					<%= link_to "Voir", admin_control_card_path(y) %>
 				</td>
 				<td>
-					<%= button_to "Supprimer", admin_control_card_path(y), method: :delete %>
+					<%= button_to "Supprimer", admin_control_card_path(y), method: :delete ,class: 'btn btn-warning' %>
 				</td>
 		</tr>
 	<% end %>
+</tbody>
 </table>
 
 <%= link_to "Ajouter une nouvelle carte principale", new_admin_control_card_path %>
+</div>
+</div>

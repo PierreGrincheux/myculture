@@ -1,11 +1,16 @@
+<div class="row center-row" >
+	<div class="col-md-12">
 <h1> Liste des Cartes Secondaires</h1>
 
-<table class='table'>
+<table class="table table-stripped table-hover white-back">
+	<thead>
 		<th> ID  </th>
 		<th> Numero de Série </th>
 		<th> Liée à une carte prinipale </th>
 		<th> Liée à une serre </th>
 		<th colspan='2'> Actions </th>
+	</thead>
+	<tbody>
 		<% @all_data_cards.each do |y| %>
 		<tr>
 				<td> 
@@ -32,10 +37,13 @@
 					<%= link_to "Voir", admin_data_card_path(y) %>
 				</td>
 				<td>
-					<%= button_to "Supprimer", admin_data_card_path(y), method: :delete %>
+					<%= button_to "Supprimer", admin_data_card_path(y), method: :delete,class: 'btn btn-warning'  %>
 				</td>
 		</tr>
 	<% end %>
+</tbody>
 </table>
 
 <%= link_to "Ajouter une nouvelle carte secondaire", new_admin_data_card_path %>
+</div>
+</div>
