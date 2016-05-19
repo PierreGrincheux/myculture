@@ -2,16 +2,90 @@
 	<div class="col-md-12">
 		<h1> SHOW de DATA </h1>
 
-		<b>Liste des Serres disponibles</b><br/>
-		<% unless @greenhouses.blank? %>
-		<ol>
-			<% @greenhouses.each do |y| %>
-							<li><b><%= y.serial_nbr %></b> --- <% if @selected_greenhouse.id == y.id %> Serre actuellement selectionnée <% else %> <%= link_to "Choisir cette serre", show_data_pages_path(id: params[:id], selected_greenhouse: y.id) %><% end %></li>
+
+<h1> SHOW de DATA </h1>
+
+<b>Liste des Serres disponibles</b><br/>
+<% unless @greenhouses.blank? %>
+<ol>
+	<% @greenhouses.each do |y| %>
+					<li><b><%= y.serial_nbr %></b> --- <% if @selected_greenhouse.id == y.id %> Serre actuellement selectionnée <% else %> <%= link_to "Choisir cette serre", show_data_pages_path(id: params[:id], selected_greenhouse: y.id) %><% end %></li>
+<% end %>
+</ol>
+<% else %>
+	Aucune serre n'est associée à cette école <br/>
+<% end %>
+
+
+<!-- ############################################################## GESTION DU TRI DES DONNEES PAR DATES ######################################################################################## -->
+
+
+
+<b> Trier par : </b><br/>
+<div class="btn-group btn-justified" role="group" aria-label="...">
+	<div>
+		<b>Année</b> 
+		<% for i in @start_year..@end_year %>
+						<% if params[:year].to_i == i %>
+							<%= link_to i.to_s, url_for(params.merge({year: "", month: "", day: ""})), class:"btn btn-default #{"active" if i == params[:year].to_i}" %>
+						<% else %>
+							<%= link_to i.to_s, url_for(params.merge({year: i.to_s})), class:"btn btn-default #{"active" if i == params[:year].to_i}" %>				
+						<% end %>
 		<% end %>
-		</ol>
-		<% else %>
-			Aucune serre n'est associée à cette école <br/>
+	</div>
+	<br/>
+	<div style="visibility:<%= @display_div_months %>">
+		<b>Mois</b>
+		<% for i in 1..12 %>
+						<% if params[:month].to_i == i %>
+							<%= link_to FRENCH_MONTHS["#{i}"], url_for(params.merge({month: "", day: ""})), class:"btn btn-default #{"active" if i == params[:month].to_i}" %>	
+						<% else %>
+							<%= link_to FRENCH_MONTHS["#{i}"], url_for(params.merge({month: i.to_s})), class:"btn btn-default #{"active" if i == params[:month].to_i}" %>
+			<% end %>
+
+			<% if i%6 == 0 %><br/><% end %>
+
 		<% end %>
+	</div>
+	<br/>
+	<div style="visibility:<%= @display_div_days %>">
+		<b>Jour</b>
+		<% for i in 1..@days_in_month %>
+						<% if params[:day].split('!').include?(i.to_s) %>
+										<% array_day = params[:day].split('!') %>
+										<% array_day.delete(i.to_s)%>
+
+										<% if array_day == [] %>
+														<% param = "" %>
+										<% else %>
+														<% param = array_day.join('!') %>
+										<% end %>
+
+						<% else %>
+										<% param = params[:day].split('!').push(i.to_s).join('!') %>
+						<% end %>
+
+						<% if params[:day].blank? || ([i, (i - 1), (i + 1)].any?{|x| params[:day].split('!').map(&:to_i).include?(x)} && ![i, (i - 1), (i + 1)].all?{|x| params[:day].split('!').map(&:to_i).include?(x)})%>
+										<% disabled = "" %>
+						<% else %>
+										<% disabled = "disabled" %>
+						<% end %>
+
+						 
+
+						<%= link_to i.to_s, url_for(params.merge({day: param})), class:"btn btn-default #{disabled ||= ""} #{"active" if params[:day].split('!').map(&:to_i).include?(i)}" %>
+						<% if i%5 == 0 %><br/><% end %>
+		<% end %>
+	</div>
+	<br/>
+	<%= link_to "Remise à zéro", url_for(params.merge({day: "", month: "", year: ""})), class: "btn btn-default" %>
+</div>
+
+
+
+<!-- ######################################################################################################################################################### -->
+
+
 
 		<div style="width:100%;height:450px;">
 		<svg id="chart">
