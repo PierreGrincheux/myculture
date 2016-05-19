@@ -54,8 +54,8 @@ for (i = 1; i < arrayAirHumValue.length; i++){
 //alert(tempDate);
 var chart = c3.generate({
 	size: {
-	    height: 240,
-	    width: 480
+	    height: 440,
+	    width: 1024
 	},
 	data: {
 		x: 'x',

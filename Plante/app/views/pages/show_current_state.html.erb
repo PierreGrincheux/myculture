@@ -1,38 +1,43 @@
-<h1> SHOW de "Situation Actuelle" </h1>
+<div class="row center-row" style="margin-top:9%">
+	<div class="col-md-12">
+		<h1> SHOW de "Situation Actuelle" </h1>
 
-<b>Liste des Serres Disponibles</b><br/>
-<% unless @greenhouses.blank? %>
-<ol>
-	<% @greenhouses.each do |y| %>
-					<li><b><%= y.serial_nbr %></b> --- <% if @selected_greenhouse.id == y.id %> Serre actuellement selectionnée <% else %> <%= link_to "Choisir cette serre", show_current_state_pages_path(id: params[:id], selected_greenhouse: y.id) %><% end %></li>
-<% end %>
-</ol>
-<% else %>
-	Aucune serre n'est associée à cette école <br/>
-<% end %>
-
-<br/>
-<br/>
+		<b>Liste des Serres Disponibles</b><br/>
+		<% unless @greenhouses.blank? %>
+		<ol>
+			<% @greenhouses.each do |y| %>
+							<li><b><%= y.serial_nbr %></b> --- <% if @selected_greenhouse.id == y.id %> Serre actuellement selectionnée <% else %> <%= link_to "Choisir cette serre", show_current_state_pages_path(id: params[:id], selected_greenhouse: y.id) %><% end %></li>
+		<% end %>
+		</ol>
+		<% else %>
+			Aucune serre n'est associée à cette école <br/>
+		<% end %>
+	
 <b>Liste des dernières valeurs</b><br/>
-<table class='table'>
-		<% @value_types_header.each do |v| %>
-			<th><%="#{v}"%></th>
-		<% end %>
-
-		<% @value_types.each do |y| %>
-				<tr>
-						<td>
-								<%= print_value_name(y.name) %> 
-						</td>
-						<td>
-								<%= print_value(instance_variable_get("@#{y.name}_values"), y.name) %>
-						</td>
-						<td>
-								<%= print_value(instance_variable_get("@target_#{y.name}"), y.name) %>
-						</td>
-				</tr>
-		<% end %>
-</table>
+	<table class='table table table-hover table-bordered white-back'>
+		<thead>
+			<% @value_types_header.each do |v| %>
+				<th><%="#{v}"%></th>
+			<% end %>
+		</thead>
+		<tbody>
+			<% @value_types.each do |y| %>
+					<tr>
+							<td>
+									<%= print_value_name(y.name) %> 
+							</td>
+							<td>
+									<%= print_value(instance_variable_get("@#{y.name}_values"), y.name) %>
+							</td>
+							<td>
+									<%= print_value(instance_variable_get("@target_#{y.name}"), y.name) %>
+							</td>
+					</tr>
+			<% end %>
+		</tbody>
+	</table>
 
 
 <%= link_to "Ancienne page d'accueil connecté", root_path(ana_display: "true", id: params[:id]) %>
+</div>
+</div>

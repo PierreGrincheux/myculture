@@ -1,3 +1,7 @@
+<div class="row center-row" style="margin-top:9%">
+	<div class="col-md-12">
+		<h1> SHOW de DATA </h1>
+
 
 <h1> SHOW de DATA </h1>
 
@@ -83,29 +87,29 @@
 
 
 
-<div style="width:100%;height:400px;">
-	<b><%= @selected_date %></b>
-
-	<svg id="chart">
-	</svg>
-	<% @value_types.collect(&:name).each do |v|%>
-	<div id="<%= v %>-value" data-source="<%=  ( ["#{VALUE_TYPES[:"#{v}"][0]}"] + instance_variable_get("@#{v}_values").collect{ |y| y.value}).join('!')  %>"></div>
-	<div id="<%= v %>-date" data-source="<%= (['x'] + @temperature_values.collect{ |y| y.created_at.iso8601}).join('!')  %>"></div>
-	<% end %>  		
-</div>
-
+		<div style="width:100%;height:450px;">
+		<svg id="chart">
+		</svg>
+		<% @value_types.collect(&:name).each do |v|%>
+		<div id="<%= v %>-value" data-source="<%=  ( ["#{VALUE_TYPES[:"#{v}"][0]}"] + instance_variable_get("@#{v}_values").collect{ |y| y.value}).join('!')  %>"></div>
+		<div id="<%= v %>-date" data-source="<%= (['x'] + @temperature_values.collect{ |y| y.created_at.iso8601}).join('!')  %>"></div>
+		<% end %>  		
+		</div>
 
 <b>Liste des valeurs pour chaque types<b><br/><br/>
 		<% @value_types.each do |y| %>
 				<b> <%= VALUE_TYPES[:"#{y.name}"][0] %> </b>
-				<table class='table table-hover table-bordered'>
-					<tr style="background-color:white;">
-						<th> ID </th>
-						<th> DataCard ID </th>
-						<th> Date </th>
-						<th> Valeur </th>
-						<th> Valeur cible du moment </th>
-					</tr>
+				<table class='table table-hover table-bordered white-back'>
+					<thead>
+						<tr style="background-color:white;">
+							<th> ID </th>
+							<th> DataCard ID </th>
+							<th> Date </th>
+							<th> Valeur </th>
+							<th> Valeur cible du moment </th>
+						</tr>
+					</thead>
+					<tbody>
 						<% instance_variable_get("@#{y.name}_values").each do |k,v| %>
 								<tr>
 										<td>
@@ -125,9 +129,12 @@
 										</td>
 								</tr>
 						<% end %>
+				</tbody>
 			</table>
 			<br/>	
 		<% end %>
+	</div>
+</div>
 <br/>
 <br/>
 

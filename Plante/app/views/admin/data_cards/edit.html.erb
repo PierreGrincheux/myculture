@@ -1,9 +1,21 @@
+<div class="row">
+	<div class="col-md-4 col-md-offset-4 transparent-co" style="text-align: center">
 <h1> Modification de la carte de commande secondaire: <%= @data_card.serial_nbr.to_s %> </h1>
 
 <%= form_for @data_card, url: admin_data_card_path, method: :patch do |f| %>
+<div class="form-group col-md-12">
 	<%= f.label :serial_nbr, "Numéro de série" %> : <%= f.text_field :serial_nbr, autofocus: true %><br/>
+</div>
+<div class="form-group col-md-12">
 	<%= f.label :control_card_id, "Carte de contrôle à lier" %> : <%= f.select :control_card_id, @linkable_control_cards.collect{|y| ["#{y.serial_nbr} - #{[y.school.name, y.school.town].join(' - ') if !y.school.blank?}", y.id]}, {prompt: "Choisir une carte de contrôle", include_blank: @blank_included} %><br/>
+</div>
+<div class="form-group col-md-12">
 	<%= f.label :greenhouse_id, "Serre à lier" %> : <%= f.select :greenhouse_id, @linkable_greenhouses.collect{|y| ["#{y.serial_nbr} - #{[y.name]}", y.id]}, {prompt: "Choisir une serre", include_blank: @blank_included2} %><br/>
-	<%= f.submit "Modifier" %>
+</div>
+	<%= f.submit "Modifier",class: 'btn btn-default' %>
+	<%= render partial: "return_link" %>
 <% end %>
-<%= render partial: "return_link" %>
+
+
+</div>
+</div>
