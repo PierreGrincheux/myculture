@@ -16,9 +16,14 @@ class Teacher::SupervisionsController < ApplicationController
 		##### HTTP LOGS
 		@logs = Hash.new
 		@all_greenhouses.each do |t|
-			@logs[:"#{t.serial_nbr}"] = Array.new
+			@logs[:"#{t.serial_nbr}"] = Hash.new
 			all_operations.each do |v|
-				@logs[:"#{t.serial_nbr}"] << [v, HttpConnectionLog.where("connection_type = ? AND greenhouse_id = ?", v.to_s, t.id).reverse.first.created_at.localtime.strftime("%d/%m/%Y %H:%M:%S")]
+				log = HttpConnectionLog.where("connection_type = ? AND greenhouse_id = ?", v.to_s, t.id)
+	
+				unless log.blank?
+					log = log.reverse.first.created_at.localtime.strftime("%d/%m/%Y %H:%M:%S")
+					@logs[:"#{t.serial_nbr}"].merge!({"#{v}": log})
+				end
 			end
 		end
 
