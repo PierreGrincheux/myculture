@@ -2,9 +2,6 @@
 	<div class="col-md-12">
 		<h1> SHOW de DATA </h1>
 
-
-<h1> SHOW de DATA </h1>
-
 <b>Liste des Serres disponibles</b><br/>
 <% unless @greenhouses.blank? %>
 <ol>
@@ -34,6 +31,8 @@
 		<% end %>
 	</div>
 	<br/>
+</div>
+<div class="btn-group btn-justified" role="group" aria-label="...">
 	<div style="visibility:<%= @display_div_months %>">
 		<b>Mois</b>
 		<% for i in 1..12 %>
@@ -48,6 +47,8 @@
 		<% end %>
 	</div>
 	<br/>
+</div>
+<div class="btn-group btn-justified" role="group" aria-label="...">
 	<div style="visibility:<%= @display_div_days %>">
 		<b>Jour</b>
 		<% for i in 1..@days_in_month %>
@@ -78,6 +79,7 @@
 		<% end %>
 	</div>
 	<br/>
+</div>
 	<%= link_to "Remise à zéro", url_for(params.merge({day: "", month: "", year: ""})), class: "btn btn-default" %>
 </div>
 
@@ -87,7 +89,7 @@
 
 
 
-		<div style="width:100%;height:450px;">
+		<div style="width:100%;height:450px;margin-bottom: 20%;">
 		<svg id="chart">
 		</svg>
 		<% @value_types.collect(&:name).each do |v|%>
