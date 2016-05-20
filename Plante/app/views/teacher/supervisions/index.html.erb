@@ -11,9 +11,18 @@
 			<h4><b>Serre "<%= v %>"</b></h4>
 		</div>
 		<div class="panel-body">
-			<b> Logs échanges serre/serveur :</b><br/>
-			<% @logs[:"#{v}"].each do |t|	%>
-				<%= HTTP_CONNECTION_TYPES[:"#{t[0]}"][0].capitalize %> => <b><%= t[1] %></b><br/>
+				<b> Logs échanges serre/serveur :</b><br/>
+				<% @logs[:"#{v}"].each do |c,j|	%>
+				<% array_comp = ["available","disabled"] %>
+				<% if array_comp.any?{|b| /#{b}/ =~ c}%>
+					<% opposite = array_comp[array_comp.index(c.to_s.split('_')[-1]) - 1] %>
+					<% other_data = @logs[:"#{v}"][:"#{c.to_s.split('_')[0..-2].join('_')}_#{opposite}"] %>
+					<% next if other_data > j %>
+					<%= HTTP_CONNECTION_TYPES[:"#{c}"][0].capitalize %> => <span class="btn btn-<%="danger" if c.to_s.split('_')[-1] == "disabled"%><%="success" if c.to_s.split('_')[-1] == "available"%>"><%=HTTP_CONNECTION_STATES[:"#{c.to_s.split('_')[-1]}"] %></span>
+					<% next %>
+				<% end %>
+
+				<%= HTTP_CONNECTION_TYPES[:"#{c}"][0].capitalize %> => <b><%= j %></b><br/>
 			<% end %>
 		</div>
 	</div>

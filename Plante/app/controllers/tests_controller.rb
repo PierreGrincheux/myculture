@@ -37,8 +37,22 @@ skip_before_filter  :verify_authenticity_token
 			when "post_new_values"
 				greenhouse_id = Greenhouse.where(serial_nbr: params[:greenhouse_serial_nbr]).first.id
 				post_new_values
+
+			when "post_pictures"
+				f = Logger.new("log/http_request_supervision.log")
+				f.info ""
+				f.info "######## Starting post_pictures  ########"
+				f.info "gnagnagna"
+				f.info "#{params}"		
+				greenhouse_id = Greenhouse.where(serial_nbr: params[:greenhouse_serial_nbr]).first.id
+
+				f.info "gnagnagna"
+				params[:request_type] = "#{params[:request_type]}_#{params[:state]}"
+				f.info "params[:request_type] = #{params[:request_type]}"
 		end
 
+		f.info "out"
+		f.info "#{params[:request_type]}"
 		log = HttpConnectionLog.new
 		log.connection_type = params[:request_type]
 		log.greenhouse_id = greenhouse_id

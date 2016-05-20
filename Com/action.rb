@@ -229,12 +229,16 @@ class Action
 		f.puts "#######################################"
 		f.puts ""
 
-		f.puts "Starting 'take_picture' methood at #{Time.now}"
+		f.puts "Starting 'take_picture' method at #{Time.now}"
+
+		hash_params = {request_type: "post_pictures", greenhouse_serial_nbr: GREENHOUSE_SERIAL_NBR } 
 
 		unless File.exist?(WEBCAM_PATH)
 			puts "ERROR NO WEBCAM FOUND"
 			f.puts "ERROR OCCURED : NO WEBCAM FOUND AT #{WEBCAM_PATH}"
 			online = false
+			
+			hash_params[:state] = "disabled"
 		else
 			online = true
 			i=0
@@ -262,8 +266,18 @@ class Action
 			File.rename("#{UNPROCESSED_PICS_PATH}/#{namefile}", "#{PROCESSED_PICS_PATH}/#{Time.now.strftime("%Y%m%d%H%M%S")}_#{GREENHOUSE_SERIAL_NBR}_pic.png")
 			
 			f.puts "PHOTO PROCESS DONE"
+
+			hash_params[:state] = "available"
 			i += 1
 		end
+
+		puts ""
+		puts ""
+		puts "HTTP CONNECTION	FOR PICTURE"
+		puts "hash_params = #{hash_params}"
+		puts ""
+		puts ""
+		HttpConnection.new(TARGET_URL,"",hash_params)	
 	end
 
 

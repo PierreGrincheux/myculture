@@ -18,10 +18,9 @@
 
 
 
-<b> Trier par : </b><br/>
 <div class="btn-group btn-justified" role="group" aria-label="...">
 	<div>
-		<b>Année</b> 
+		<b>Choisir une année :</b><br/>
 		<% for i in @start_year..@end_year %>
 						<% if params[:year].to_i == i %>
 							<%= link_to i.to_s, url_for(params.merge({year: "", month: "", day: ""})), class:"btn btn-default #{"active" if i == params[:year].to_i}" %>
@@ -30,12 +29,16 @@
 						<% end %>
 		<% end %>
 	</div>
+
 	<br/>
 </div>
 <div class="btn-group btn-justified" role="group" aria-label="...">
+
+
+<b>Choisir un mois :</b><br/>
+
 	<div style="visibility:<%= @display_div_months %>">
-		<b>Mois</b>
-		<% for i in 1..12 %>
+		<% for i in 1..@nb_months %>
 						<% if params[:month].to_i == i %>
 							<%= link_to FRENCH_MONTHS["#{i}"], url_for(params.merge({month: "", day: ""})), class:"btn btn-default #{"active" if i == params[:month].to_i}" %>	
 						<% else %>
@@ -46,11 +49,16 @@
 
 		<% end %>
 	</div>
+
 	<br/>
 </div>
 <div class="btn-group btn-justified" role="group" aria-label="...">
+
+
+
+	<b>Choisir un jour :</b><br/>
+
 	<div style="visibility:<%= @display_div_days %>">
-		<b>Jour</b>
 		<% for i in 1..@days_in_month %>
 						<% if params[:day].split('!').include?(i.to_s) %>
 										<% array_day = params[:day].split('!') %>
@@ -72,9 +80,9 @@
 										<% disabled = "disabled" %>
 						<% end %>
 
-						 
+						<% i < 10 ? i_to_show = "0" + i.to_s : i_to_show = i.to_s %>
 
-						<%= link_to i.to_s, url_for(params.merge({day: param})), class:"btn btn-default #{disabled ||= ""} #{"active" if params[:day].split('!').map(&:to_i).include?(i)}" %>
+						<%= link_to i_to_show, url_for(params.merge({day: param})), class:"btn btn-default #{disabled ||= ""} #{"active" if params[:day].split('!').map(&:to_i).include?(i)}" %>
 						<% if i%5 == 0 %><br/><% end %>
 		<% end %>
 	</div>

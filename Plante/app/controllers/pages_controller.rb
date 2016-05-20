@@ -100,6 +100,7 @@ class PagesController < ApplicationController
 			@display_div_months = "hidden"
 			@display_div_days = "hidden"
 			@days_in_month = 1
+			@nb_months = 1
 			condition = ["",""]
 			condition[0] += "AND created_at BETWEEN ? AND ?"
 			unless params[:year].blank?
@@ -107,6 +108,7 @@ class PagesController < ApplicationController
 				condition[1] = ["#{date}","#{date + 1.years}"]
 				@selected_date = "#{params[:year]}"
 				@display_div_months = ""
+				@nb_months = 12
 				unless params[:month].blank?
 					date = Time.mktime(params[:year].to_i,params[:month].to_i)
 					condition[1] = ["#{date}","#{date + 1.months}"]
