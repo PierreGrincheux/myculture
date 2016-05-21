@@ -8,19 +8,48 @@
 			<h4><b>Serre "<%= v %>"</b></h4>
 		</div>
 		<div class="panel-body">
-				<b> Logs échanges serre/serveur :</b><br/>
-				<% @logs[:"#{v}"].each do |c,j|	%>
-				<% array_comp = ["available","disabled"] %>
-				<% if array_comp.any?{|b| /#{b}/ =~ c}%>
-					<% opposite = array_comp[array_comp.index(c.to_s.split('_')[-1]) - 1] %>
-					<% other_data = @logs[:"#{v}"][:"#{c.to_s.split('_')[0..-2].join('_')}_#{opposite}"] %>
-					<% next if other_data > j %>
-					<%= HTTP_CONNECTION_TYPES[:"#{c}"][0].capitalize %> => <span class="btn btn-<%="danger" if c.to_s.split('_')[-1] == "disabled"%><%="success" if c.to_s.split('_')[-1] == "available"%>"><%=HTTP_CONNECTION_STATES[:"#{c.to_s.split('_')[-1]}"] %></span>
-					<% next %>
-				<% end %>
+			<% @all_families.each do |family| %>
+				<table class="table table-bordered table-striped table-hover">
+					<tr>
+						<th colspan='2'> <%= HTTP_CONNECTION_FAMILIES[:"#{family}"]%> </th>
+						<% HTTP_CONNECTION_TYPES.each do |type,val| %>
+							<% next if val[1] != family %>
+							<% @logs[:"#{v}"].each do |c,j| %>
+								<% next if c.to_s != type.to_s %>
+								<% case family %>
+									<% when "material" %>
+										<% array_comp = ["available","disabled"] %>
+										
+										<% if array_comp.include?(c.to_s.split('_')[-1])%>
+											<% if array_comp.all?{|comp| @logs[:"#{v}"][:"#{c.to_s.split('_')[0..-2].join('_')}_#{comp}"] == ""}%>
+												<% if	c.to_s.split('_')[-1] == "available" %>
+													<tr>
+														<td><%= HTTP_CONNECTION_TYPES[:"#{c}"][0].capitalize %></td>
+														<td class="warning"><b>Inconnu</b></span></td>
+													</tr>
+												<% end %>
+												<% next %>
+											<% end %>
 
-				<%= HTTP_CONNECTION_TYPES[:"#{c}"][0].capitalize %> => <b><%= j %></b><br/>
-			<% end %>
+											<% opposite = array_comp[array_comp.index(c.to_s.split('_')[-1]) - 1] %>
+											<% other_data = @logs[:"#{v}"][:"#{c.to_s.split('_')[0..-2].join('_')}_#{opposite}"] %>
+											<% next if other_data > j %>
+											<tr>
+												<td><%= HTTP_CONNECTION_TYPES[:"#{c}"][0].capitalize %></td>
+												<td class="<%="danger" if c.to_s.split('_')[-1] == "disabled"%><%="success" if c.to_s.split('_')[-1] == "available"%>"><b><%=HTTP_CONNECTION_STATES[:"#{c.to_s.split('_')[-1]}"] %></b><br/> au <small><%= j %></small></span></td>
+											</tr>
+										<% end %>
+									<% else %>
+										<tr>
+											<td><%= HTTP_CONNECTION_TYPES[:"#{c}"][0].capitalize %></td>
+											<td><b><%= j %></b></td>
+										</tr>
+								<% end %>
+							<% end %>
+						<% end %>
+		</tr>
+		</table>
+					<% end %>
 		</div>
 	</div>
 <% end %>

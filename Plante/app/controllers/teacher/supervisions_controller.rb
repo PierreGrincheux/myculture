@@ -3,6 +3,7 @@ class Teacher::SupervisionsController < ApplicationController
 
 	def index
 		all_operations = HTTP_CONNECTION_TYPES.keys
+		@all_families = HTTP_CONNECTION_TYPES.values.collect{|g| g[1]}.uniq
 		@all_greenhouses = Greenhouse.where("school_id = ?", params[:id])
 		
 		##### VALUE TYPES
@@ -23,10 +24,11 @@ class Teacher::SupervisionsController < ApplicationController
 				unless log.blank?
 					log = log.reverse.first.created_at.localtime.strftime("%d/%m/%Y %H:%M:%S")
 					@logs[:"#{t.serial_nbr}"].merge!({"#{v}": log})
+				else
+					@logs[:"#{t.serial_nbr}"].merge!({"#{v}": ""})
 				end
 			end
 		end
-
 		##### TARGET VALUES
 		@all_target_values = Array.new
 		req = TargetValue.where("greenhouse_id IN (?) AND active = ?", @all_greenhouses.collect(&:id), true)

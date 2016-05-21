@@ -4,7 +4,7 @@ module ApplicationHelper
 	end
 
 	def convert_date(date)
-		return date.strftime("%d/%m/%Y %H:%M").to_s
+		return date.strftime("%d/%m/%Y %H:%M:%S").to_s
 	end
 
 	def convert_date_short(date)

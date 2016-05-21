@@ -4,7 +4,7 @@ require_relative "setup_script"
 action = Action.new
 
 puts "running action.setup and action.get_data(value_types)"
-#action.setup
+action.setup
 #action.get_data("value_types")
 
 while true do
