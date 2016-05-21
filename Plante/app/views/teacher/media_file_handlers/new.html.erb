@@ -1,3 +1,5 @@
+<div class="row center-row" style="margin-top:9%">
+	<div class="col-md-12">
 <% if !@media_file.errors.empty? %>
   <div class = "alert alert-error">
       
@@ -22,4 +24,6 @@
 					<%= f.label :attachement, "Fichier à ajouter :", :class => "col-md-3" %><%= f.file_field :attachement, :class => "col-md-3" %><br/><br><br/><br/>
 					<%= f.submit "Enregistrer", class: "btn btn-primary" %>
 	<% end %>
+</div>
+</div>
 </div>
