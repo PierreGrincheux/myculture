@@ -7,8 +7,8 @@
 												<span class="icon-bar"></span>
 								</button>
 								<a class="navbar-brand" href="#">
-												<%=image_tag("logo.png", alt: "Logo", id: "logo")%>
-								</a>
+												<%= link_to image_tag("logo.png", alt: "Logo", id: "logo"), root_path, class: "btn"%>
+								</a> 
 				</div>
 
 				<% if user_signed_in? %>
@@ -17,6 +17,7 @@
 							<li class="<%= "active" if request.env['PATH_INFO'] == show_current_state_pages_path %>"><%= link_to "Situation actuelle", show_current_state_pages_path(id: params[:id], selected_greenhouse: params[:selected_greenhouse]), class: "nav_btn" %></li>
 							<li class="<%= "active" if request.env['PATH_INFO'] == show_parameters_pages_path %>"><%= link_to "Modifier les paramètres", show_parameters_pages_path(id: params[:id], selected_greenhouse: params[:selected_greenhouse]), class: "nav_btn"%></li>
 							<li class="<%= "active" if request.env['PATH_INFO'] == show_data_pages_path %>"><%= link_to "Évolution", show_data_pages_path(id: params[:id], selected_greenhouse: params[:selected_greenhouse], year: "", month: "", day: ""), class:"nav_btn" %></li>
+							<li class="<%= "active" if request.env['PATH_INFO'] == show_data2_pages_path %>"><%= link_to "Évolution", show_data2_pages_path(id: params[:id], selected_greenhouse: params[:selected_greenhouse], year: "", month: "", day: ""), class:"nav_btn" %></li>
 							<li class="<%= "active" if request.env['PATH_INFO'] == show_media_file_pages_path %>"><%= link_to "Supports Éducatifs", show_media_file_pages_path(id: params[:id]), class: "nav_btn" %></li>
 							<% if current_user.super_admin? || current_user.teacher? %>
 								<li class="dropdown <%= "active" if [edit_user_registration_path,teacher_supervisions_path,admin_schools_path].include?(request.env['PATH_INFO'])%>">

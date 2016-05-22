@@ -41,6 +41,7 @@ Rails.application.routes.draw do
 				get 'show_current_state', on: :collection
 				get 'show_parameters', on: :collection
 				get 'show_data', on: :collection
+				get 'show_data2', on: :collection
 				get 'show_media_file', on: :collection
 				patch 'update_parameters', on: :collection
 		 end

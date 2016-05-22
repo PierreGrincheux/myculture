@@ -1,18 +1,8 @@
 <div class="row center-row" style="margin-top:9%">
 	<div class="col-md-12">
 
-<h1> SHOW de "Modifier les Paramètres"</h1>
+					<%= render "nav_greenhouse" %>
 
-<b>Liste des Serres disponibles</b><br/>
-<% unless @greenhouses.blank? %>
-<ol>
-				<% @greenhouses.each do |y| %>
-								<li><b><%= y.serial_nbr %></b> --- <% if @selected_greenhouse.id == y.id %> Serre actuellement selectionnée <% else %> <%= link_to "Choisir cette serre", show_parameters_pages_path(id: params[:id], selected_greenhouse: y.id) %><% end %></li>
-<% end %>
-</ol>
-
-<br/>
-<br/>
 
 <table class="table table-stripped white-back">
 	<thead>
@@ -45,11 +35,6 @@
 </tbody>
 </table>
 
-<% else %>
-	Aucune serre n'est associée à cette école <br/>
-<% end %>
-<br/>
-<br/>
 
 </div>
 </div>
