@@ -1,8 +1,13 @@
 <div class="row center-row" style="margin-top:9%">
 	<div class="col-md-12">
+		<%= render "actual_situation" %>
 		<h1> SHOW de "Situation Actuelle" </h1>
 
 		<b>Liste des Serres Disponibles</b><br/>
+
+		
+
+		
 		<% unless @greenhouses.blank? %>
 		<ol>
 			<% @greenhouses.each do |y| %>
