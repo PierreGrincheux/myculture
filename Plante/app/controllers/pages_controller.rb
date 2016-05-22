@@ -33,7 +33,9 @@ class PagesController < ApplicationController
 		unless @selected_greenhouse.blank?
 			@linked_data_cards = DataCard.where(greenhouse_id: @selected_greenhouse.id)
 			@value_types.each do |g|
-				instance_variable_set("@target_#{g.name}", TargetValue.where("greenhouse_id = ? AND value_type_id = ? AND active = ?", @selected_greenhouse.id, g.id, true)[0].value)
+				target_value = TargetValue.where("greenhouse_id = ? AND value_type_id = ? AND active = ?", @selected_greenhouse.id, g.id, true)[0]
+				target_value.blank? ? "NA" : target_value = target_value.value
+				instance_variable_set("@target_#{g.name}", target_value)
 				instance_variable_set("@#{g.name}_values", Value.where("data_card_id in (?)", @linked_data_cards.collect(&:id)).select{|h| h.value_type_id == g.id}.sort{|b,c| b.created_at <=> c.created_at}.collect(&:value)[0])			
 			end
 		end
@@ -85,6 +87,63 @@ class PagesController < ApplicationController
 	end
 
 	def show_data
+		unless params[:selected_greenhouse].blank?
+			@selected_greenhouse = Greenhouse.find(params[:selected_greenhouse])
+		else
+			@selected_greenhouse = Greenhouse.find(@greenhouses[0].id) unless @greenhouses.blank?
+		end
+
+		unless @selected_greenhouse.blank?
+			@linked_data_cards = DataCard.where(greenhouse_id: @selected_greenhouse.id)
+			@hash_target_values = Hash.new
+			@start_year = Value.maximum("created_at").year
+			@end_year = Value.minimum("created_at").year
+			@selected_date = String.new
+			@display_div_months = "hidden"
+			@display_div_days = "hidden"
+			@days_in_month = 1
+			@nb_months = 1
+			condition = ["",""]
+			condition[0] += "AND created_at BETWEEN ? AND ?"
+			unless params[:year].blank?
+				date = Time.mktime(params[:year].to_i)
+				condition[1] = ["#{date}","#{date + 1.years}"]
+				@selected_date = "#{params[:year]}"
+				@display_div_months = ""
+				@nb_months = 12
+				unless params[:month].blank?
+					date = Time.mktime(params[:year].to_i,params[:month].to_i)
+					condition[1] = ["#{date}","#{date + 1.months}"]
+					@days_in_month = (Time.days_in_month(params[:month].to_i, params[:year].to_i))
+					@display_div_days = ""
+					@selected_date = "#{FRENCH_MONTHS["#{date.month}"]} #{date.year}"
+					unless params[:day].blank?
+						date = Time.mktime(params[:year].to_i,params[:month].to_i,params[:day].split('!').map(&:to_i).sort[0].to_i)
+						date2 = Time.mktime(params[:year].to_i,params[:month].to_i,params[:day].split('!').map(&:to_i).sort[-1].to_i) + 1.days - 1.seconds
+						condition[1] = ["#{date}","#{date2}"]
+						@selected_date = "#{date.day}-#{date2.day} #{FRENCH_MONTHS["#{date.month}"]} #{date.year}"
+					end
+				end
+			else
+				condition[1] = [["#{Time.mktime(Time.now.year)}"],["#{Time.mktime(Time.now.year) + 1.years}"]] 
+				@selected_date = "#{Time.now.year}"
+			end
+
+			@value_types.each do |g|
+				max_deactivated_at = TargetValue.where('greenhouse_id = ? AND value_type_id = ?',@selected_greenhouse.id,g.id).order('deactivated_at DESC').first.deactivated_at
+				all_values = Value.where("data_card_id in (?) AND value_type_id = ? #{condition[0]}", @linked_data_cards.collect(&:id),g.id, condition[1][0], condition[1][1])
+				
+				all_values.each do |y|
+					target = TargetValue.where('greenhouse_id = ? AND value_type_id = ? AND created_at < ? AND deactivated_at > ?', @selected_greenhouse.id,g.id,y.created_at,y.created_at).first
+					target ||= TargetValue.where('greenhouse_id = ? AND value_type_id = ? AND active = ?',@selected_greenhouse.id,g.id,true).first
+					@hash_target_values[:"id#{y.id}"] = target.value
+				end
+				instance_variable_set("@#{g.name}_values", all_values)
+			end	
+		end
+	end
+
+	def show_data2
 		unless params[:selected_greenhouse].blank?
 			@selected_greenhouse = Greenhouse.find(params[:selected_greenhouse])
 		else
