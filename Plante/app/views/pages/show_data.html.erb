@@ -8,7 +8,8 @@
 <!-- ############################################################## GESTION DU TRI DES DONNEES PAR DATES ######################################################################################## -->
 
 
-
+<div class="row">
+	<div class="col-md-4">
 <div class="btn-group btn-justified" role="group" aria-label="...">
 	<div>
 		<b>Choisir une année :</b><br/>
@@ -23,6 +24,8 @@
 
 	<br/>
 </div>
+</div>
+<div class="col-md-4">
 <div class="btn-group btn-justified" role="group" aria-label="...">
 
 
@@ -43,6 +46,8 @@
 
 	<br/>
 </div>
+</div>
+<div class="col-md-4">
 <div class="btn-group btn-justified" role="group" aria-label="...">
 
 
@@ -79,9 +84,10 @@
 	</div>
 	<br/>
 </div>
+</div>
 	<%= link_to "Remise à zéro", url_for(params.merge({day: "", month: "", year: ""})), class: "btn btn-default" %>
 </div>
-
+</div>
 
 
 <!-- ######################################################################################################################################################### -->

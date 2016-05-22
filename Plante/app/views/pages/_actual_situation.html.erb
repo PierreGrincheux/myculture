@@ -1,4 +1,5 @@
-      <div class="situation">
+
+        <div class="situation">
         <div class="row">
 
           <div class="col-md-4 rect rect1">
@@ -9,7 +10,7 @@
                   </clipPath>
                       <pattern id="image" x="0%" y="0%" height="100%" width="100%"
                            viewBox="0 0 512 512">
-                    <image x="0%" y="0%" width="512" height="512" xlink:href="assets/images/svg/sun.png"></image>
+                    <image x="0%" y="0%" width="512" height="512" xlink:href="../assets/images/svg/sun.png"></image>
                   </pattern>
                  
               </defs>
@@ -17,17 +18,17 @@
               
 
               <g style="clip-path:url(#ring1);" id="aring1">
-                  <circle cx="160" cy="160" r="60" fill="blue" >
+                  <circle cx="160" cy="160" r="60" fill="#FB3B33" >
                       <animateTransform attributeName="transform" begin="0s" dur="4s" type="rotate" from="360 160 160" to="0 160 160" repeatCount="indefinite"/>
                     
                   </circle>
-                     <text x="160" y="180"
+                     <text x="160" y="175"
                        font-family="Helvetica Neue"
-                       font-size="46px"
+                       font-size="32px"
                        text-anchor="middle"
                        letter-spacing="4px"
                        font-weight="700"
-                       fill="white">30°</text>
+                       fill="white"><%= print_value(@temperature_values, "temperature") %></text>
               </g>
 
               <g id="orbitingstuff">
@@ -132,7 +133,7 @@
                   </clipPath>
                       <pattern id="image" x="0%" y="0%" height="100%" width="100%"
                            viewBox="0 0 512 512">
-                    <image x="0%" y="0%" width="512" height="512" xlink:href="assets/images/svg/sun.png"></image>
+                    <image x="0%" y="0%" width="512" height="512" xlink:href="../assets/images/svg/sun.png"></image>
                   </pattern>
                  
               </defs>
@@ -140,24 +141,106 @@
               
 
               <g style="clip-path:url(#ring1);" id="aring1">
-                  <circle cx="160" cy="160" r="60" fill="green" >
+                  <circle cx="160" cy="160" r="60" fill="#F7D515" >
                       <animateTransform attributeName="transform" begin="0s" dur="4s" type="rotate" from="360 160 160" to="0 160 160" repeatCount="indefinite"/>
                     
                   </circle>
-                     <text x="160" y="180"
+                     <text x="160" y="175"
                        font-family="Helvetica Neue"
-                       font-size="46px"
+                       font-size="32px"
                        text-anchor="middle"
                        letter-spacing="4px"
                        font-weight="700"
-                       fill="white">20</text>
+                       fill="white"><%= print_value(@illumination_values, "illumination") %></text>
               </g>
 
-              <g id="orbitingstuff">
+              <!--<g id="orbitingstuff">
                 <circle  r="20" fill="url(#image)" cx="90" cy="90" >
                   <animateTransform attributeName="transform" begin="0s" dur="10s" type="rotate" from="360 160 160" to="0 160 160" repeatCount="indefinite"/>
                 </circle>
-              </g>
+              </g>-->
+              <% if @illumination_values > 20  %>
+<g transform="translate(130.000000,104.700000) scale(0.02500,-0.025000)"
+fill="#000000" stroke="none">
+<path d="M970 2544 c-217 -58 -415 -240 -531 -489 -46 -99 -90 -229 -115 -345
+-30 -134 -27 -475 4 -630 43 -213 136 -460 250 -665 l50 -90 -136 -3 c-158 -3
+-169 -8 -196 -95 -15 -48 -35 -169 -36 -209 0 -17 30 -18 486 -18 l487 0 -5
+98 c-6 102 -24 160 -60 199 -21 22 -27 23 -209 23 l-188 0 -50 84 c-121 200
+-218 436 -265 647 -81 364 -45 685 111 992 92 180 246 324 405 378 90 30 215
+24 313 -18 62 -26 70 -32 67 -53 -20 -158 -16 -168 116 -296 l106 -101 0 -119
+c1 -118 1 -119 41 -198 22 -43 49 -84 60 -92 36 -25 114 -17 190 19 224 108
+455 400 431 546 -7 44 -37 71 -125 114 -76 36 -187 47 -270 27 l-51 -12 -97
+92 c-119 112 -163 135 -243 127 -52 -6 -63 -3 -122 28 -129 69 -295 92 -418
+59z m1265 -536 c-55 -139 -239 -329 -392 -407 -45 -23 -123 -39 -123 -25 0 5
+118 127 263 272 253 253 262 261 265 231 2 -17 -4 -49 -13 -71z"/>
+
+</g>
+
+<g transform="translate(-42.000000,340.000000) scale(0.050000,-0.050000)"
+fill="#000000" stroke="none">
+<path d="M3058 4761 c-70 -28 -185 -129 -273 -240 -42 -54 -80 -103 -84 -108
+-3 -6 -29 -13 -58 -16 -29 -3 -66 -13 -82 -22 -44 -22 -108 -107 -127 -168
+-18 -60 -30 -183 -20 -221 3 -14 33 -55 65 -91 69 -75 99 -149 108 -262 5 -68
+4 -76 -31 -149 -20 -42 -59 -114 -86 -159 -66 -109 -80 -152 -87 -260 -7 -106
+7 -149 58 -188 64 -47 269 -107 371 -107 47 0 184 55 192 77 10 24 -11 40 -32
+25 -55 -39 -109 -57 -177 -56 -112 1 -282 53 -339 104 -31 28 -31 29 -30 123
+0 107 15 155 74 253 86 140 124 227 128 290 8 124 -35 246 -119 339 -56 62
+-59 68 -59 116 0 27 7 81 16 119 19 85 73 160 134 184 54 21 74 21 65 -1 -3
+-10 -9 -39 -12 -65 -5 -44 -4 -47 25 -62 41 -21 171 -32 200 -17 25 13 42 67
+42 133 0 59 -14 68 -104 68 -36 0 -66 2 -66 5 0 19 160 201 220 249 101 82
+120 86 387 86 216 0 223 1 223 20 0 19 -7 20 -237 20 -206 -1 -244 -3 -285
+-19z m-178 -435 c0 -18 -5 -48 -11 -66 l-12 -32 -69 7 c-98 9 -101 11 -93 54
+13 68 17 71 105 71 l80 0 0 -34z"/>
+</g>
+<g transform="translate(109.000000,209.000000) scale(0.010000,-0.010000) rotate(60 100 100)"
+fill="#000000" stroke="none">
+<path  d="m1600.115845,51.375397c-32.015259,-40.365458 -90.35022,-47.095304 -130.715454,-15.079865l-296.658691,235.289215l-145.050293,-182.883957c-10.11377,-12.806015 -30.995361,-15.211517 -43.762207,-5.048401l-282.637756,224.170547c-240.05661,190.395599 -307.147522,516.860474 -178.522705,781.201599l-467.521187,370.807007c-60.539958,48.015015 -70.613918,135.342285 -22.598335,195.881836c48.015144,60.538818 135.343155,70.613281 195.881332,22.598145l467.520966,-370.807739c228.109375,185.435547 561.274292,194.442627 801.331299,4.04541l282.637329,-224.169922c12.805908,-10.114258 15.211304,-30.99646 5.048462,-43.763062l-145.051025,-182.883728l296.657837,-235.289124c40.366211,-32.015564 47.096069,-90.349182 15.0802,-130.71582c-32.015259,-40.365387 -90.349609,-47.094238 -130.71521,-15.079254l-296.657837,235.288788l-236.003784,-297.557739l296.656982,-235.289291c40.366211,-32.014664 47.095947,-90.349953 15.080688,-130.715195l-0.00061,0.000549z"/>
+</g>
+<g transform="translate(190.000000,102.000000) scale(0.023000,-0.023000) rotate(32 100 100)"
+fill="yellow" stroke="none">
+<path d="M131 1763 c-8 -9 -11 -221 -11 -768 l0 -755 1150 0 c633 0 1150 2
+1150 5 0 3 -343 348 -762 768 l-763 762 -376 0 c-281 0 -379 -3 -388 -12z"/>
+</g>
+
+
+<% else %>
+<g transform="translate(130.000000,104.700000) scale(0.02500,-0.025000)"
+fill="#000000" stroke="none">
+<path d="M970 2544 c-217 -58 -415 -240 -531 -489 -46 -99 -90 -229 -115 -345
+-30 -134 -27 -475 4 -630 43 -213 136 -460 250 -665 l50 -90 -136 -3 c-158 -3
+-169 -8 -196 -95 -15 -48 -35 -169 -36 -209 0 -17 30 -18 486 -18 l487 0 -5
+98 c-6 102 -24 160 -60 199 -21 22 -27 23 -209 23 l-188 0 -50 84 c-121 200
+-218 436 -265 647 -81 364 -45 685 111 992 92 180 246 324 405 378 90 30 215
+24 313 -18 62 -26 70 -32 67 -53 -20 -158 -16 -168 116 -296 l106 -101 0 -119
+c1 -118 1 -119 41 -198 22 -43 49 -84 60 -92 36 -25 114 -17 190 19 224 108
+455 400 431 546 -7 44 -37 71 -125 114 -76 36 -187 47 -270 27 l-51 -12 -97
+92 c-119 112 -163 135 -243 127 -52 -6 -63 -3 -122 28 -129 69 -295 92 -418
+59z m1265 -536 c-55 -139 -239 -329 -392 -407 -45 -23 -123 -39 -123 -25 0 5
+118 127 263 272 253 253 262 261 265 231 2 -17 -4 -49 -13 -71z"/>
+
+</g>
+
+<g transform="translate(-132.000000,370.000000) scale(0.050000,-0.050000)"
+fill="#000000" stroke="none">
+<path d="M5295 5345 c-77 -36 -146 -65 -154 -65 -7 0 -30 -9 -50 -19 -20 -11
+-66 -33 -102 -49 -87 -39 -235 -139 -279 -188 -19 -22 -53 -66 -75 -98 l-40
+-58 -5 -152 c-5 -147 -6 -153 -40 -226 -19 -42 -83 -139 -144 -219 -121 -162
+-134 -187 -143 -274 -9 -105 6 -140 104 -232 47 -44 144 -136 217 -205 72 -69
+154 -141 181 -159 28 -19 65 -48 83 -64 30 -30 32 -34 32 -105 0 -75 -21 -171
+-46 -207 -8 -11 -14 -32 -14 -47 0 -23 4 -28 25 -28 18 0 25 5 25 20 0 11 11
+53 25 94 19 57 25 95 25 164 0 106 -6 116 -108 188 -37 26 -126 104 -198 173
+-71 69 -163 155 -204 190 -92 82 -115 128 -106 213 4 33 11 70 16 83 5 13 59
+90 120 171 172 228 190 273 190 469 l0 132 41 59 c23 32 55 74 73 93 44 48
+225 165 292 191 31 11 66 27 78 35 11 8 26 15 33 15 7 0 59 20 116 44 189 82
+216 96 210 112 -9 23 -30 17 -178 -51z"/>
+</g>
+<g transform="translate(95.000000,229.000000) scale(0.010000,-0.010000) rotate(-65 100 100)"
+fill="#000000" stroke="none">
+<path  d="m1600.115845,51.375397c-32.015259,-40.365458 -90.35022,-47.095304 -130.715454,-15.079865l-296.658691,235.289215l-145.050293,-182.883957c-10.11377,-12.806015 -30.995361,-15.211517 -43.762207,-5.048401l-282.637756,224.170547c-240.05661,190.395599 -307.147522,516.860474 -178.522705,781.201599l-467.521187,370.807007c-60.539958,48.015015 -70.613918,135.342285 -22.598335,195.881836c48.015144,60.538818 135.343155,70.613281 195.881332,22.598145l467.520966,-370.807739c228.109375,185.435547 561.274292,194.442627 801.331299,4.04541l282.637329,-224.169922c12.805908,-10.114258 15.211304,-30.99646 5.048462,-43.763062l-145.051025,-182.883728l296.657837,-235.289124c40.366211,-32.015564 47.096069,-90.349182 15.0802,-130.71582c-32.015259,-40.365387 -90.349609,-47.094238 -130.71521,-15.079254l-296.657837,235.288788l-236.003784,-297.557739l296.656982,-235.289291c40.366211,-32.014664 47.095947,-90.349953 15.080688,-130.715195l-0.00061,0.000549z"/>
+</g>
+
+
+<% end %>
 
             </svg>
           </div>
@@ -173,7 +256,7 @@
                   </clipPath>
                       <pattern id="image" x="0%" y="0%" height="100%" width="100%"
                            viewBox="0 0 512 512">
-                    <image x="0%" y="0%" width="512" height="512" xlink:href="assets/images/svg/sun.png"></image>
+                    <image x="0%" y="0%" width="512" height="512" xlink:href="../assets/images/svg/sun.png"></image>
                   </pattern>
                  
               </defs>
@@ -181,17 +264,17 @@
               
 
               <g style="clip-path:url(#ring1);" id="aring1">
-                  <circle cx="160" cy="160" r="60" fill="red" >
+                  <circle cx="160" cy="160" r="60" fill="#99C32E" >
                       <animateTransform attributeName="transform" begin="0s" dur="4s" type="rotate" from="360 160 160" to="0 160 160" repeatCount="indefinite"/>
                     
                   </circle>
-                  <text x="160" y="180"
+                  <text x="160" y="175"
                        font-family="Helvetica Neue"
-                       font-size="46px"
+                       font-size="32px"
                        text-anchor="middle"
                        letter-spacing="4px"
                        font-weight="700"
-                       fill="white">555</text>
+                       fill="white"><%= print_value(@air_humidity_values, "air_humidity") %></text>
               </g>
               <svg id="group1" x="100px" y="30px">
                 <g style="margin-left:10px;">
@@ -288,6 +371,106 @@
                   </clipPath>
                       <pattern id="image" x="0%" y="0%" height="100%" width="100%"
                            viewBox="0 0 512 512">
+                    <image x="0%" y="0%" width="512" height="512" xlink:href="../assets/images/svg/sun.png"></image>
+                  </pattern>
+                 
+              </defs>
+
+              
+
+              <g style="clip-path:url(#ring1);" id="aring1">
+                  <circle cx="160" cy="160" r="60" fill="#21958D" >
+                      <animateTransform attributeName="transform" begin="0s" dur="4s" type="rotate" from="360 160 160" to="0 160 160" repeatCount="indefinite"/>
+                    
+                  </circle>
+                  <text x="160" y="175"
+                       font-family="Helvetica Neue"
+                       font-size="32px"
+                       text-anchor="middle"
+                       letter-spacing="4px"
+                       font-weight="700"
+                       fill="white"><%= print_value(@soil_humidity_values, "soil_humidity") %></text>
+              </g>
+              <svg id="group1" x="50px" y="220px">
+                <g transform="translate(-10.000000,105.000000) scale(0.300000,-0.300000)"
+                fill="#452402" stroke="none" style="margin-left:-10px;">
+                <path d="M387 393 c-4 -3 -7 -14 -7 -24 0 -39 -29 -51 -99 -44 -36 4 -74 12
+                -85 17 -12 7 -16 7 -12 0 3 -6 -10 -13 -32 -17 -20 -3 -44 -11 -52 -16 -12 -9
+                -11 -9 5 -4 36 12 122 18 162 10 l38 -7 -45 -23 c-24 -12 -50 -20 -57 -18 -7
+                3 -13 0 -13 -6 0 -6 -18 -20 -40 -31 -33 -17 -38 -23 -28 -34 11 -12 14 -12
+                16 -1 2 8 15 21 28 30 24 16 27 15 40 -2 14 -17 15 -17 9 3 -5 18 2 24 42 40
+                26 10 52 21 58 23 5 2 1 -9 -9 -25 -16 -24 -12 -22 27 14 26 23 52 42 58 42 7
+                0 10 -19 7 -55 -1 -30 0 -55 3 -55 3 0 4 -11 2 -25 -4 -18 -17 -29 -48 -41
+                -30 -11 -42 -21 -38 -30 4 -12 7 -12 17 -1 6 7 23 18 39 25 25 11 27 10 27
+                -10 0 -12 3 -19 6 -15 4 3 21 -1 38 -9 l31 -15 -32 26 c-36 29 -46 75 -17 75
+                13 0 14 3 5 14 -7 8 -11 37 -9 68 l3 53 27 -55 c15 -30 27 -51 27 -46 1 5 11
+                1 24 -10 22 -19 22 -19 4 2 -9 11 -14 24 -11 27 4 4 -1 9 -10 13 -16 6 -53 64
+                -41 64 18 0 156 -77 185 -104 19 -17 28 -22 20 -12 -14 18 -13 19 15 13 17 -4
+                -8 13 -55 37 -65 34 -81 46 -67 51 10 4 34 5 53 2 19 -3 32 -2 29 3 -3 5 3 11
+                12 13 34 9 -42 6 -81 -3 -54 -12 -103 9 -117 50 -10 28 -36 40 -52 23z"/>
+                </g>
+                <svg id="group2" y="12px" x="50px">
+                  <g x="0px" y="0px" width="36px" height="36px" viewBox="0 0 36 36" style="enable-background:new 0 0 36 36;" xml:space="preserve">
+
+                      <path style="fill:#75D6FF;" d="M21.029,5.659c0,0-8.137,11.245-8.137,15.739s3.643,8.137,8.137,8.137s8.137-3.643,8.137-8.137
+                      S21.029,5.659,21.029,5.659z M15.76,17.977c0,0-0.201,3.966,4.078,9.207C19.838,27.184,13.211,24.21,15.76,17.977z"/>
+                       <animateTransform attributeName="transform" type="translate"
+                         values="100,-50; 100,50" begin="0s" dur="1.5s" fill="freeze" repeatCount="indefinite"/>
+
+                  </g>
+                  </svg>
+                  <svg id="group2" y="2px" x="80px">
+                  <g x="0px" y="0px" width="36px" height="36px" viewBox="0 0 36 36" style="enable-background:new 0 0 36 36;" xml:space="preserve">
+
+                    <path style="fill:#75D6FF;" d="M21.029,5.659c0,0-8.137,11.245-8.137,15.739s3.643,8.137,8.137,8.137s8.137-3.643,8.137-8.137
+                      S21.029,5.659,21.029,5.659z M15.76,17.977c0,0-0.201,3.966,4.078,9.207C19.838,27.184,13.211,24.21,15.76,17.977z"/>
+                       <animateTransform attributeName="transform" type="translate"
+                         values="10,-70; 10,80" begin="0s" dur="1.5s" fill="freeze" repeatCount="indefinite"/>
+
+                  </g>
+                  </svg>
+                  <svg id="group2" y="25px" x="40px">
+                  <g x="0px" y="0px" width="36px" height="36px" viewBox="0 0 36 36" style="enable-background:new 0 0 36 36;" xml:space="preserve">
+
+                    <path style="fill:#75D6FF;" d="M21.029,5.659c0,0-8.137,11.245-8.137,15.739s3.643,8.137,8.137,8.137s8.137-3.643,8.137-8.137
+                      S21.029,5.659,21.029,5.659z M15.76,17.977c0,0-0.201,3.966,4.078,9.207C19.838,27.184,13.211,24.21,15.76,17.977z"/>
+                       <animateTransform attributeName="transform" type="translate"
+                         values="80,-50; 80,20" begin="0s" dur="1.5s" fill="freeze" repeatCount="indefinite"/>
+
+                  </g>
+                   </svg>
+                   <svg id="group2" y="11px" x="-20px">
+                  <g x="0px" y="0px" width="36px" height="36px" viewBox="0 0 36 36" style="enable-background:new 0 0 36 36;" xml:space="preserve">
+
+                    <path style="fill:#75D6FF;" d="M21.029,5.659c0,0-8.137,11.245-8.137,15.739s3.643,8.137,8.137,8.137s8.137-3.643,8.137-8.137
+                      S21.029,5.659,21.029,5.659z M15.76,17.977c0,0-0.201,3.966,4.078,9.207C19.838,27.184,13.211,24.21,15.76,17.977z"/>
+                       <animateTransform attributeName="transform" type="translate"
+                         values="30,-60; 30,40" begin="0s" dur="1.5s" fill="freeze" repeatCount="indefinite"/>
+
+                  </g>
+                  </svg>
+                  <svg id="group2" y="15px" x="25px">
+                  <g x="0px" y="0px" width="36px" height="36px" viewBox="0 0 36 36" style="enable-background:new 0 0 36 36;" xml:space="preserve">
+
+                    <path style="fill:#75D6FF;" d="M21.029,5.659c0,0-8.137,11.245-8.137,15.739s3.643,8.137,8.137,8.137s8.137-3.643,8.137-8.137
+                      S21.029,5.659,21.029,5.659z M15.76,17.977c0,0-0.201,3.966,4.078,9.207C19.838,27.184,13.211,24.21,15.76,17.977z"/>
+                       <animateTransform attributeName="transform" type="translate"
+                         values="30,-30; 30,10" begin="0s" dur="1.5s" fill="freeze" repeatCount="indefinite"/>
+
+                  </g>
+                  </svg>
+                  
+                </svg>
+
+            </svg>
+</svg>
+            <!-- <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="320px" height="320px" viewBox="0 0 320 320" enable-background="new 0 0 320 320" xml:space="preserve">
+              <defs>
+                  <clipPath id="ring1" style="stroke:10px;" clip-rule="odd">
+                          <circle cx="160" cy="160" r="65" stroke="1px" fill="red"/>
+                  </clipPath>
+                      <pattern id="image" x="0%" y="0%" height="100%" width="100%"
+                           viewBox="0 0 512 512">
                     <image x="0%" y="0%" width="512" height="512" xlink:href="assets/images/svg/sun.png"></image>
                   </pattern>
                  
@@ -344,13 +527,13 @@
               
 
             </svg>
-</svg>
+</svg>-->
           </div>
         </div>
 
         <div class="row">
           <div class="col-md-4 col-md-offset-4 rect rect3">
-            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="320px" height="320px" viewBox="0 0 320 320" enable-background="new 0 0 320 320" xml:space="preserve">
+            <!--<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="320px" height="320px" viewBox="0 0 320 320" enable-background="new 0 0 320 320" xml:space="preserve">
               <defs>
                   <clipPath id="ring1" style="stroke:10px;" clip-rule="odd">
                           <circle cx="160" cy="160" r="65" stroke="1px" fill="red"/>
@@ -365,7 +548,7 @@
               
 
               <g style="clip-path:url(#ring1);" id="aring1">
-                  <circle cx="160" cy="160" r="60" fill="black" >
+                  <circle cx="160" cy="160" r="60" fill="#21958D" >
                       <animateTransform attributeName="transform" begin="0s" dur="4s" type="rotate" from="360 160 160" to="0 160 160" repeatCount="indefinite"/>
                     
                   </circle>
@@ -449,14 +632,12 @@
                 </svg>
 
             </svg>
-</svg>
+</svg>-->
           </div>
         </div>
 
 
       </div>
-
-
 
 
 
