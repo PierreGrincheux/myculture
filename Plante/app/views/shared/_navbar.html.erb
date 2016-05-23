@@ -16,7 +16,7 @@
 						<ul class="nav navbar-nav navbar-left">
 							<li class="<%= "active" if request.env['PATH_INFO'] == show_current_state_pages_path %>"><%= link_to "Situation actuelle", show_current_state_pages_path(id: params[:id], selected_greenhouse: params[:selected_greenhouse]), class: "nav_btn" %></li>
 							<li class="<%= "active" if request.env['PATH_INFO'] == show_parameters_pages_path %>"><%= link_to "Modifier les paramètres", show_parameters_pages_path(id: params[:id], selected_greenhouse: params[:selected_greenhouse]), class: "nav_btn"%></li>
-							<li class="<%= "active" if request.env['PATH_INFO'] == show_data_pages_path %>"><%= link_to "Évolution", show_data_pages_path(id: params[:id], selected_greenhouse: params[:selected_greenhouse], year: "", month: "", day: "", type: "data"), class:"nav_btn" %></li>
+							<li class="<%= "active" if request.env['PATH_INFO'] == show_data_pages_path %>"><%= link_to "Évolution", show_data_pages_path(id: params[:id], selected_greenhouse: params[:selected_greenhouse], year: "", month: "", day: "", type: "chart"), class:"nav_btn" %></li>
 							<li class="<%= "active" if request.env['PATH_INFO'] == show_data2_pages_path %>"><%= link_to "Évolution", show_data2_pages_path(id: params[:id], selected_greenhouse: params[:selected_greenhouse], year: "", month: "", day: ""), class:"nav_btn" %></li>
 							<li class="<%= "active" if request.env['PATH_INFO'] == show_media_file_pages_path %>"><%= link_to "Supports Éducatifs", show_media_file_pages_path(id: params[:id]), class: "nav_btn" %></li>
 							<% if current_user.super_admin? || current_user.teacher? %>

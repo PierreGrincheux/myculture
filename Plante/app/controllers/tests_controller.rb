@@ -65,9 +65,10 @@ skip_before_filter  :verify_authenticity_token
 				mf = MediaFile.new(
 							media_file_type_id: mft_id,
 							to_show: true,
-							path: "#{Rails.root}/app/assets/images/greenhouses_pictures/#{params[:greenhouse_serial_nbr]}/#{params[:upload].original_filename}",
+							path: "greenhouses_pictures/#{params[:greenhouse_serial_nbr]}/#{params[:upload].original_filename}",
 							created_at: creation_date,
-							title: "Photo du #{creation_date.strftime("%d/%m/%Y")}"				
+							title: "Photo du #{creation_date.strftime("%d/%m/%Y")}",
+							greenhouse_id: greenhouse_id				
 				)
 
 				if mf.save

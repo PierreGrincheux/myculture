@@ -1,0 +1,46 @@
+<div style="width:100%;height:450px;margin-bottom: 20%;">
+	<svg id="chart">
+	</svg>
+	<% @value_types.collect(&:name).each do |v|%>
+		<div id="<%= v %>-value" data-source="<%=  ( ["#{VALUE_TYPES[:"#{v}"][0]}"] + instance_variable_get("@#{v}_values").collect{ |y| y.value}).join('!')  %>"></div>
+		<div id="<%= v %>-date" data-source="<%= (['x'] + @temperature_values.collect{ |y| y.created_at.iso8601}).join('!')  %>"></div>
+	<% end %>  		
+</div>
+
+<b>Liste des valeurs pour chaque types<b><br/><br/>
+<% @value_types.each do |y| %>
+		<b> <%= VALUE_TYPES[:"#{y.name}"][0] %> </b>
+		<table class='table table-hover table-bordered white-back'>
+			<thead>
+				<tr style="background-color:white;">
+					<th> ID </th>
+					<th> DataCard ID </th>
+					<th> Date </th>
+					<th> Valeur </th>
+					<th> Valeur cible du moment </th>
+				</tr>
+			</thead>
+			<tbody>
+				<% instance_variable_get("@#{y.name}_values").each do |k,v| %>
+						<tr>
+								<td>
+										<%= k.id %>
+								</td>
+								<td>
+										<%= k.data_card_id %>
+								</td>
+								<td>
+										<%= convert_date(k.created_at) %>
+								</td>
+								<td>
+										<%= print_value(k.value,y.name) %>
+								</td>
+								<td>
+										<%= print_value(@hash_target_values[:"id#{k.id}"], y.name) %>
+								</td>
+						</tr>
+				<% end %>
+		</tbody>
+	</table>
+	<br/>	
+<% end %>
