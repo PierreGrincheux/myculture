@@ -11,6 +11,11 @@ module ApplicationHelper
 		return date.strftime("%d/%m/%Y").to_s
 	end
 
+	def convert_date_js(date)
+		month = date[-1..-2].to_i
+		return "#{date[0..1]} #{FRENCH_MONTHS["#{month}"]}"
+	end
+
 	def print_value(value, name)
 		value ||= 'NA'
 		return "#{value} #{VALUE_TYPES[:"#{name}"][2]}"

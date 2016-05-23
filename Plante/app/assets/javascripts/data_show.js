@@ -63,10 +63,17 @@ var chart = c3.generate({
 	},
 	axis: {
 	 x: {
-	   type: 'timeseries',
-	   tick: {
-	     format: '%Y-%m-%d %H:%M:%S'
-	   }
+	 	type: 'timeseries',
+            tick: {
+            	format: '%Y-%m-%d %H:%M:%S',
+                culling: {
+                    max: 3 
+                }
+            }
+
 	 },
 	},
 });
+
+
+

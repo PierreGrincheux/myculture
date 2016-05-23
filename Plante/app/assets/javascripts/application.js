@@ -39,6 +39,59 @@ $(document).ready(function (){
 
     });
 
+ /*timeline*/
+/*$("#demo").rangeCalendar({
+lang: "fr",
+theme: "default-theme",
+themeContext: this,
+startDate: moment(),
+endDate: moment().add('months', 12),
+start : "+7",
+startRangeWidth : 3, 
+minRangeWidth: 1,
+maxRangeWidth: 14,
+weekends: true,
+autoHideMonths: false,
+visible: true,
+trigger: null,
+changeRangeCallback : rangeChanged
+});*/
+$(document).ready(function(){
+		
+		var callbackRangeCalendar =  $("#cal5").rangeCalendar({changeRangeCallback: rangeChanged,weekends:true,startDate: moment()});
+		
+		function rangeChanged(target,range){
+	    
+			
+			console.log(range);
+		    var startDay = moment(range.start).format('DD');
+		    var startMonth = moment(range.start).format('MM');
+		    var startYear = moment(range.start).format('YY');
+		    var endDay = moment(range.end).format('DD');
+		    var endMonth = moment(range.end).format('MM');
+		    var endYear = moment(range.end).format('YY');
+		    
+		    
+		    $(".calendar-values .start-date .value").html(startDay + "/" +startMonth);
+		    $(".calendar-values .start-date .label").html("");
+		    $(".calendar-values .start-date .label").append(startMonth);
+		    $(".calendar-values .start-date .label").append("<small>"+ startYear + "</small>");
+		    $(".calendar-values .end-date .value").html(endDay + "" + endMonth);
+		    $(".calendar-values .end-date .label").html("");
+		    $(".calendar-values .end-date .label").append(endMonth );
+		    $(".calendar-values .end-date .label").append("<small>"+endYear+"</small>");
+		    $(".calendar-values .days-width .value").html(range.width);
+		    $(".calendar-values .from-now .label").html(range.fromNow);
+		    
+		}
+    
+		function ragneChanged(target,range) {
+			
+			console.log(range);
+		}
+    
+	});
+
 
 
 

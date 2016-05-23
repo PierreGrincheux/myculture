@@ -7,6 +7,24 @@
 
 <!-- ############################################################## GESTION DU TRI DES DONNEES PAR DATES ######################################################################################## -->
 
+<!--<div class="section"> <code class="code"> <span class="sample-title">Sample #5</span> <br>
+  $(document).ready(function(){<br>
+  <br>
+  var callbackRangeCalendar =  $("#range-calendar").rangeCalendar({theme:"cyano-theme",changeRangeCallback: rangeChanged});<br>
+  <br>
+  function rangeChanged(target,range){<br>
+  <br>
+  console.log(range);<br>
+  }<br>
+  <br>
+  }); </code>
+  <div id="cal5"></div>
+  <div class="calendar-values row">
+    <div class="col col-md-4 start-date"> <span class="title">Start Date</span> <span class="value text-color"></span> <span class="label text-color"></span> </div>
+    <div class="col col-md-4 end-date"> <span class="title">End Date</span> <span class="value text-color"></span> <span class="label text-color"></span> </div>
+    <div class="col col-md-4 col days-width last"> <span class="title">Width</span> <span class="value text-color"></span> <span class="label text-color">Days</span> </div>
+  </div>
+</div>-->
 
 
 <div class="btn-group btn-justified" role="group" aria-label="...">
@@ -97,7 +115,9 @@
 		<% end %>  		
 		</div>
 
-<b>Liste des valeurs pour chaque types<b><br/><br/>
+		<div style="padding-top:15%;">
+
+<b>Liste des valeurs pour chaque types</b><br/><br/>
 		<% @value_types.each do |y| %>
 				<b> <%= VALUE_TYPES[:"#{y.name}"][0] %> </b>
 				<table class='table table-hover table-bordered white-back'>
@@ -136,7 +156,13 @@
 		<% end %>
 	</div>
 </div>
+</div>
 <br/>
 <br/>
+	<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/jquery-ui.min.js"></script>
 
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+
+	<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.7.0/moment-with-langs.min.js"></script>
 <%= javascript_include_tag "data_show.js" %>
+<%= javascript_include_tag "jquery.rangecalendar.js" %>
