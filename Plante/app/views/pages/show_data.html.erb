@@ -1,62 +1,60 @@
 <div class="row center-row" style="margin-top:9%">
 	<div class="col-md-12">
-		<h1> SHOW de DATA </h1>
 
-<b>Liste des Serres disponibles</b><br/>
 <%= render "nav_greenhouse" %>
-
+<br/>
 <!-- ############################################################## GESTION DU TRI DES DONNEES PAR DATES ######################################################################################## -->
 
 
 <div class="row">
-	<div class="col-md-4">
-<div class="btn-group btn-justified" role="group" aria-label="...">
-	<div>
-		<b>Choisir une année :</b><br/>
-		<% for i in @start_year..@end_year %>
-						<% if params[:year].to_i == i %>
-							<%= link_to i.to_s, url_for(params.merge({year: "", month: "", day: ""})), class:"btn btn-default #{"active" if i == params[:year].to_i}" %>
-						<% else %>
-							<%= link_to i.to_s, url_for(params.merge({year: i.to_s})), class:"btn btn-default #{"active" if i == params[:year].to_i}" %>				
-						<% end %>
-		<% end %>
+	<div class="col-md-3">
+		<ul class="nav nav-pills nav-stacked">
+			<li>
+				<%= link_to url_for(params.merge({type: "data"})), class:"btn btn-default #{"active" if params[:type] == "data"}" do %>
+					<span class="glyphicon glyphicon-signal" aria-hidden="true"></span> <b>Graphe d'évolution</b>
+				<% end %>
+			</li>
+			<li>
+				<%= link_to url_for(params.merge({type: "timelapse"})), class:"btn btn-default #{"active" if params[:type] == "timelapse"}" do %>
+					<span class="glyphicon glyphicon-camera" aria-hidden="true"></span> <b>Timelapse</b>
+				<% end %>
+			</li>
+		</ul>
 	</div>
-
-	<br/>
-</div>
-</div>
-<div class="col-md-4">
-<div class="btn-group btn-justified" role="group" aria-label="...">
-
-
-<b>Choisir un mois :</b><br/>
-
-	<div style="visibility:<%= @display_div_months %>">
-		<% for i in 1..@nb_months %>
+	<div class="col-md-1">
+		<div class="btn-group btn-justified" role="group" aria-label="...">
+			<b>Choisir une année :</b><br/>
+				<% for i in @start_year..@end_year %>
+							<% if params[:year].to_i == i %>
+								<%= link_to i.to_s, url_for(params.merge({year: "", month: "", day: ""})), class:"btn btn-default #{"active" if i == params[:year].to_i}" %>
+							<% else %>
+								<%= link_to i.to_s, url_for(params.merge({year: i.to_s})), class:"btn btn-default #{"active" if i == params[:year].to_i}" %>				
+							<% end %>
+				<% end %>
+		</div>
+	</div>
+	<div class="col-md-4">
+		<div class="btn-group btn-justified" role="group" aria-label="...">
+			<b>Choisir un mois :</b><br/>
+				<div style="visibility:<%= @display_div_months %>">
+					<% for i in 1..@nb_months %>
 						<% if params[:month].to_i == i %>
 							<%= link_to FRENCH_MONTHS["#{i}"], url_for(params.merge({month: "", day: ""})), class:"btn btn-default #{"active" if i == params[:month].to_i}" %>	
 						<% else %>
 							<%= link_to FRENCH_MONTHS["#{i}"], url_for(params.merge({month: i.to_s})), class:"btn btn-default #{"active" if i == params[:month].to_i}" %>
-			<% end %>
-
-			<% if i%6 == 0 %><br/><% end %>
-
-		<% end %>
-	</div>
-
-	<br/>
-</div>
-</div>
-<div class="col-md-4">
-<div class="btn-group btn-justified" role="group" aria-label="...">
-
-
-
-	<b>Choisir un jour :</b><br/>
-
-	<div style="visibility:<%= @display_div_days %>">
-		<% for i in 1..@days_in_month %>
-						<% if params[:day].split('!').include?(i.to_s) %>
+						<% end %>
+						<% if i%4 == 0 %><br/><% end %>
+					<% end %>
+				</div>
+				<br/>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="btn-group btn-justified" role="group" aria-label="...">
+				<b>Choisir un jour :</b><br/>
+					<div style="visibility:<%= @display_div_days %>">
+						<% for i in 1..@days_in_month %>
+							<% if params[:day].split('!').include?(i.to_s) %>
 										<% array_day = params[:day].split('!') %>
 										<% array_day.delete(i.to_s)%>
 
@@ -66,28 +64,30 @@
 														<% param = array_day.join('!') %>
 										<% end %>
 
-						<% else %>
+							<% else %>
 										<% param = params[:day].split('!').push(i.to_s).join('!') %>
-						<% end %>
+							<% end %>
 
-						<% if params[:day].blank? || ([i, (i - 1), (i + 1)].any?{|x| params[:day].split('!').map(&:to_i).include?(x)} && ![i, (i - 1), (i + 1)].all?{|x| params[:day].split('!').map(&:to_i).include?(x)})%>
+							<% if params[:day].blank? || ([i, (i - 1), (i + 1)].any?{|x| params[:day].split('!').map(&:to_i).include?(x)} && ![i, (i - 1), (i + 1)].all?{|x| params[:day].split('!').map(&:to_i).include?(x)})%>
 										<% disabled = "" %>
-						<% else %>
+							<% else %>
 										<% disabled = "disabled" %>
+							<% end %>
+
+							<% i < 10 ? i_to_show = "0" + i.to_s : i_to_show = i.to_s %>
+
+							<%= link_to i_to_show, url_for(params.merge({day: param})), class:"btn btn-default #{disabled ||= ""} #{"active" if params[:day].split('!').map(&:to_i).include?(i)}" %>
+							<% if i%5 == 0 %><br/><% end %>
 						<% end %>
-
-						<% i < 10 ? i_to_show = "0" + i.to_s : i_to_show = i.to_s %>
-
-						<%= link_to i_to_show, url_for(params.merge({day: param})), class:"btn btn-default #{disabled ||= ""} #{"active" if params[:day].split('!').map(&:to_i).include?(i)}" %>
-						<% if i%5 == 0 %><br/><% end %>
-		<% end %>
+					</div>
+					<br/>
+				</div>
+			</div>
+			<div class="col-md-1">
+				<%= link_to "Remise à zéro", url_for(params.merge({day: "", month: "", year: ""})), class: "btn btn-default" %>
+			</div>
+		</div>
 	</div>
-	<br/>
-</div>
-</div>
-	<%= link_to "Remise à zéro", url_for(params.merge({day: "", month: "", year: ""})), class: "btn btn-default" %>
-</div>
-</div>
 
 
 <!-- ######################################################################################################################################################### -->
@@ -95,12 +95,12 @@
 
 
 		<div style="width:100%;height:450px;margin-bottom: 20%;">
-		<svg id="chart">
-		</svg>
-		<% @value_types.collect(&:name).each do |v|%>
-		<div id="<%= v %>-value" data-source="<%=  ( ["#{VALUE_TYPES[:"#{v}"][0]}"] + instance_variable_get("@#{v}_values").collect{ |y| y.value}).join('!')  %>"></div>
-		<div id="<%= v %>-date" data-source="<%= (['x'] + @temperature_values.collect{ |y| y.created_at.iso8601}).join('!')  %>"></div>
-		<% end %>  		
+			<svg id="chart">
+			</svg>
+			<% @value_types.collect(&:name).each do |v|%>
+				<div id="<%= v %>-value" data-source="<%=  ( ["#{VALUE_TYPES[:"#{v}"][0]}"] + instance_variable_get("@#{v}_values").collect{ |y| y.value}).join('!')  %>"></div>
+				<div id="<%= v %>-date" data-source="<%= (['x'] + @temperature_values.collect{ |y| y.created_at.iso8601}).join('!')  %>"></div>
+			<% end %>  		
 		</div>
 
 <b>Liste des valeurs pour chaque types<b><br/><br/>
