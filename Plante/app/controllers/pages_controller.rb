@@ -129,17 +129,22 @@ class PagesController < ApplicationController
 				@selected_date = "#{Time.now.year}"
 			end
 
-			@value_types.each do |g|
-				max_deactivated_at = TargetValue.where('greenhouse_id = ? AND value_type_id = ?',@selected_greenhouse.id,g.id).order('deactivated_at DESC').first.deactivated_at
-				all_values = Value.where("data_card_id in (?) AND value_type_id = ? #{condition[0]}", @linked_data_cards.collect(&:id),g.id, condition[1][0], condition[1][1])
-				
-				all_values.each do |y|
-					target = TargetValue.where('greenhouse_id = ? AND value_type_id = ? AND created_at < ? AND deactivated_at > ?', @selected_greenhouse.id,g.id,y.created_at,y.created_at).first
-					target ||= TargetValue.where('greenhouse_id = ? AND value_type_id = ? AND active = ?',@selected_greenhouse.id,g.id,true).first
-					@hash_target_values[:"id#{y.id}"] = target.value
-				end
-				instance_variable_set("@#{g.name}_values", all_values)
-			end	
+			if params[:type] == "chart"
+				@value_types.each do |g|
+					max_deactivated_at = TargetValue.where('greenhouse_id = ? AND value_type_id = ?',@selected_greenhouse.id,g.id).order('deactivated_at DESC').first.deactivated_at
+					all_values = Value.where("data_card_id in (?) AND value_type_id = ? #{condition[0]}", @linked_data_cards.collect(&:id),g.id, condition[1][0], condition[1][1])
+					
+					all_values.each do |y|
+						target = TargetValue.where('greenhouse_id = ? AND value_type_id = ? AND created_at < ? AND deactivated_at > ?', @selected_greenhouse.id,g.id,y.created_at,y.created_at).first
+						target ||= TargetValue.where('greenhouse_id = ? AND value_type_id = ? AND active = ?',@selected_greenhouse.id,g.id,true).first
+						@hash_target_values[:"id#{y.id}"] = target.value
+					end
+					instance_variable_set("@#{g.name}_values", all_values)
+				end	
+			else
+				mft_id = MediaFileType.where(name: "timelapse_photo").first.id
+				@all_pics = MediaFile.where("greenhouse_id = ? AND media_file_type_id = ? AND to_show = ? #{condition[0]}", @selected_greenhouse.id, mft_id, true, condition[1][0])
+			end
 		end
 	end
 

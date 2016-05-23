@@ -5,9 +5,10 @@ skip_before_filter  :verify_authenticity_token
 	end
 
 	def create 
+		f = Logger.new("log/http_request_supervision.log")
 		case params[:request_type]
 			when 'get_value_types'
-				f = Logger.new("log/http_request_supervision.log")
+				
 				f.info ""
 				f.info "######## STARTING get_value_types ########"
 				f.info ""
@@ -49,6 +50,32 @@ skip_before_filter  :verify_authenticity_token
 				f.info "gnagnagna"
 				params[:request_type] = "#{params[:request_type]}_#{params[:state]}"
 				f.info "params[:request_type] = #{params[:request_type]}"
+				f.info "params[:upload] = #{params[:upload].tempfile.path}"
+				f.info "moving image to /app/assets/images/greehouses_pictures/#{params[:greenhouse_serial_nbr]} with name = #{params[:upload].original_filename}"
+				Dir.mkdir("#{Rails.root}/app/assets/images/greenhouses_pictures/#{params[:greenhouse_serial_nbr]}") unless File.directory?("#{Rails.root}/app/assets/images/greenhouses_pictures/#{params[:greenhouse_serial_nbr]}")
+				File.rename("#{params[:upload].tempfile.path}","#{Rails.root}/app/assets/images/greenhouses_pictures/#{params[:greenhouse_serial_nbr]}/#{params[:upload].original_filename}")
+
+				mft_id = MediaFileType.where(name: 'timelapse_photo').first.id
+				f.info "MFT_ID = #{mft_id}"
+				date = params[:upload].original_filename.split('_')[0]
+				f.info "date = #{date}"
+				creation_date = Time.mktime(date[0..3].to_i,date[4..5].to_i,date[6..7].to_i,date[8..9],date[10..11],date[12..13],date[14..15])
+				f.info "creation_date = #{creation_date}"
+
+				mf = MediaFile.new(
+							media_file_type_id: mft_id,
+							to_show: true,
+							path: "greenhouses_pictures/#{params[:greenhouse_serial_nbr]}/#{params[:upload].original_filename}",
+							created_at: creation_date,
+							title: "Photo du #{creation_date.strftime("%d/%m/%Y")}",
+							greenhouse_id: greenhouse_id				
+				)
+
+				if mf.save
+					f.info "MF_PHOTO created"
+				else
+					f.info "ERROR WITH MF_PHOTO CREATION"
+				end
 		end
 
 		f.info "out"

@@ -1,4 +1,6 @@
 TARGET_URL = 'http://127.0.0.1:3000/tests'
+TARGET_SITE = "http://127.0.0.1:3000"
+TARGET_CONTROLLER = "/tests"
 DB_NAME = 'test2.db'
 
 GREENHOUSE_SERIAL_NBR =	'azer'
