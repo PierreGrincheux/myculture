@@ -143,7 +143,7 @@ class PagesController < ApplicationController
 				end	
 			else
 				mft_id = MediaFileType.where(name: "timelapse_photo").first.id
-				@all_pics = MediaFile.where("greenhouse_id = ? AND media_file_type_id = ? AND to_show = ? #{condition[0]}", @selected_greenhouse.id, mft_id, true, condition[1][0])
+				@all_pics = MediaFile.where("greenhouse_id = ? AND media_file_type_id = ? AND to_show = ? #{condition[0]}", @selected_greenhouse.id, mft_id, true, condition[1][0], condition[1][1])
 			end
 		end
 	end
