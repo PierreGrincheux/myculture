@@ -18,7 +18,7 @@ vt.each_with_index do |v,index|
 		i = Value.new(
 				value_type_id: v.id,
 				data_card_id: data_card_id,
-				created_at: (Time.now + (i * 12).hours),
+				created_at: (Time.now + (i * 12).hours + (index * 15).minutes),
 				value: new_value
 		)
 		i.save

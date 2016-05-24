@@ -1,6 +1,6 @@
 /*chart*/
 
-/*températur*/
+/*température*/
 var dataSource = $("#temperature-value").attr("data-source");
 var arrayTempValue = dataSource.split("!");
 var tempValue = new Array(arrayTempValue[0]); 
@@ -100,64 +100,27 @@ for (i = 1; i < arrayAirHumDate.length; i++){
 
 }
 
-
-
-//alert(tempDate);
 var chart = c3.generate({
 	size: {
 	    height: 440,
 	    width: 1024
 	},
 	data: {
-		   xs: {
-	            x: 'xaxis',
-				x2: 'Température',
-				x3: 'Éclairement',
-				x4: 'Humidité du sol',
-				x5: 'Humidité de l\'air',
-	        },
-	columns: [dummyValue, tempValue, tempDate, illumValue, soilHumValue, airHumValue, xAxisDate, illuDate, airHumDate, soilHumDate]
+		xs:{
+			'dummy':'xaxis',
+			'TempératureD':'TempératureT',
+			'ÉclairementD':'ÉclairementT'
+		},
+	columns: [xAxisDate, tempDate, illuDate, dummyValue, tempValue, illumValue]
 	},
-	/*axis: {
-	 x: {
-	 	type: 'timeseries',
-            tick: {
-            	format: '%Y-%m-%d %H:%M:%S',
-
-            }
-
-	 
+	
+	axis : {
+		'xaxis' : {
+			type: 'timeseries',
+		  tick: {
+				format: '%Y-%m-%d %%H:%M'
+			}
+    }
 	},
-	 x2 : {
-        	 	type: 'timeseries',
-            tick: {
-            	format: "",
-
-            }
-    },
-     x3 : {
-        	 	type: 'timeseries',
-            tick: {
-            	format: "",
-
-            }
-    },
-     x4 : {
-        	 	type: 'timeseries',
-            tick: {
-            	format: "",
-
-            }
-    },
-     x5 : {
-        	 	type: 'timeseries',
-            tick: {
-            	format: "",
-   
-            }
-    },
-    },*/
 });
-
-
 
