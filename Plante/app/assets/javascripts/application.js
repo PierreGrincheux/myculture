@@ -92,7 +92,19 @@ $(document).ready(function(){
     
 	});
 
+/*galleria*/
 
+	var id = $("img").attr("data-description");
+	alert(id);
 
+    // Initialize Galleria
+    $('#galleria').galleria();
+    //$('.galleria-stage').prepend('<a class="test" href="#"></a>');
+    //$('.galleria-stage').prepend('<div class="info"><div class="galleria-info2 "></div></div>');
+    $( ".info" ).hide();
+
+    $( ".test" ).click(function() {
+    	$( ".info" ).slideToggle();
+	});
 
 });

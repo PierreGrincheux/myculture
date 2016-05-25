@@ -1,5 +1,22 @@
-<% @all_pics.each do |v| %>
-	<%= image_tag "#{v.path}" %>
-	<br/>
+<div class="row" style="margin-top: 17%;">
+<div class="content-galleria">
+	<% @all_pics.each do |v| %>
+
+				<div class="pic" id="<%= v.path %>-description" data-source="<%=  v.description  %>"></div>
+				
 <% end %>
-<br/>
+
+	<div id="galleria">
+		<% @all_pics.each do |v| %>
+		<%= link_to "#" ,class: "test" %>
+	<div class="info"><div class="galleria-info2 "><%= v.description %></div></div>
+			<%= image_tag "#{v.path}", :data => { :description => v.description }  %>
+
+		<% end %>
+	</div>
+</div>
+</div>
+
+
+<%= javascript_include_tag "galleria-1.4.2.min.js" %>
+<%= javascript_include_tag "galleria.twelve.min.js" %>
