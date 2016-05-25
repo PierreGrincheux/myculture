@@ -1,15 +1,15 @@
 <div style="padding-top:15%;">
 <div style="width:100%;height:450px;margin-bottom: 20%;">
-	<svg id="chart">
-	</svg>
-	<% @value_types.collect(&:name).each do |v|%>
-		<div id="<%= v %>-value" data-source="<%=  ( ["#{VALUE_TYPES[:"#{v}"][0]}"] + instance_variable_get("@#{v}_values").collect{ |y| y.value}).join('!')  %>"></div>
-		<div id="<%= v %>-date" data-source="<%= (["#{VALUE_TYPES[:"#{v}"][0]}"] + instance_variable_get("@#{v}_values").collect{ |y| y.created_at.iso8601}).join('!')  %>"></div>
-	<% end %>
-	<% date = @date %>
+	<div id="chart">
+	</div>
 	
+	<% @value_types.collect(&:name).each do |v|%>
 
-
+		<div id="<%= v %>-value" data-source="<%= instance_variable_get("@#{v}_values").collect{|y| y.value}.join('!') %>"></div>
+		<div id="<%= v %>-date" data-source="<%= instance_variable_get("@#{v}_values").collect{|y| y.created_at.iso8601}.join('!') %>"></div>
+	<% end %>
+	
+	<% date = @date %>
 	<% array_date = ['xaxis'] %>
 	<% while date < @date2 %>
 		<% array_date << date.iso8601 %>
@@ -23,7 +23,7 @@
 	<% end %>
 
 	<div id="xaxis" data-source="<%= "#{array_date.join('!')} "%>"></div>
-	<div id="dummyvalue" data-source="<%="#{["dummy"] + (1..(array_date.count)).step(1).to_a}"%>"></div>	
+	<div id="dummyvalue" data-source="<%="#{(["dummy"] + (1..(array_date.count - 1)).step(1).to_a).join('!')}"%>"></div>	
 </div>
 
 <b>Liste des valeurs pour chaque types<b><br/><br/>
