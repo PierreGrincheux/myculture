@@ -17,7 +17,7 @@
 							<li class="<%= "active" if request.env['PATH_INFO'] == show_current_state_pages_path %>"><%= link_to "Situation actuelle", show_current_state_pages_path(id: params[:id], selected_greenhouse: params[:selected_greenhouse]), class: "nav_btn" %></li>
 							<li class="<%= "active" if request.env['PATH_INFO'] == show_parameters_pages_path %>"><%= link_to "Modifier les paramètres", show_parameters_pages_path(id: params[:id], selected_greenhouse: params[:selected_greenhouse]), class: "nav_btn"%></li>
 							<li class="<%= "active" if request.env['PATH_INFO'] == show_data_pages_path %>"><%= link_to "Évolution", show_data_pages_path(id: params[:id], selected_greenhouse: params[:selected_greenhouse], year: "", month: "", day: "", type: "chart"), class:"nav_btn" %></li>
-							<li class="<%= "active" if request.env['PATH_INFO'] == show_data2_pages_path %>"><%= link_to "Évolution", show_data2_pages_path(id: params[:id], selected_greenhouse: params[:selected_greenhouse], year: "", month: "", day: ""), class:"nav_btn" %></li>
+							<!--<li class="<%= "active" if request.env['PATH_INFO'] == show_data2_pages_path %>"><%= link_to "Évolution", show_data2_pages_path(id: params[:id], selected_greenhouse: params[:selected_greenhouse], year: "", month: "", day: ""), class:"nav_btn" %></li>-->
 							<li class="<%= "active" if request.env['PATH_INFO'] == show_media_file_pages_path %>"><%= link_to "Supports Éducatifs", show_media_file_pages_path(id: params[:id]), class: "nav_btn" %></li>
 							<% if current_user.super_admin? || current_user.teacher? %>
 								<li class="dropdown <%= "active" if [edit_user_registration_path,teacher_supervisions_path,admin_schools_path].include?(request.env['PATH_INFO'])%>">
@@ -35,14 +35,14 @@
 					</div><!--/.nav-collapse -->
 				<% end %>
 
-				<div class="col-md-3 col-md-offset-9" style="margin-top: -4%">
-					<div class="user_info">
+				<div class="col-md-3 col-md-offset-9" style="position: absolute;">
+					<div class="user_info" >
 						<% if user_signed_in? %>
-										<p>Bonjour <%= current_user.first_name%> <%= current_user.last_name%></p>
-										<p><%= link_to 'Se déconnecter', destroy_user_session_path %></p>
+										<p style="margin-top:-42%;">Bonjour <%= current_user.first_name%> <%= current_user.last_name%></p>
+										<p style="margin-top:-42%;"><%= link_to 'Se déconnecter', destroy_user_session_path %></p>
 						<% else %>      
 										<!-- Je sais c'est pas bien mais je le fais a l'arrache dans le train pour y avoir accès :) -->
-										<p style='margin-top:25%'><%= link_to 'Se connecter', new_user_session_path %></p>
+										<p style="position:relative;"><%= link_to 'Se connecter', new_user_session_path, class: "btn btn-default" %></p>
 						<% end %>
 					</div>
 				</div>

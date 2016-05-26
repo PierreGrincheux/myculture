@@ -39,3 +39,16 @@ body{
 .white-back{
 	background-color: white;
 }
+
+@font-face {
+    font-family: 'cf_jack_storyregular';
+    src: url(font-path('cfjackstory-regular-webfont.eot')),
+    	 url(font-path('cfjackstory-regular-webfont.eot') + "?#iefix") format('embedded-opentype'),
+         url(font-path('cfjackstory-regular-webfont.woff2')) format('woff2'),
+         url(font-path('cfjackstory-regular-webfont.woff')) format('woff'),
+         url(font-path('cfjackstory-regular-webfont.ttf')) format('truetype'),
+         url(font-path('cfjackstory-regular-webfont.svg') + "#cf_jack_storyregular") format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}

@@ -95,7 +95,7 @@ $(document).ready(function(){
 /*galleria*/
 
 	var id = $("img").attr("data-description");
-	alert(id);
+	//alert(id);
 
     // Initialize Galleria
     $('#galleria').galleria();
