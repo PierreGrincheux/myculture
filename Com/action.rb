@@ -288,6 +288,56 @@ class Action
 	end
 
 
+	def get_values_from_data_card
+		f = File.open("log/supervision.log", "a")
+		f.puts ""
+		f.puts "#######################################"
+		f.puts ""
+
+		f.puts "Starting 'get_values_from_data_card' method at #{Time.now}"
+		HttpConnection2.new
+		file = File.open(VALUE_FILE_PATH,'r')
+		db = SQLite3::Database.open DB_NAME
+		begin
+			db.transaction
+			file.each do |f|
+				array_data = f.split(';')
+				f.puts "array_data => #{array_data.join(', ')}"
+				array_data.each_with_index do |k,index|
+					next if !(index % 2 == 0)
+					case k
+						when "data_card_serial_nbr"
+							@data_card_id = db.execute "SELECT rowid FROM data_card WHERE data_card_serial_nbr = #{array_data[index + 1]}"
+							f.puts "ERROR in DB inserting"
+							raise if @data_card_id.blank?
+						else
+							value_type_id = db.execute "SELECT rowid FROM value_type WHERE name = #{k}"
+							req = db.prepare "INSERT INTO value (value, value_type_id, data_card_id, created_at) VALUES = (?,?,?,?)"
+							req.execute array_data[index + 1].to_f, value_type_id, @data_card_id, Time.now
+							req.close
+							f.puts "DATA INSERTED : name => #{k} ; value => #{array_data[index + 1]}"
+							data_file = File.open("#{Time.now.strftime("%Y%m%d%H%M")}_values","w")
+								data_file.puts "new_values"
+								data_cards =  db.execute "SELECT * FROM data_card"
+								value_types = db.execute "SELECT * FROM value_type"
+								data_cards.each do |dc|
+									value_types.each do |vt|
+										value = db.execute "SELECT * FROM value WHERE value_type_id = #{vt.rowid} AND data_card_id = #{dc.rowid} ORDER BY rowid DESC LIMIT 1" 
+										data_file.puts "#{vt.main_db_id}!!!#{value.value}!!!#{Time.mktime(value.created_at).strftime("%Y-%m-%d %H:%M")}!!!#{dc.serial_nbr}"
+									end
+								end
+							data_file.close
+					end
+				end
+			end
+			db.commit
+		rescue
+			puts "ERROR OCCURED WHEN ADDING VALUES"
+		end
+		db.close
+		f.close
+	end
+
 
 
 	private
