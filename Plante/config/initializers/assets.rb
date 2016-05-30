@@ -9,5 +9,6 @@ Rails.application.config.assets.version = '1.0'
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
 
- Rails.application.config.assets.precompile += %w( data_show.js , data_show2,  jquery.rangecalendar.js , galleria-1.4.2.min.js , galleria.twelve.min.js)
+ Rails.application.config.assets.precompile += %w( data_show.js , jquery.rangecalendar.js , galleria-1.4.2.min.js , galleria.twelve.min.js , highcharts.js , exporting.js)
 
+Rails.application.config.assets.precompile += %w( data_show2.js )

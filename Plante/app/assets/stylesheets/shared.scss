@@ -28,6 +28,7 @@ body{
 .transparent-co{
 	background-color: rgba(255,255,255, 0.7);
 	padding:4% 0% 4% 0%;
+	border: solid black 1px;
 }
 
 .center-row{
@@ -38,4 +39,67 @@ body{
 
 .white-back{
 	background-color: white;
+}
+
+@font-face {
+    font-family: 'cf_jack_storyregular';
+    src: url(font-path('cfjackstory-regular-webfont.eot')),
+    	 url(font-path('cfjackstory-regular-webfont.eot') + "?#iefix") format('embedded-opentype'),
+         url(font-path('cfjackstory-regular-webfont.woff2')) format('woff2'),
+         url(font-path('cfjackstory-regular-webfont.woff')) format('woff'),
+         url(font-path('cfjackstory-regular-webfont.ttf')) format('truetype'),
+         url(font-path('cfjackstory-regular-webfont.svg') + "#cf_jack_storyregular") format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+#fp-nav ul li:hover a span, .fp-slidesNav ul li:hover a span{
+	background-color: #8CBB32;
+}
+#fp-nav ul li a.active span, .fp-slidesNav ul li a.active span, #fp-nav ul li:hover a.active span, .fp-slidesNav ul li:hover a.active span{
+	background-color: #8CBB32;
+}
+#fp-nav ul li a span, .fp-slidesNav ul li a span{
+	z-index: 100;
+	color:#8CBB32;
+}
+
+.btn_style {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0px;
+  font-family: Arial;
+  color: #8CBB32;
+  font-size: 20px;
+  background: transaprent;
+  padding: 10px 20px 10px 20px;
+  border: solid #8CBB32 2px;
+  text-decoration: none;
+}
+
+.btn_style:hover {
+  background: #8CBB32;
+  text-decoration: none;
+  color:white;
+}
+
+.btn_style_connect {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0px;
+  font-family: Arial;
+  color: #8CBB32;
+  font-size: 20px;
+  background: white;
+  padding: 10px 20px 10px 20px;
+  border: solid #8CBB32 3px;
+  text-decoration: none;
+}
+
+.btn_style_connect:hover {
+  background: #8CBB32;
+  text-decoration: none;
+  border: solid #8CBB32 2px;
+  color:white;
 }
