@@ -29,6 +29,7 @@ class Teacher::SupervisionsController < ApplicationController
 				end
 			end
 		end
+		
 		##### TARGET VALUES
 		@all_target_values = Array.new
 		req = TargetValue.where("greenhouse_id IN (?) AND active = ?", @all_greenhouses.collect(&:id), true)

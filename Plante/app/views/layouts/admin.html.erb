@@ -12,12 +12,15 @@
 
 <div class="container">
 
-		<%= render "shared/navbar_admin" %>
-	  <% flash.each do |key, value| %>
-					    <div class="alert alert-<%= key %>">
-	      <%= value %>
-	    </div>
-	  <% end %>
+				<%= render "shared/navbar_admin" %>
+		<% if !flash[:notice].blank? %>
+			<div class = "alert alert-info alert-dismissible fade in">
+				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				<%= flash[:notice] %>
+			</div>
+		<% end %>
 	</div>
 
 	<%= yield :top_content %>
