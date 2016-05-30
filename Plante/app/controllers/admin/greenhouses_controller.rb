@@ -56,12 +56,24 @@ class Admin::GreenhousesController < ApplicationController
 
 	def show
 		@greenhouse = Greenhouse.where(id: params[:id].to_i)[0]	
+		all_operations = HTTP_CONNECTION_TYPES.keys
+		@all_families = HTTP_CONNECTION_TYPES.values.collect{|g| g[1]}.uniq
+		@logs = Hash.new
+		all_operations.each do |v|
+			log = HttpConnectionLog.where("connection_type = ? and greenhouse_id = ?", v.to_s, @greenhouse.id)
+			unless log.blank?
+				log = log.reverse.first.created_at.localtime.strftime("%d/%m/%Y %H:%M:%S")
+				@logs[:"#{v}"] = log
+			else
+				@logs[:"#{v}"] = ""
+			end
+	  end
 	end
 
 	private
 
 	def greenhouse_params
-		params.require(:greenhouse).permit(:serial_nbr, :school_id)
+		params.require(:greenhouse).permit(:serial_nbr, :school_id, :name)
 	end
 
 end

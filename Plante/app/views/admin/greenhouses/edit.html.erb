@@ -7,8 +7,12 @@
 	<%= f.label :serial_nbr, "Numéro de série" %> : <%= f.text_field :serial_nbr, autofocus: true %><br/>
 </div>
 <div class="form-group col-md-12">
+	<%= f.label :name, "Nom de la serre" %> : <%= f.text_field :name, autofocus: true %><br/>
+</div>
+<div class="form-group col-md-12">
 	<%= f.label :school_id, "École liée" %> : <%= f.select :school_id, @linkable_schools.collect{|t| ["#{t.name} - #{t.town}", t.id]}, {prompt: "Choisir une école", include_blank: @blank_included} %> <br/>
 </div>
+
 	<%= f.submit "Modifier",class: 'btn btn-default' %>
 	<%= render partial: "return_link" %>
 <% end %>

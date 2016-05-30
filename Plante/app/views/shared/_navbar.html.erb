@@ -41,8 +41,7 @@
 										<p>Bonjour <%= current_user.first_name%> <%= current_user.last_name%></p>
 										<p><%= link_to 'Se déconnecter', destroy_user_session_path %></p>
 						<% else %>      
-										<!-- Je sais c'est pas bien mais je le fais a l'arrache dans le train pour y avoir accès :) -->
-										<p style='margin-top:25%'><%= link_to 'Se connecter', new_user_session_path %></p>
+										<p><%= link_to 'Se connecter', new_user_session_path %></p>
 						<% end %>
 					</div>
 				</div>
