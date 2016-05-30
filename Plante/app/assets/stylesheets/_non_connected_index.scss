@@ -14,12 +14,24 @@
       }
 }
 
+.white{
+	background-color: white;
+	height: 450px;
+	text-align: center;
+	overflow: hidden;
+}
+
 
 /*section1*/
 
 /*section 2*/
 .but{
 	font-size: 14px;
+	text-align: justify;
+    text-justify: inter-word;
+    padding-left: 100px;
+    padding-right: 100px;
+
 }
 
 /*section 3*/
@@ -28,13 +40,49 @@
 }
 
 /*section 4*/
-#interface{
-	width: 50%;
+
+#hautserre{
+	width: 90%;
+}
+
+#serre{
+	width: 70%;
+	margin-top: -5%;
+}
+
+.design{
+	font-size: 14px;
+	text-align: justify;
+    text-justify: inter-word;
+    position: relative;
+    margin-right: -43%;
+    margin-left: 27px;
 }
 
 /*section 5*/
+.resize{
+	width: 518px;
+	height: 300px;
+	text-align: center;
+}
+
+#evolution{
+	width: 90%;
+	height: 90%;
+}
+
+
+/*section 6 */
 .contact{
 	font-size: 14px;
-	width: 50%;
-	margin-left: 25%;
+	/*width: 50%;*/
+	padding:5px 0px 5px 0px;
+	background-color: rgba(255,255,255, 0.7);
+
+
+	.form-group{
+		width: 70%;
+		margin-left: 16%;
+	}
 }
+

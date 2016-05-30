@@ -36,13 +36,17 @@
 				<% end %>
 
 				<div class="col-md-3 col-md-offset-9" style="position: absolute;">
+					<!--<div class="language">
+						<%= link_to_unless_current "Français", locale: "fr" %>
+						<%= link_to_unless_current "English", locale: "en" %>
+					</div>-->
 					<div class="user_info" >
 						<% if user_signed_in? %>
 										<p style="margin-top:-42%;">Bonjour <%= current_user.first_name%> <%= current_user.last_name%></p>
 										<p style="margin-top:-42%;"><%= link_to 'Se déconnecter', destroy_user_session_path %></p>
 						<% else %>      
 										<!-- Je sais c'est pas bien mais je le fais a l'arrache dans le train pour y avoir accès :) -->
-										<p style="position:relative;"><%= link_to 'Se connecter', new_user_session_path, class: "btn btn-default" %></p>
+										<p style="position:relative;"><%= link_to 'Se connecter', new_user_session_path, class: "btn btn_style_connect" %></p>
 						<% end %>
 					</div>
 				</div>
