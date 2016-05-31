@@ -51,10 +51,12 @@ gem 'greensock-rails', '~> 1.18', '>= 1.18.2.0'
 # Devise
 gem 'devise', '3.4.1'
 
+# CarrierWave
 gem 'carrierwave'
 
 #i18n
 gem 'i18n', '~> 0.7.0'
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

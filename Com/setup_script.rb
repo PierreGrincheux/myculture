@@ -68,7 +68,7 @@ begin
 
 		#DATA_CARD
 		db.execute "CREATE TABLE IF NOT EXISTS data_card (
-			serial_nbr INT
+			serial_nbr VARCHAR(20) 
 			);"	
 		########### END OF TABLE CREATION ###############
 
@@ -97,8 +97,8 @@ end
 action = Action.new
 
 ##### Preparing different folders
-#puts "setup"
-#action.setup
+puts "setup"
+action.setup
 #
 ##### Adding value_types to database
 #puts "get value_types"
