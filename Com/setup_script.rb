@@ -71,6 +71,7 @@ begin
 			serial_nbr VARCHAR(20) 
 			);"	
 		########### END OF TABLE CREATION ###############
+		f.puts "data_card added"
 
 		########### ADDING DATA CARDS ###########
 		DATA_CARD_SERIAL_NBR.each do |v|
@@ -78,13 +79,14 @@ begin
 			req.execute v.to_s
 			req.close
 		end
+		f.puts "data_card inserted"
 
 	#Close transaction
 	db.commit
 
 rescue SQLite3::Exception => e
-	puts 'ERROR OCCURED'
-	puts e
+	f.puts 'ERROR OCCURED'
+	f.puts e
 	db.rollback
 ensure
 	db.close if db
@@ -97,7 +99,7 @@ end
 action = Action.new
 
 ##### Preparing different folders
-puts "setup"
+f.puts "setup"
 action.setup
 #
 ##### Adding value_types to database

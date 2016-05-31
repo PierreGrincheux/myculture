@@ -2,6 +2,7 @@ class Action
 	require 'nokogiri'
 	require 'sqlite3'
 	require_relative "http_connection"
+	require_relative "http_connection2"
 	require_relative "constants"
 
 	
@@ -11,9 +12,8 @@ class Action
 	def setup
 		Dir.mkdir('files_xml') unless File.directory?('files_xml')
 		Dir.mkdir('files_processed') unless File.directory?('files_processed')
+		Dir.mkdir('new_values') unless File.directory?('new_values')
 		Dir.mkdir('pictures') unless File.directory?('pictures')
-		Dir.mkdir('pictures/unprocessed') unless File.directory?('pictures/unprocessed')
-		Dir.mkdir('pictures/processed') unless File.directory?('pictures/processed')
 	end
 
 	
@@ -203,7 +203,7 @@ class Action
 					
 					f.puts "Looking for value type name in db"
 					db = SQLite3::Database.open DB_NAME
-						value_type_name = db.execute "SELECT name FROM value_type WHERE rowid = #{v[0]}"
+						value_type_name = db.execute "SELECT name FROM value_type WHERE main_db_id = #{v[0].to_i}"
 					db.close
 
 					hash_params[:"#{value_type_name[0][0]}_value"] = v[1].to_f
@@ -242,40 +242,29 @@ class Action
 			state = "disabled"
 		else
 			online = true
-			i=0
-			nb_pics_taken = 8 
-			f.puts "Nb photos taken : #{nb_pics_taken}"
+			f.puts "Nb photos skipped : #{NB_PICS_TO_SKIP}"
 			puts ""
 			puts ""
 			puts "Taking photo"
 			
-			#Dir.chdir(UNPROCESSED_PICS_PATH) do 
-			#puts "moved to #{Dir.pwd}"
 			f.puts "Taking photo ..."
-			system  WEBCAM_COMMAND + "#{nb_pics_taken}"
-			system "mv *.png #{UNPROCESSED_PICS_PATH}"
-			#end
+			puts "aaa"
+			date = "#{Time.now.strftime("%Y%m%d%H%M%S")}"
+			puts date.to_s
+			puts "command = #{WEBCAM_COMMAND}#{date}_#{GREENHOUSE_SERIAL_NBR}_pic"
+			system  "#{WEBCAM_COMMAND}#{date}_#{GREENHOUSE_SERIAL_NBR}_pic.png"
 
-			all_files = Dir.entries(UNPROCESSED_PICS_PATH)
-			puts "all_files = #{all_files}"
-			f.puts "All files = #{all_files}"
-
-			namefile = all_files.sort.drop(nb_pics_taken + 1)[0]
-			puts "namefile = #{namefile}"
-
-			File.rename("#{UNPROCESSED_PICS_PATH}/#{namefile}", "#{PROCESSED_PICS_PATH}/#{Time.now.strftime("%Y%m%d%H%M%S")}_#{GREENHOUSE_SERIAL_NBR}_pic.png")
 			
-			f.puts "PHOTO PROCESS DONE"
+			puts "PHOTO PROCESS DONE"
 
 			state = "available"
-			upload = File.new("#{PROCESSED_PICS_PATH}/#{Time.now.strftime("%Y%m%d%H%M%S")}_#{GREENHOUSE_SERIAL_NBR}_pic.png")
-			i += 1
+			puts "upload => #{PIC_PATH}/#{date}_#{GREENHOUSE_SERIAL_NBR}_pic.png"
+			upload = File.new("#{PIC_PATH}#{date}_#{GREENHOUSE_SERIAL_NBR}_pic.png")
 		end
 
 		puts ""
 		puts ""
 		puts "HTTP CONNECTION	FOR PICTURE"
-		puts "file_path = #{PROCESSED_PICS_PATH}/#{Time.now.strftime("%Y%m%d%H%M%S")}_#{GREENHOUSE_SERIAL_NBR}_pic.png"
 		puts ""
 		puts ""
 		puts "STARTING RESTCLIENT"
@@ -295,47 +284,70 @@ class Action
 		f.puts ""
 
 		f.puts "Starting 'get_values_from_data_card' method at #{Time.now}"
-		HttpConnection2.new
+		begin
+			HttpConnection2.new
+			f.puts "HTTP2 done"
+		rescue => error
+			f.puts error.to_s
+		end
 		file = File.open(VALUE_FILE_PATH,'r')
 		db = SQLite3::Database.open DB_NAME
 		begin
 			db.transaction
-			file.each do |f|
-				array_data = f.split(';')
+			db.execute "DELETE FROM value"
+			puts "AFTER DELETING ALL VALUES"
+			file.each do |f2|
+				array_data = f2.split(';')
 				f.puts "array_data => #{array_data.join(', ')}"
 				array_data.each_with_index do |k,index|
 					next if !(index % 2 == 0)
 					case k
-						when "data_card_serial_nbr"
-							@data_card_id = db.execute "SELECT rowid FROM data_card WHERE data_card_serial_nbr = #{array_data[index + 1]}"
-							f.puts "ERROR in DB inserting"
-							raise if @data_card_id.blank?
+						when "serial_nbr"
+							f.puts "processing serial_nbr"
+							@data_card_id = (db.execute "SELECT rowid FROM data_card WHERE serial_nbr = '#{array_data[index + 1].to_s}'")[0][0]
+							raise if @data_card_id == nil
 						else
-							value_type_id = db.execute "SELECT rowid FROM value_type WHERE name = #{k}"
-							req = db.prepare "INSERT INTO value (value, value_type_id, data_card_id, created_at) VALUES = (?,?,?,?)"
-							req.execute array_data[index + 1].to_f, value_type_id, @data_card_id, Time.now
+							puts "Processing #{k}"
+							value_type_id = (db.execute "SELECT rowid FROM value_type WHERE name = '#{k}'")[0][0]
+							f.puts "vt_id = #{value_type_id}"
+							req = db.prepare "INSERT INTO value (value, value_type_id, data_card_id, created_at) VALUES (?,?,?,?)"
+							req.execute array_data[index + 1].to_f, value_type_id, @data_card_id, Time.now.to_i
 							req.close
-							f.puts "DATA INSERTED : name => #{k} ; value => #{array_data[index + 1]}"
-							data_file = File.open("#{Time.now.strftime("%Y%m%d%H%M")}_values","w")
-								data_file.puts "new_values"
-								data_cards =  db.execute "SELECT * FROM data_card"
-								value_types = db.execute "SELECT * FROM value_type"
-								data_cards.each do |dc|
-									value_types.each do |vt|
-										value = db.execute "SELECT * FROM value WHERE value_type_id = #{vt.rowid} AND data_card_id = #{dc.rowid} ORDER BY rowid DESC LIMIT 1" 
-										data_file.puts "#{vt.main_db_id}!!!#{value.value}!!!#{Time.mktime(value.created_at).strftime("%Y-%m-%d %H:%M")}!!!#{dc.serial_nbr}"
-									end
-								end
-							data_file.close
+							puts "DATA INSERTED : name => #{k} ; value => #{array_data[index + 1].to_s}"
+							f.puts "DATA INSERTED : name => #{k} ; value => #{array_data[index + 1].to_s}"
+							
 					end
 				end
 			end
 			db.commit
-		rescue
-			puts "ERROR OCCURED WHEN ADDING VALUES"
+			data_file = File.open("new_values/#{Time.now.strftime("%Y%m%d%H%M")}_values.txt","w")
+			data_file.puts "new_values"
+			data_cards =  db.execute "SELECT rowid,* FROM data_card"
+			value_types = db.execute "SELECT rowid,* FROM value_type"
+			data_cards.each do |dc|
+				value_types.each do |vt|
+					next if vt[1] == "soil_humidity"
+					value = db.execute "SELECT * FROM value WHERE value_type_id = #{vt[0]} AND data_card_id = #{dc[0]} ORDER BY rowid DESC LIMIT 1" 
+					puts "#{dc} #{vt} #{value}"
+					data_file.puts "#{vt[2]}!!!#{value[0][0]}!!!#{Time.at(value[0][1]).strftime("%Y-%m-%d %H:%M")}!!!#{dc[1]}"
+				end
+			end
+			data_file.close
+			f.puts "File written"
+		rescue => e
+			f.puts "ERROR OCCURED WHEN ADDING VALUES"
+			f.puts e.to_s
 		end
 		db.close
 		f.close
+		return "DONE"
+	end
+
+
+	def set_system_response
+		puts "running db_python.py"
+		system "python db_python.py"
+		puts "python script ended"
 	end
 
 
