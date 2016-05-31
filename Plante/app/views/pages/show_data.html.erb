@@ -8,7 +8,7 @@
 
 
 		<div class="row">
-			<div class="col-md-3">
+			<div class="col-md-2" style="padding-left: 0px;">
 				<ul class="nav nav-pills nav-stacked">
 					<li>
 						<%= link_to url_for(params.merge({type: "chart"})), class:"btn btn-default #{"active" if params[:type] == "chart"}" do %>
@@ -16,10 +16,6 @@
 						<% end %>
 					</li>
 					<li>
-						<%= link_to url_for(params.merge({type: "combined_chart"})), class:"btn btn-default #{"active" if params[:type] == "combined_chart"}" do %>
-							<span class="glyphicon glyphicon-signal" aria-hidden="true"></span> <b>Graphe2 d'évolution</b>
-						<% end %>
-					</li>
 					<li>
 						<%= link_to url_for(params.merge({type: "timelapse"})), class:"btn btn-default #{"active" if params[:type] == "timelapse"}" do %>
 							<span class="glyphicon glyphicon-camera" aria-hidden="true"></span> <b>Timelapse</b>
@@ -27,7 +23,7 @@
 					</li>
 				</ul>
 			</div>
-			<div class="col-md-1">
+			<div class="col-md-2">
 				<div class="btn-group btn-justified" role="group" aria-label="...">
 					<b>Choisir une année :</b><br/>
 						<% for i in @start_year..@end_year %>
@@ -45,11 +41,11 @@
 						<div style="visibility:<%= @display_div_months %>">
 							<% for i in 1..@nb_months %>
 								<% if params[:month].to_i == i %>
-									<%= link_to FRENCH_MONTHS["#{i}"], url_for(params.merge({month: "", day: ""})), class:"btn btn-default #{"active" if i == params[:month].to_i}" %>	
+									<%= link_to FRENCH_MONTHS["#{i}"], url_for(params.merge({month: "", day: ""})), class:"btn btn-default mois #{"active" if i == params[:month].to_i}" %>	
 								<% else %>
-									<%= link_to FRENCH_MONTHS["#{i}"], url_for(params.merge({month: i.to_s})), class:"btn btn-default #{"active" if i == params[:month].to_i}" %>
+									<%= link_to FRENCH_MONTHS["#{i}"], url_for(params.merge({month: i.to_s})), class:"btn btn-default mois #{"active" if i == params[:month].to_i}" %>
 								<% end %>
-								<% if i%4 == 0 %><br/><% end %>
+								<% if i%4 == 0 %><% end %>
 							<% end %>
 						</div>
 						<br/>
@@ -81,8 +77,19 @@
 									<% end %>
 		
 									<% i < 10 ? i_to_show = "0" + i.to_s : i_to_show = i.to_s %>
-		
-									<%= link_to i_to_show, url_for(params.merge({day: param})), class:"btn btn-default #{disabled ||= ""} #{"active" if params[:day].split('!').map(&:to_i).include?(i)}" %>
+
+									<% if params[:day].split('!').map(&:to_i).include?(i) %>
+										<% active = "active" %>
+									<% else %>
+										<% active = "" %>
+									<% end %>
+
+									<% if disabled == "disabled" && active == "active" %>
+										<% disabled = "disabled2" %>
+									<% end %>
+
+									<%= link_to i_to_show, url_for(params.merge({day: param})), class:"btn btn-default #{disabled ||= ""} #{active}"  %>
+									
 									<% if i%5 == 0 %><br/><% end %>
 								<% end %>
 							</div>
@@ -105,3 +112,5 @@
 
 
 <%= javascript_include_tag "data_show2.js" %>
+<%= javascript_include_tag "highcharts.js" %>
+<%= javascript_include_tag "exporting.js" %>
