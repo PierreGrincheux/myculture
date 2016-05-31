@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
 	before_filter :verify_authorization, except: ["index"] 
-	before_filter :get_datas, except: ["index"]
+	before_filter :get_datas, except: ["index", "update_parameters"]
 	
 	def index
 		if user_signed_in?

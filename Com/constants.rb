@@ -3,6 +3,7 @@ TARGET_SITE = "http://127.0.0.1:3000"
 TARGET_CONTROLLER = "/tests"
 DB_NAME = 'test2.db'
 
+DATA_CARD_URL = "http://192.168.1.105:333"
 VALUE_FILE_PATH = "test_arduino.txt"
 
 GREENHOUSE_SERIAL_NBR =	'azer'
