@@ -181,6 +181,13 @@ $(function () {
         }]
     });
 });
+ $( "#dialog" ).hide();
+$( ".courbe" ).click(function() {
+        $( "#dialog" ).dialog();
+    });
+ $( ".timelapse" ).click(function() {
+        $( "#dialog" ).dialog();
+    });
 
 
 

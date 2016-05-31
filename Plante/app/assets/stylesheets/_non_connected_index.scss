@@ -26,11 +26,13 @@
 
 /*section 2*/
 .but{
-	font-size: 14px;
+	font-size: 16px;
 	text-align: justify;
     text-justify: inter-word;
     padding-left: 100px;
     padding-right: 100px;
+    font-weight: bold;
+	line-height: 1.5;
 
 }
 
@@ -59,9 +61,11 @@
 }
 
 .design{
-	font-size: 14px;
+	font-size: 16px;
 	text-align: justify;
     text-justify: inter-word;
+    font-weight: boLd;
+    line-height: 1.5;
     position: relative;
     margin-right: -43%;
     margin-left: 27px;
