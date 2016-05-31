@@ -22,9 +22,16 @@ while true do
 #		}
 #		sleep(5)
 
-		thread3 = Thread.new{
-				puts "thread3 at #{Time.now}"
-				action.take_picture
+#		thread3 = Thread.new{
+#				puts "thread3 at #{Time.now}"
+#				action.take_picture
+#				sleep(60)
+#		}
+#		sleep(5)
+
+		thread4 = Thread.new{
+				puts "thread4 at #{Time.now}"
+				action.get_values_from_data_card
 				sleep(60)
 		}
 		sleep(5)
