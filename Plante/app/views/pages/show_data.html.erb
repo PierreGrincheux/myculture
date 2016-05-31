@@ -1,4 +1,4 @@
-<div class="row center-row" style="margin-top:9%">
+<div class="row center-row" style="margin-top:11%">
 	<div class="col-md-12">
 
 		<%= render "nav_greenhouse" %>
@@ -13,6 +13,11 @@
 					<li>
 						<%= link_to url_for(params.merge({type: "chart"})), class:"btn btn-default #{"active" if params[:type] == "chart"}" do %>
 							<span class="glyphicon glyphicon-signal" aria-hidden="true"></span> <b>Graphe d'évolution</b>
+						<% end %>
+					</li>
+					<li>
+						<%= link_to url_for(params.merge({type: "combined_chart"})), class:"btn btn-default #{"active" if params[:type] == "combined_chart"}" do %>
+							<span class="glyphicon glyphicon-signal" aria-hidden="true"></span> <b>Graphe2 d'évolution</b>
 						<% end %>
 					</li>
 					<li>
@@ -98,7 +103,5 @@
 
 
 
-<script src="https://code.highcharts.com/modules/exporting.js"></script>
+
 <%= javascript_include_tag "data_show2.js" %>
-<%= javascript_include_tag "highcharts.js" %>
-<%= javascript_include_tag "exporting.js" %>

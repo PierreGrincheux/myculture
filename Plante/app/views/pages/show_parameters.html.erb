@@ -1,4 +1,4 @@
-<div class="row center-row" style="margin-top:9%">
+<div class="row center-row" style="margin-top:11%">
 	<div class="col-md-12">
 
 					<%= render "nav_greenhouse" %>
@@ -6,9 +6,9 @@
 
 <table class="table table-stripped white-back">
 	<thead>
-		<th> Type de valeur </th>
-		<th> Valeur </th>
-		<th> Actions </th>
+		<th> <%= t('pages.valuetype')  %><!--Type de valeur--> </th>
+		<th> <%= t('pages.value')  %></th>
+		<th> <%= t('pages.actions')  %> </th>
 	</thead>
 	<tbody>
 	<% if current_user.teacher? %>
@@ -20,7 +20,7 @@
 					<%= hidden_field_tag :greenhouse_id, @selected_greenhouse.id %>
 					<%= hidden_field_tag :value_type_id, y.id %>
 					<%= hidden_field_tag :school_id, params[:id] %>
-					<td> <%= f.submit "Modifier"%></td>
+					<td> <%= f.submit t('pages.modify')%></td>
 				<% end %>
 			</tr>
 		<% end %>

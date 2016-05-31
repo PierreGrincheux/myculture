@@ -11,6 +11,12 @@ VALUE_TYPES = {
 	:illumination => ["Éclairement","lux","lux"]
 }
 
+VALUE_TYPES_EN = {
+	:temperature => ["Temperature","degrés","°C"],
+	:air_humidity => ["Air humidity","pourcent","%"],
+	:soil_humidity => ["Soil humidity","pourcent","%"],
+	:illumination => ["Illumination","lux","lux"]
+}
 #Pour le matériel mettre :nom_available ou :nom_disabledd les 2 sont obligatoires et doivent être identiques
 HTTP_CONNECTION_TYPES = {
 				:get_value_types => ['envoie des types de valeurs','data'],

@@ -22,7 +22,12 @@ module ApplicationHelper
 	end
 
 	def print_value_name(name)
-		return "#{VALUE_TYPES[:"#{name}"][0]}"
+		case I18n.locale.to_s
+			when "fr"
+				return "#{VALUE_TYPES[:"#{name}"][0]}"
+			when "en"
+				return "#{VALUE_TYPES_EN[:"#{name}"][0]}"
+		end
 	end
 
 	def print_unit(name)

@@ -1,4 +1,18 @@
-fr:
-  #admin: 
-  #	controlcards: 
-  #		principale: "Liste des Cartes Principales"
+--- 
+fr: 
+  pages: 
+    actions: Actions
+    actusituation: "Situation actuelle"
+    adminarea: "Zone Admin"
+    administration: Administration
+    changeparam: "Modifier les paramètres"
+    chooseserre: "Choisir une serre:"
+    educsupport: "Supports Éducatifs"
+    evolution: Évolution
+    hello: Bonjour
+    logout: "Se déconnecter"
+    modify: Modifier
+    profarea: "Zone Professeur"
+    profilemanagement: "Gestion du Profil"
+    value: Valeur
+    valuetype: "Type de valeur"

@@ -14,19 +14,19 @@
 				<% if user_signed_in? %>
 					<div id="navbar" class="collapse navbar-collapse">
 						<ul class="nav navbar-nav navbar-left">
-							<li class="<%= "active" if request.env['PATH_INFO'] == show_current_state_pages_path %>"><%= link_to "Situation actuelle", show_current_state_pages_path(id: params[:id], selected_greenhouse: params[:selected_greenhouse]), class: "nav_btn" %></li>
-							<li class="<%= "active" if request.env['PATH_INFO'] == show_parameters_pages_path %>"><%= link_to "Modifier les paramètres", show_parameters_pages_path(id: params[:id], selected_greenhouse: params[:selected_greenhouse]), class: "nav_btn"%></li>
-							<li class="<%= "active" if request.env['PATH_INFO'] == show_data_pages_path %>"><%= link_to "Évolution", show_data_pages_path(id: params[:id], selected_greenhouse: params[:selected_greenhouse], year: "", month: "", day: "", type: "chart"), class:"nav_btn" %></li>
+							<li class="<%= "active" if request.env['PATH_INFO'] == show_current_state_pages_path %>"><%= link_to t('pages.actusituation'), show_current_state_pages_path(id: params[:id], selected_greenhouse: params[:selected_greenhouse]), class: "nav_btn" %></li>
+							<li class="<%= "active" if request.env['PATH_INFO'] == show_parameters_pages_path %>"><%= link_to t('pages.changeparam'), show_parameters_pages_path(id: params[:id], selected_greenhouse: params[:selected_greenhouse]), class: "nav_btn"%></li>
+							<li class="<%= "active" if request.env['PATH_INFO'] == show_data_pages_path %>"><%= link_to t('pages.evolution'), show_data_pages_path(id: params[:id], selected_greenhouse: params[:selected_greenhouse], year: "", month: "", day: "", type: "chart"), class:"nav_btn" %></li>
 							<!--<li class="<%= "active" if request.env['PATH_INFO'] == show_data2_pages_path %>"><%= link_to "Évolution", show_data2_pages_path(id: params[:id], selected_greenhouse: params[:selected_greenhouse], year: "", month: "", day: ""), class:"nav_btn" %></li>-->
-							<li class="<%= "active" if request.env['PATH_INFO'] == show_media_file_pages_path %>"><%= link_to "Supports Éducatifs", show_media_file_pages_path(id: params[:id]), class: "nav_btn" %></li>
+							<li class="<%= "active" if request.env['PATH_INFO'] == show_media_file_pages_path %>"><%= link_to t('pages.educsupport'), show_media_file_pages_path(id: params[:id]), class: "nav_btn" %></li>
 							<% if current_user.super_admin? || current_user.teacher? %>
 								<li class="dropdown <%= "active" if [edit_user_registration_path,teacher_supervisions_path,admin_schools_path].include?(request.env['PATH_INFO'])%>">
-	      	    	  <a data-toggle="dropdown" class="dropdown-toggle" href="#">Administration<b class="caret"></b></a>
+	      	    	  <a data-toggle="dropdown" class="dropdown-toggle" href="#"><%= t('pages.administration')%><b class="caret"></b></a>
 									<ul class="dropdown-menu">
-										<li class="<%= "active" if request.env['PATH_INFO'] == edit_user_registration_path %>"><%= link_to "Gestion du Profil", edit_user_registration_path, class: "nav_btn" %></li>
-										<li class="<%= "active" if request.env['PATH_INFO'] == teacher_supervisions_path %>"><%= link_to "Zone Professeur", teacher_supervisions_path(id: params[:id]), class: "nav_btn" %></li>
+										<li class="<%= "active" if request.env['PATH_INFO'] == edit_user_registration_path %>"><%= link_to t('pages.profilemanagement'), edit_user_registration_path, class: "nav_btn" %></li>
+										<li class="<%= "active" if request.env['PATH_INFO'] == teacher_supervisions_path %>"><%= link_to t('pages.profarea'), teacher_supervisions_path(id: params[:id]), class: "nav_btn" %></li>
 										<% if current_user.super_admin %>
-											<li class="<%= "active" if request.env['PATH_INFO'] == admin_schools_path %>"> <%= link_to "Zone Admin", admin_schools_path, class: "nav_btn" %></li>
+											<li class="<%= "active" if request.env['PATH_INFO'] == admin_schools_path %>"> <%= link_to t('pages.adminarea'), admin_schools_path, class: "nav_btn" %></li>
 										<% end %>
 									</ul>
 								</li>
@@ -36,14 +36,23 @@
 				<% end %>
 
 				<div class="col-md-3 col-md-offset-9" style="position: absolute;">
-					<!--<div class="language">
-						<%= link_to_unless_current "Français", locale: "fr" %>
-						<%= link_to_unless_current "English", locale: "en" %>
-					</div>-->
+					<div class="language">
+						
+	
+						<%= link_to url_for(params.merge({locale:"en"})) do %>
+						 <%= image_tag 'enflag.png', alt: 'England flag', class: "flag" %>
+						<% end %>
+						<%= link_to url_for(params.merge({locale:"fr"})) do %>
+						 <%= image_tag 'frflag.png', alt: 'French flag', class: "flag"%>
+						<% end %>
+
+
+						
+					</div>
 					<div class="user_info" >
 						<% if user_signed_in? %>
-										<p style="margin-top:-42%;">Bonjour <%= current_user.first_name%> <%= current_user.last_name%></p>
-										<p style="margin-top:-42%;"><%= link_to 'Se déconnecter', destroy_user_session_path %></p>
+										<p style="margin-top:-42%;"><%= t('pages.hello')%> <%= current_user.first_name%> <%= current_user.last_name%></p>
+										<p style="margin-top:-42%;"><%= link_to t('pages.logout'), destroy_user_session_path %></p>
 						<% else %>      
 										<!-- Je sais c'est pas bien mais je le fais a l'arrache dans le train pour y avoir accès :) -->
 										<p style="position:relative;"><%= link_to 'Se connecter', new_user_session_path, class: "btn btn_style_connect" %></p>
